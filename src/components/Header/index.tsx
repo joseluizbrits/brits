@@ -6,7 +6,7 @@ import Shorts from "@/icons/Shorts";
 
 function Header() {
   return (
-    <Container>
+    <Container className="container">
       <Logo href="/">
         <span className={montserrat.className}>BRITS</span>
         <Shorts />

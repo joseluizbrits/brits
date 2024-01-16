@@ -9,7 +9,7 @@ const GlobalStyles = createGlobalStyle`
     --primaryGradient: linear-gradient(to right, #692FA4, #764BA2, #8659B4);
     --secondary: #41F7EC;
     --tertiary: #D22AE8;
-    --gradientOne: linear-gradient(to bottom, #862FA4 75%, #692FA4);
+    --gradientOne: linear-gradient(to bottom, #862FA4 30%, #692FA4);
     --gradientTwo: linear-gradient(to bottom, #692FA4, #8A2A99);
     --gradientThree: linear-gradient(to bottom, #8A2A99 15%, #8DFFF8);
   }
@@ -38,6 +38,10 @@ const GlobalStyles = createGlobalStyle`
 
   li {
     list-style: none;
+  }
+
+  .container {
+    margin: 0 120px;
   }
 `;
 
