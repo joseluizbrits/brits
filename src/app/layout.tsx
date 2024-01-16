@@ -5,8 +5,8 @@ import StylesProvider from "@/styles/StylesProvider";
 import Header from "@/components/Header";
 
 export const metadata: Metadata = {
-  title: "Brits",
-  description: "Brits | Desenvolvimento web front-end",
+  title: "BRITS",
+  description: "BRITS | Desenvolvimento web front-end",
 };
 
 export default function RootLayout({
@@ -19,7 +19,7 @@ export default function RootLayout({
       <body className={ubuntu.className}>
         <StylesProvider>
           <Header />
-          <main>{children}</main>
+          {children}
         </StylesProvider>
       </body>
     </html>

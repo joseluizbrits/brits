@@ -41,7 +41,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   .container {
-    margin: 0 120px;
+    padding: 0 120px;
   }
 `;
 

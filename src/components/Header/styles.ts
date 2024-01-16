@@ -1,16 +1,18 @@
 import styled from "styled-components";
 
 export const Container = styled.header`
+  padding: 20px 120px;
+  height: 100px;
+  background-color: var(--primaryGradient);
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
 
   ul {
     display: flex;
     align-items: center;
     gap: 20px;
-    margin-right: -20px;
   }
 
   li a {

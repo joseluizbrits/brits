@@ -1,8 +1,10 @@
 "use client";
 
-import Link from "next/link";
 import { Container } from "./styles";
-import FoldShort from "@/icons/FoldShort";
+import Link from "next/link";
+
+import GitHub from "@/icons/GitHub";
+import Instagram from "@/icons/Instagram";
 
 function Hero() {
   return (
@@ -12,7 +14,14 @@ function Hero() {
         Unindo estética e performance para abrilhantar sua presença online
       </h1>
       <Link href="#">Entrar em contato</Link>
-      <FoldShort />
+      <div>
+        <Link href="#">
+          <GitHub />
+        </Link>
+        <Link href="#">
+          <Instagram />
+        </Link>
+      </div>
     </Container>
   );
 }
