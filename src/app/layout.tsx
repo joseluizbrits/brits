@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { ubuntu } from "@/lib/fonts";
 
 import StylesProvider from "@/styles/StylesProvider";
+import Header from "@/components/Header";
 
 export const metadata: Metadata = {
   title: "Brits",
@@ -17,6 +18,7 @@ export default function RootLayout({
     <html lang="pt-br">
       <body className={ubuntu.className}>
         <StylesProvider>
+          <Header />
           <main>{children}</main>
         </StylesProvider>
       </body>
