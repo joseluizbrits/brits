@@ -1,12 +1,17 @@
 "use client";
 
 import { ButtonWrapper } from "./styles";
-import { ubuntu } from "@/lib/fonts";
 import { ReactNode } from "react";
+import { ubuntu } from "@/lib/fonts";
 
-function Button({ children }: { children: ReactNode }) {
+interface IButton {
+  children: ReactNode;
+  secondary?: boolean;
+}
+
+function Button({ children, secondary }: IButton) {
   return (
-    <ButtonWrapper>
+    <ButtonWrapper $secondary={secondary}>
       <span className={ubuntu.className}>{children}</span>
     </ButtonWrapper>
   );

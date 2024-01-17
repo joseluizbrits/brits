@@ -1,30 +1,30 @@
 "use client";
 
-import { Container, Content } from "./styles";
 import Button from "@/components/Button";
+import { Container, Content } from "./styles";
 import Up from "@/icons/Up";
 
-function Introduction() {
+function Explanation() {
   return (
     <Container>
       <Content className="container">
         <h2>
-          Aumente a visibilidade de seus produtos e serviços
-          <small>Credibilidade online</small>
+          <small>Marketing alavancado</small>
+          Um site personalizado e bem projetado eleva a sua marca
         </h2>
         <div>
-          <Button>Me convença</Button>
+          <Button secondary>Saber mais</Button>
           <ul>
             <li>
-              <span>clientes</span>
+              <span>personalidade</span>
               <Up />
             </li>
             <li>
-              <span>vendas</span>
+              <span>reconhecimento</span>
               <Up />
             </li>
             <li>
-              <span>faturameto</span>
+              <span>confiança</span>
               <Up />
             </li>
           </ul>
@@ -34,4 +34,4 @@ function Introduction() {
   );
 }
 
-export default Introduction;
+export default Explanation;

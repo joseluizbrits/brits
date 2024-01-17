@@ -1,17 +1,17 @@
 import styled from "styled-components";
-import eye from "../../../public/eye.jpg";
+import note from "../../../public/note.jpg";
 
 export const Container = styled.section`
-  background: var(--gradientTwo);
+  background: var(--gradientThree);
   height: 100vh;
   position: relative;
 
   &::before {
     content: "";
     display: block;
-    width: 70%;
+    width: 34.9%;
     height: 100vh;
-    background: url(${eye.src}) 30% 40%;
+    background: url(${note.src}) 40% center no-repeat;
     background-size: cover;
     opacity: 0.4;
 
@@ -23,7 +23,7 @@ export const Container = styled.section`
   &::after {
     content: "";
     display: block;
-    background: var(--gradientTwo);
+    background: var(--gradientThree);
 
     width: 35%;
     height: 100vh;
@@ -31,14 +31,14 @@ export const Container = styled.section`
 
     position: absolute;
     top: 0;
-    right: 30%;
+    right: 65%;
   }
 `;
 
 export const Content = styled.div`
   width: 100%;
   height: 100%;
-  padding-top: 120px;
+  padding-top: 100px;
   padding-bottom: 48px;
 
   display: grid;
@@ -69,7 +69,7 @@ export const Content = styled.div`
     line-height: 1.25em;
     text-align: end;
     color: var(--white);
-    max-width: 18ch;
+    max-width: 20ch;
   }
 
   small {
@@ -77,7 +77,7 @@ export const Content = styled.div`
     letter-spacing: 0.05rem;
     text-transform: lowercase;
     color: var(--primaryLight);
-    margin-top: -32px;
+    margin-bottom: -40px;
   }
 
   ul {

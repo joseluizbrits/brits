@@ -1,4 +1,5 @@
 import Hero from "@/components/Hero";
+import Explanation from "@/sections/Explanation";
 import Introduction from "@/sections/Introduction";
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <>
       <Hero />
       <Introduction />
+      <Explanation />
     </>
   );
 }
