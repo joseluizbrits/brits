@@ -1,6 +1,7 @@
 import Hero from "@/components/Hero";
-import Explanation from "@/sections/Explanation";
 import Introduction from "@/sections/Introduction";
+import Explanation from "@/sections/Explanation";
+import Services from "@/sections/Services";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Hero />
       <Introduction />
       <Explanation />
+      <Services />
     </>
   );
 }
