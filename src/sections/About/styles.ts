@@ -5,6 +5,7 @@ export const Container = styled.section`
   height: 100vh;
   background: var(--primary);
 
+  display: flex;
   position: relative;
 
   &::before {
