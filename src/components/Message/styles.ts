@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.aside`
+  max-height: 100vh;
   flex: 1;
   position: relative;
 

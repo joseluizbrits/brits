@@ -3,34 +3,54 @@ import styled from "styled-components";
 export const Container = styled.section`
   width: 100%;
   height: 100vh;
-  background: var(--gradientTwoReverse);
+  background: var(--primary);
+`;
+
+export const Title = styled.h2`
+  display: grid;
+  justify-content: center;
 
   position: relative;
 
-  &::before {
-    content: "";
-    display: block;
-    background: var(--primary);
-
-    width: 20%;
-    height: 100vh;
-
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
-
+  &::before,
   &::after {
     content: "";
     display: block;
-    background: var(--gradientTwoReverse);
+    width: 200px;
+    height: 64px;
 
-    width: 40%;
-    height: 100vh;
-    clip-path: polygon(0 0, 100% 100%, 0 100%);
+    background-color: var(--tertiary);
+    opacity: 0.8;
 
     position: absolute;
-    top: 0;
-    left: 79.99%;
+  }
+
+  &::before {
+    border-radius: 0 50px 50px 0;
+
+    bottom: -100px;
+    left: 0;
+  }
+
+  &::after {
+    border-radius: 50px 0 0 50px;
+
+    top: 400px;
+    right: 0;
+    z-index: 1;
+  }
+
+  small {
+    font-weight: 400;
+    font-size: 1.25rem;
+    color: var(--primaryDark);
+  }
+
+  span {
+    font-weight: 400;
+    font-size: 4rem;
+    line-height: 1.25em;
+    color: var(--white);
+    max-width: 19ch;
   }
 `;

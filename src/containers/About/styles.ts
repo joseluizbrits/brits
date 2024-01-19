@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.section`
   width: 100%;
-  height: 100vh;
+  height: 160vh;
   background: var(--primary);
 
   display: flex;
@@ -11,10 +11,10 @@ export const Container = styled.section`
   &::before {
     content: "";
     display: block;
-    background: var(--gradientTwo);
+    background: var(--gradientTwoToPrimary);
 
-    width: 40%;
-    height: 100vh;
+    width: 60%;
+    height: 160vh;
     clip-path: polygon(0 0, 100% 100%, 0 100%);
 
     position: absolute;

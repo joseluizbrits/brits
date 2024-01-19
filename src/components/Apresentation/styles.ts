@@ -2,10 +2,10 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 40%;
-  height: 100vh;
-  padding-top: 200px;
+  height: 160vh;
+  padding-top: 240px;
   padding-left: 40px;
-  background: var(--gradientTwo);
+  background: var(--gradientTwoToPrimary);
 
   position: relative;
   z-index: 1;

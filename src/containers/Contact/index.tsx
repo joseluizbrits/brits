@@ -1,9 +1,18 @@
 "use client";
 
-import { Container } from "./styles";
+import { Container, Title } from "./styles";
+import Form from "@/components/Form";
 
 function Contact() {
-  return <Container>Contact</Container>;
+  return (
+    <Container>
+      <Title>
+        <small>Caso você goste de formalidades</small>
+        <span>Me envie um e-mail pelo formulário abaixo</span>
+      </Title>
+      <Form />
+    </Container>
+  );
 }
 
 export default Contact;
