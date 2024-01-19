@@ -3,15 +3,27 @@ import styled from "styled-components";
 export const Container = styled.section`
   width: 100%;
   height: 100vh;
-  background: var(--primary);
+  background: var(--gradientTwoReverse);
 
-  display: flex;
   position: relative;
 
   &::before {
     content: "";
     display: block;
-    background: var(--gradientTwo);
+    background: var(--primary);
+
+    width: 20%;
+    height: 100vh;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    background: var(--gradientTwoReverse);
 
     width: 40%;
     height: 100vh;
@@ -19,6 +31,6 @@ export const Container = styled.section`
 
     position: absolute;
     top: 0;
-    left: 40%;
+    left: 79.99%;
   }
 `;

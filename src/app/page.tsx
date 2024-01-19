@@ -1,9 +1,10 @@
 import Hero from "@/components/Hero";
-import Introduction from "@/sections/Introduction";
-import Explanation from "@/sections/Explanation";
-import Services from "@/sections/Services";
-import Project from "@/sections/Project";
-import About from "@/sections/About";
+import Introduction from "@/containers/Introduction";
+import Explanation from "@/containers/Explanation";
+import Services from "@/containers/Services";
+import Project from "@/containers/Project";
+import About from "@/containers/About";
+import Contact from "@/containers/Contact";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Services />
       <Project />
       <About />
+      <Contact />
     </>
   );
 }

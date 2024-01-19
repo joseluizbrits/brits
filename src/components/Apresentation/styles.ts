@@ -8,6 +8,7 @@ export const Container = styled.div`
   background: var(--gradientTwo);
 
   position: relative;
+  z-index: 1;
 `;
 
 export const ImageWrapper = styled.div`

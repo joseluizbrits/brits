@@ -31,7 +31,7 @@ export const Point = styled.div`
 
   &#point-2 {
     top: 21%;
-    left: 42%;
+    left: 46%;
   }
 
   &#point-3 {
@@ -45,17 +45,19 @@ export const Point = styled.div`
   }
 
   &#point-5 {
-    top: 70%;
+    top: 75%;
     left: 57%;
   }
 
   &#point-6 {
-    bottom: 8%;
-    right: 14%;
+    bottom: -10%;
+    right: 16%;
+    z-index: 1;
   }
 
   &#point-7 {
-    bottom: 2%;
-    right: 15%;
+    bottom: -30%;
+    right: 5%;
+    z-index: 1;
   }
 `;
