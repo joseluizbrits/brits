@@ -3,7 +3,7 @@ import { createGlobalStyle } from "styled-components";
 const GlobalStyles = createGlobalStyle`
   :root {
     --white: #FFFFFF;
-    --primary: #001542;
+    --primary: #692FA4;
     --primaryLight: #B576F5;
     --primaryDark: #4D1981;
     --primaryGradient: linear-gradient(to right, #692FA4, #764BA2, #8659B4);

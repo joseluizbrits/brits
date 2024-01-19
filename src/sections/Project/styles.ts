@@ -25,7 +25,7 @@ export const Container = styled.section`
     display: block;
     background: var(--gradientOne);
 
-    width: 30%;
+    width: 40%;
     height: 100vh;
     clip-path: polygon(0 0, 100% 100%, 0 100%);
 
