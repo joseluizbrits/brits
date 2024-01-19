@@ -1,16 +1,13 @@
 "use client";
 
-import { Container, Logo } from "./styles";
+import { Container } from "./styles";
 import { montserrat } from "@/lib/fonts";
-import Shorts from "@/icons/Shorts";
+import Logo from "../Logo";
 
 function Header() {
   return (
     <Container className="container">
-      <Logo href="/">
-        <span className={montserrat.className}>BRITS</span>
-        <Shorts />
-      </Logo>
+      <Logo href="/" />
       <nav>
         <ul>
           <li>
