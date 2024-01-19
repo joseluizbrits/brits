@@ -40,7 +40,7 @@ const Field = ({
           className={error ? "error" : ""}
         />
       )}
-      {error && <p className="error">{error}</p>}
+      {error && <span className="error">{error}</span>}
     </div>
   );
 };

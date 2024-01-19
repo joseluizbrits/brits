@@ -51,7 +51,7 @@ export const Point = styled.div`
 
   &#point-6 {
     bottom: -10%;
-    right: 16%;
+    right: 20%;
     z-index: 1;
   }
 

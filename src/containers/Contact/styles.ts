@@ -28,16 +28,15 @@ export const Title = styled.h2`
   &::before {
     border-radius: 0 50px 50px 0;
 
-    bottom: -100px;
+    bottom: -80px;
     left: 0;
   }
 
   &::after {
     border-radius: 50px 0 0 50px;
 
-    top: 400px;
+    top: 0;
     right: 0;
-    z-index: 1;
   }
 
   small {

@@ -67,17 +67,22 @@ function Form() {
     <Container>
       <form onSubmit={handleSubmit}>
         <div className="fields">
-          <Field label="Nome" type="text" name="name" {...name} />
-          <Field label="Email" type="email" name="email" {...email} />
+          <Field label="Nome: " type="text" name="name" {...name} />
+          <Field label="Email: " type="email" name="email" {...email} />
           <Field
-            label="Menssagem"
+            label="Menssagem: "
             type="textarea"
             name="message"
             {...message}
           />
 
-          <button className={loading}>Enviar</button>
-          {success && <p className="success">Menssagem enviada com sucesso!</p>}
+          {!success ? (
+            <button className={loading}>
+              <span>Mandar</span>
+            </button>
+          ) : (
+            <span className="success">Foi! 👍</span>
+          )}
         </div>
       </form>
     </Container>
