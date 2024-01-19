@@ -8,6 +8,7 @@ export const ButtonWrapper = styled.button<{ $secondary?: boolean }>`
 
   span {
     font-weight: 700;
+    font-size: 1rem;
     letter-spacing: 0.05rem;
     text-transform: uppercase;
     color: ${(props) =>
