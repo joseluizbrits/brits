@@ -2,6 +2,7 @@
 
 import { Container, Content } from "./styles";
 import Button from "@/components/Button";
+import ConvinceMe from "@/components/ConvinceMe";
 import Up from "@/icons/Up";
 
 function Introduction() {
@@ -30,6 +31,7 @@ function Introduction() {
           </ul>
         </div>
       </Content>
+      <ConvinceMe />
     </Container>
   );
 }
