@@ -6,10 +6,12 @@ import { Pagination, Navigation } from "swiper/modules";
 import img1 from "../../../public/velhota.jpg";
 import img3 from "../../../public/google.jpg";
 import img4 from "../../../public/drake.jpg";
+import img6 from "../../../public/me-solta.jpg";
 
 import { montserrat } from "@/lib/fonts";
 import Quotes from "@/icons/Quotes";
 import Image from "next/image";
+import Link from "next/link";
 
 function ConvinceMe() {
   return (
@@ -87,7 +89,7 @@ function ConvinceMe() {
                 src={img3.src}
                 width={400}
                 height={260}
-                alt="Meme de uma velhinha em cima de uma prancha rosa com o universo de fundo"
+                alt="Paginá principal do Google com o meme do Dicaprio no filme Django no lugar dos doi 'o' da logo"
               />
             </div>
           </div>
@@ -113,8 +115,76 @@ function ConvinceMe() {
                 src={img4.src}
                 width={300}
                 height={300}
-                alt="Meme de uma velhinha em cima de uma prancha rosa com o universo de fundo"
+                alt="Meme do Drake, rejeitando o facebook e instagram e dizendo sim para 'meu site'"
               />
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="cm-container">
+            <div className="cm-card cm-card-5">
+              <div className="cm-text">
+                <p>
+                  <span className={montserrat.className}>
+                    É bom ter o seu cantinho na internet e poder contar a sua
+                    história e seus valores do jeitinho que você quiser.
+                  </span>
+                  <span className={montserrat.className}>
+                    Você pode dar a sua cara a ele e contar comigo para dar
+                    aquela maquiada ;)
+                  </span>
+                </p>
+                <Quotes className="quote-1" />
+                <Quotes className="quote-2" />
+              </div>
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="cm-container">
+            <div className="cm-card">
+              <div className="cm-text">
+                <p>
+                  <span className={montserrat.className}>
+                    Eu sei que você não quer ficar para trás e nem viver como
+                    viviam os antigos Maias e Astecas.
+                  </span>
+                  <span className={montserrat.className}>
+                    Ter um site é essencial para se destacar nos dias de hoje.
+                    Portanto...
+                  </span>
+                </p>
+                <Quotes className="quote-1" />
+                <Quotes className="quote-2" />
+              </div>
+              <Image
+                id="img-6"
+                src={img6.src}
+                width={360}
+                height={240}
+                alt="Meme de uma mulher num quadro antigo segurando um alienzinho"
+              />
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="cm-container">
+            <div className="cm-card cm-card-7">
+              <div className="cm-text">
+                <p>
+                  <span className={montserrat.className}>
+                    Joga uma mensagem lá no meu WhatsApp pra a gente descobrir
+                    como te colocar no mundo digital.
+                  </span>
+                  <span className={montserrat.className}>
+                    Meus preços são super amigaveis e meu método de trabalho é
+                    no amor :)
+                  </span>
+                </p>
+                <Quotes className="quote-1" />
+                <Quotes className="quote-2" />
+              </div>
+              <Link href="#">Dar um alô</Link>
             </div>
           </div>
         </SwiperSlide>

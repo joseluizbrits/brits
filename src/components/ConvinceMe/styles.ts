@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import arrow from "../../../public/arrow.svg";
 import img2 from "../../../public/sabichao.png";
+import img5 from "../../../public/makeup.png";
+import img7 from "../../../public/chorrindo.png";
 
 export const Container = styled.div`
   width: 100%;
@@ -109,6 +111,21 @@ export const Container = styled.div`
     right: 64px;
   }
 
+  .cm-card a {
+    font-weight: 700;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+    color: var(--primaryDark);
+    background-color: var(--secondary);
+    border-radius: 50px;
+    padding: 20px 32px;
+
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    z-index: 1;
+  }
+
   /* IMAGENS */
 
   .cm-card img {
@@ -134,17 +151,44 @@ export const Container = styled.div`
     right: -40px;
   }
 
-  .cm-card-2::after {
+  #img-6 {
+    top: -40px;
+    right: -40px;
+  }
+
+  .cm-card::after {
     content: "";
     display: block;
     width: 40%;
     height: 100%;
-    border-radius: 0 50px 50px 0;
-    background: url(${img2.src}) center center no-repeat;
-    opacity: 0.4;
 
     position: absolute;
     top: 0;
+  }
+
+  /* img-2 */
+  .cm-card-2::after {
+    border-radius: 0 50px 50px 0;
+    background: url(${img2.src}) center center no-repeat;
+    background-size: cover;
+    opacity: 0.4;
+    right: 0;
+  }
+
+  /* img-5 */
+  .cm-card-5::after {
+    border-radius: 50px 0 0 50px;
+    background: url(${img5.src}) center center no-repeat;
+    background-size: cover;
+    left: 0;
+  }
+
+  /* img-7 */
+  .cm-card-7::after {
+    border-radius: 0 50px 50px 0;
+    background: url(${img7.src}) center center no-repeat;
+    background-size: cover;
+    opacity: 0.8;
     right: 0;
   }
 `;
