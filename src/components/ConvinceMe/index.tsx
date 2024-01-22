@@ -1,4 +1,5 @@
 import { Container } from "./styles";
+import { Dispatch, SetStateAction } from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
@@ -6,9 +7,24 @@ import { Pagination, Navigation } from "swiper/modules";
 import convince from "@/utils/convince";
 import ConvinceMeCard from "../ConvinceMeCard";
 
-function ConvinceMe() {
+interface IConvinceMe {
+  active: boolean;
+  setActive: Dispatch<SetStateAction<boolean>>;
+}
+
+function ConvinceMe({ active, setActive }: IConvinceMe) {
+  const handleActive = (target: EventTarget) => {
+    const element = target as Element;
+
+    if (element.classList.contains("shadow")) setActive((state) => !state);
+    return;
+  };
+
   return (
-    <Container>
+    <Container
+      className={active ? "active" : ""}
+      onClick={({ target }) => handleActive(target)}
+    >
       <Swiper
         pagination={{
           type: "fraction",

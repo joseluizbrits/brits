@@ -22,7 +22,7 @@ interface IConvinceMeCard {
 
 function ConvinceMeCard({ id, text, img, link }: IConvinceMeCard) {
   return (
-    <Container>
+    <Container className="shadow">
       <Content id={id} $src={!img.alt ? img.src : ""}>
         <Text>
           <p>
