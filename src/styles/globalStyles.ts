@@ -11,7 +11,7 @@ const GlobalStyles = createGlobalStyle`
     --secondary: #41F7EC;
     --secondaryShadow: rgba(65, 247, 236, 0.8);
     --tertiary: #D22AE8;
-    --tertiaryShadow: rgba(210, 42 , 232, 0.8);
+    --tertiaryShadow: rgba(210, 42 , 232, 0.9);
     --warning: #FB4B4B;
     --gradientOne: linear-gradient(to bottom, #862FA4 30%, #692FA4);
     --gradientTwo: linear-gradient(to bottom, #692FA4, #8A2A99);

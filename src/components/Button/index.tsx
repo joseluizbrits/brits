@@ -11,7 +11,10 @@ interface IButton {
 }
 
 function Button({ children, secondary, setActive }: IButton) {
-  const handleActive = () => setActive((state) => !state);
+  const handleActive = () => {
+    document.documentElement.style.overflow = "hidden";
+    setActive(true);
+  };
 
   return (
     <ButtonWrapper $secondary={secondary} onClick={handleActive}>

@@ -16,7 +16,10 @@ function ConvinceMe({ active, setActive }: IConvinceMe) {
   const handleActive = (target: EventTarget) => {
     const element = target as Element;
 
-    if (element.classList.contains("shadow")) setActive((state) => !state);
+    if (element.classList.contains("shadow")) {
+      document.documentElement.style.overflow = "auto";
+      setActive(false);
+    }
     return;
   };
 

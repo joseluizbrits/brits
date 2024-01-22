@@ -1,15 +1,12 @@
 import styled from "styled-components";
 import arrow from "../../../public/arrow.svg";
-import img2 from "../../../public/sabichao.png";
-import img5 from "../../../public/makeup.png";
-import img7 from "../../../public/chorrindo.png";
 
 export const Container = styled.div`
   width: 100%;
   height: 100%;
   background-color: var(--tertiaryShadow);
 
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
 
