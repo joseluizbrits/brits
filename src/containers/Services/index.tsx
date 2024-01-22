@@ -4,7 +4,7 @@ import { Title, Text, ProjectWrapper, ImageWrapper } from "./styles";
 import Image from "next/image";
 
 import ButtonProject from "@/components/ButtonProject";
-import { projects } from "@/utils/data";
+import projects from "@/utils/projects";
 
 function Services() {
   return (

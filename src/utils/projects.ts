@@ -3,7 +3,7 @@ import img2 from "../../public/magic-box.jpg";
 import img3 from "../../public/ta-na-hora.jpg";
 import img4 from "../../public/lili-da-ribeira.jpg";
 
-export const projects = [
+const projects = [
   {
     id: "project-1",
     title: "Sites Institucionais:",
@@ -37,3 +37,5 @@ export const projects = [
     href: "https://lilidaribeira.com.br/",
   },
 ];
+
+export default projects;
