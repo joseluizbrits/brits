@@ -11,15 +11,12 @@ export const Container = styled.section`
   &::before {
     content: "";
     display: block;
-    background: var(--gradientTwoToPrimary);
-
-    width: 60%;
-    height: 160vh;
-    clip-path: polygon(0 0, 100% 100%, 0 100%);
-
+    width: 500px;
+    height: 160px;
+    border-radius: 50px;
+    background-color: var(--tertiary);
     position: absolute;
-    top: 0;
-    left: 40%;
-    z-index: 1;
+    top: 24%;
+    left: 52%;
   }
 `;

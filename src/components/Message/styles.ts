@@ -5,19 +5,6 @@ export const Container = styled.aside`
   flex: 1;
   position: relative;
 
-  &::before {
-    content: "";
-    display: block;
-    width: 500px;
-    height: 160px;
-    border-radius: 50px;
-    background-color: var(--tertiary);
-
-    position: absolute;
-    top: 38%;
-    left: 20%;
-  }
-
   &::after {
     content: "";
     display: block;

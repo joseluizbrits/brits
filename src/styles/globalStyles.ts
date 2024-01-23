@@ -29,6 +29,8 @@ const GlobalStyles = createGlobalStyle`
     background: var(--primaryGradient);
     scroll-behavior: smooth;
     overflow-x: hidden;
+
+    overflow-y: hidden; // RETIRAR
   }
 
   a {

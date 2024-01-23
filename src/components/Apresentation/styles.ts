@@ -7,8 +7,19 @@ export const Container = styled.div`
   padding-left: 40px;
   background: var(--gradientTwoToPrimary);
 
-  position: relative;
-  z-index: 1;
+  &::before {
+    content: "";
+    display: block;
+    background: var(--gradientTwoToPrimary);
+
+    width: 60%;
+    height: 160vh;
+    clip-path: polygon(0 0, 100% 100%, 0 100%);
+
+    position: absolute;
+    top: 0;
+    left: 40%;
+  }
 `;
 
 export const ImageWrapper = styled.div`

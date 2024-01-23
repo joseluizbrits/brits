@@ -1,9 +1,14 @@
 "use client";
 
 import { Container, Content } from "./styles";
+import { useState } from "react";
+
 import Button from "@/components/Button";
+import Price from "@/components/Price";
 
 function Project() {
+  const [active, setActive] = useState(false);
+
   return (
     <Container>
       <Content className="container">
@@ -11,7 +16,8 @@ function Project() {
           Cada projeto é uma oportunidade para nos reinventarmos e superar
           expectativas
         </h2>
-        <Button>Simular preço</Button>
+        <Button setActive={setActive}>Simular preço</Button>
+        <Price />
       </Content>
     </Container>
   );
