@@ -1,6 +1,6 @@
 "use client";
 
-import { Container, Content } from "./styles";
+import { Container, Content, Labels } from "./styles";
 import { useState } from "react";
 
 import Button from "@/components/Button";
@@ -12,14 +12,15 @@ function Introduction() {
 
   return (
     <Container>
-      <Content className="container">
+      <Content>
         <h2>
           Aumente a visibilidade de seus produtos e serviços
           <small>Credibilidade online</small>
         </h2>
         <div>
           <Button setActive={setActive}>Me convença</Button>
-          <ul>
+          <ConvinceMe active={active} setActive={setActive} />
+          <Labels>
             <li>
               <span>clientes</span>
               <Up />
@@ -32,10 +33,9 @@ function Introduction() {
               <span>faturameto</span>
               <Up />
             </li>
-          </ul>
+          </Labels>
         </div>
       </Content>
-      <ConvinceMe active={active} setActive={setActive} />
     </Container>
   );
 }

@@ -38,6 +38,7 @@ export const Container = styled.section`
 export const Content = styled.div`
   width: 100%;
   height: 100%;
+  padding: 0 120px;
   padding-top: 100px;
   padding-bottom: 48px;
 
@@ -45,23 +46,6 @@ export const Content = styled.div`
   grid-template-columns: 1fr;
 
   position: relative;
-  z-index: 1;
-
-  > :first-child {
-    justify-self: end;
-    height: fit-content;
-
-    display: grid;
-    gap: 12px;
-  }
-
-  > :last-child {
-    align-self: end;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
 
   h2 {
     font-weight: 400;
@@ -70,6 +54,12 @@ export const Content = styled.div`
     text-align: end;
     color: var(--white);
     max-width: 20ch;
+
+    justify-self: end;
+    height: fit-content;
+
+    display: grid;
+    gap: 12px;
   }
 
   small {
@@ -80,10 +70,23 @@ export const Content = styled.div`
     margin-bottom: -40px;
   }
 
-  ul {
-    display: flex;
-    gap: 40px;
+  button {
+    z-index: 1;
   }
+
+  > div {
+    display: flex;
+    justify-content: space-between;
+    height: fit-content;
+    align-self: end;
+  }
+`;
+
+export const Labels = styled.ul`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
 
   li {
     display: flex;
@@ -91,7 +94,7 @@ export const Content = styled.div`
     gap: 8px;
   }
 
-  li span {
+  span {
     font-size: 0.875rem;
     letter-spacing: 0.05rem;
     text-transform: lowercase;
