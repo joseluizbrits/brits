@@ -7,8 +7,10 @@ export const Container = styled.div`
   background-color: var(--secondary);
 
   overflow-y: scroll;
+  overflow-x: hidden;
 
   display: grid;
+  align-items: center;
 
   position: fixed;
   top: 0;
@@ -21,15 +23,23 @@ export const Content = styled.div`
   height: fit-content;
   background-color: var(--primaryDark);
   padding: 64px;
-  margin: 120px;
+  padding-top: 40px;
+  margin: 0 120px;
   border-radius: 50px;
 
-  span {
+  display: none;
+
+  &.voila,
+  &.active {
+    display: block;
+  }
+
+  .desc {
     font-size: 1.5rem;
     color: var(--primaryLight);
   }
 
-  span::after {
+  .desc::after {
     content: "";
     display: block;
     width: 100%;
@@ -44,6 +54,45 @@ export const Content = styled.div`
     color: var(--white);
     padding-top: 40px;
     padding-bottom: 48px;
+  }
+
+  animation: sideways 0.3s ease-out forwards;
+
+  @keyframes sideways {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+  }
+`;
+
+export const CardHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+
+  span {
+    flex: 1;
+    text-align: end;
+    color: var(--primaryLight);
+    opacity: 0.4;
+  }
+`;
+
+export const ButtonBack = styled.button`
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding-right: 16px;
+
+  span {
+    color: var(--primaryLight);
+    opacity: 0.4;
   }
 `;
 
@@ -115,6 +164,24 @@ export const Options = styled.ul`
   }
 `;
 
+export const ButtonShowPrice = styled.button`
+  padding: 20px 32px;
+  border-radius: 50px;
+  background-color: var(--secondary);
+
+  position: absolute;
+  bottom: 40px;
+  right: 64px;
+
+  span {
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+    color: var(--primaryDark);
+  }
+`;
+
 export const Value = styled.div`
   width: fit-content;
   padding: 40px;
@@ -138,17 +205,25 @@ export const Value = styled.div`
 `;
 
 export const Observation = styled.span`
-  display: flex;
-  flex-direction: column-reverse;
+  font-size: 1.25rem;
+  line-height: 1.5em;
+  color: var(--primaryLight);
+  opacity: 0.8;
 
   position: relative;
 
-  &.obs {
-    font-size: 1.25rem;
-    line-height: 1.5em;
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    margin-top: 80px;
+    margin-bottom: 40px;
+    border-radius: 2px;
+    background-color: var(--primaryLightShadow);
   }
 
-  &::before {
+  &::after {
     content: "*";
     display: block;
     width: inherit;
@@ -156,11 +231,7 @@ export const Observation = styled.span`
     opacity: 0.4;
 
     position: absolute;
-    top: 74px;
-    left: -12px;
-  }
-
-  &::after {
-    margin-bottom: 40px;
+    top: 40px;
+    left: -13px;
   }
 `;

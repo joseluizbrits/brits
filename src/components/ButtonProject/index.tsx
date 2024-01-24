@@ -1,6 +1,6 @@
-import Arrow from "@/icons/Arrow";
 import { ButtonWrapper } from "./styles";
 import { ubuntu } from "@/lib/fonts";
+import Arrow from "@/icons/Arrow";
 
 function ButtonProject({ href }: { href: string }) {
   return (

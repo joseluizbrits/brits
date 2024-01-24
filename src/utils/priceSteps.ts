@@ -1,0 +1,130 @@
+const priceSteps = [
+  {
+    id: "step-1",
+    desc: "Vamos saber qual o tamanho do projeto...",
+    ask: "Quantas páginas você quer?",
+    opts: [
+      {
+        id: "page-1",
+        name: "page",
+        type: "radio",
+        answer: "1",
+        value: 20,
+      },
+      {
+        id: "page-2",
+        name: "page",
+        type: "radio",
+        answer: "2",
+        value: 40,
+      },
+      {
+        id: "page-3",
+        name: "page",
+        type: "radio",
+        answer: "3",
+        value: 60,
+      },
+      {
+        id: "page-4",
+        name: "page",
+        type: "radio",
+        answer: "4",
+        value: 80,
+      },
+      {
+        id: "page-5",
+        name: "page",
+        type: "radio",
+        answer: "5",
+        value: 100,
+      },
+    ],
+  },
+  {
+    id: "step-2",
+    desc: "Vamos entender o que você já tem...",
+    ask: "Já possui algum conteúdo?",
+    opts: [
+      {
+        id: "content-1",
+        name: "content",
+        type: "radio",
+        answer: "Possuo somente textos",
+        value: 20,
+      },
+      {
+        id: "content-2",
+        name: "content",
+        type: "radio",
+        answer: "Possuo somente imagens",
+        value: 40,
+      },
+      {
+        id: "content-3",
+        name: "content",
+        type: "radio",
+        answer: "Possuo textos e imagens",
+        value: 60,
+      },
+      {
+        id: "content-4",
+        name: "content",
+        type: "radio",
+        answer: "Possuo um layout com design pronto",
+        value: 80,
+      },
+      {
+        id: "content-5",
+        name: "content",
+        type: "radio",
+        answer: "Possuo nada, somente vontade",
+        value: 100,
+      },
+    ],
+  },
+  {
+    id: "step-3",
+    desc: "Vamos ver o que o projeto precisa ter...",
+    ask: "Quais as funcionalidades?",
+    opts: [
+      {
+        id: "feature-1",
+        name: "feature",
+        type: "checkbox",
+        answer: "Formulário para contato",
+        value: 20,
+      },
+      {
+        id: "feature-2",
+        name: "feature",
+        type: "checkbox",
+        answer: "Galeria de fotos",
+        value: 40,
+      },
+      {
+        id: "feature-3",
+        name: "feature",
+        type: "checkbox",
+        answer: "Integração com redes sociais",
+        value: 60,
+      },
+      {
+        id: "feature-4",
+        name: "feature",
+        type: "checkbox",
+        answer: "Botão de WhatsApp",
+        value: 80,
+      },
+      {
+        id: "feature-5",
+        name: "feature",
+        type: "checkbox",
+        answer: "Mapa de localização",
+        value: 100,
+      },
+    ],
+  },
+];
+
+export default priceSteps;
