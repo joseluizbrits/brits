@@ -5,14 +5,14 @@ import WhatsApp from "@/icons/WhatsApp";
 function Message() {
   return (
     <Container>
-      <a href="#">
+      {/* <a href="#">
         <span>
           Me mande uma
           <br />
           mensagem
         </span>
         <WhatsApp />
-      </a>
+      </a> */}
       <Points />
     </Container>
   );

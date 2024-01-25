@@ -6,7 +6,7 @@ import Message from "@/components/Message";
 
 function About() {
   return (
-    <Container>
+    <Container className="scroll-align">
       <Apresentation />
       <Message />
     </Container>

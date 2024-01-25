@@ -11,7 +11,7 @@ function Introduction() {
   const [active, setActive] = useState(false);
 
   return (
-    <Container>
+    <Container className="scroll-align">
       <Content>
         <h2>
           Aumente a visibilidade de seus produtos e serviços

@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.header`
-  padding: 20px 120px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   height: 100px;
   background-color: var(--primaryGradient);
 

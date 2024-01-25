@@ -11,7 +11,7 @@ function Explanation() {
   const [active, setActive] = useState(false);
 
   return (
-    <Container>
+    <Container className="scroll-align">
       <Content>
         <h2>
           <small>Marketing alavancado</small>

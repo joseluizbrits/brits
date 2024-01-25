@@ -31,6 +31,11 @@ const GlobalStyles = createGlobalStyle`
     overflow-x: hidden;
   }
 
+  html,
+  body {
+    scroll-snap-type: y mandatory;
+  }
+
   a {
     text-decoration: none;
   }
@@ -65,6 +70,22 @@ const GlobalStyles = createGlobalStyle`
 
   .container {
     padding: 0 120px;
+  }
+
+  .scroll-align {
+    scroll-snap-align: start;
+  }
+
+  @media screen and (max-width: 1440px) {
+    .container {
+      padding: 0 80px;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .container {
+      padding: 0 40px;
+    }
   }
 `;
 

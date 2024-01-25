@@ -6,7 +6,7 @@ import Logo from "../Logo";
 
 function Header() {
   return (
-    <Container className="container">
+    <Container className="container scroll-align">
       <Logo href="/" />
       <nav>
         <ul>

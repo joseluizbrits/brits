@@ -5,7 +5,7 @@ import Form from "@/components/Form";
 
 function Contact() {
   return (
-    <Container>
+    <Container className="scroll-align">
       <Title>
         <small>Caso você goste de formalidades</small>
         <span>Me envie um e-mail pelo formulário abaixo</span>
