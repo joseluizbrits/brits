@@ -38,7 +38,6 @@ export const Container = styled.section`
 export const Content = styled.div`
   width: 100%;
   height: 100%;
-  padding: 120px;
   padding-bottom: 48px;
 
   display: grid;
@@ -49,13 +48,14 @@ export const Content = styled.div`
 
   h2 {
     font-weight: 400;
-    font-size: 5rem;
+    font-size: clamp(2rem, 6vw, 9rem);
     line-height: 1.25em;
     text-align: end;
     color: var(--white);
     max-width: 18ch;
 
     justify-self: end;
+    align-self: center;
     height: fit-content;
 
     display: grid;
@@ -63,11 +63,11 @@ export const Content = styled.div`
   }
 
   small {
-    font-size: 1.25rem;
+    font-size: clamp(1rem, 1.25vw, 1.5rem);
     letter-spacing: 0.05rem;
     text-transform: lowercase;
     color: var(--primaryLight);
-    margin-top: -32px;
+    margin-bottom: -7%;
   }
 
   > div {
@@ -75,6 +75,10 @@ export const Content = styled.div`
     justify-content: space-between;
     height: fit-content;
     align-self: end;
+  }
+
+  @media screen and (max-width: 1024px) {
+    padding-top: 80px;
   }
 `;
 
@@ -91,7 +95,7 @@ export const Labels = styled.ul`
   }
 
   span {
-    font-size: 0.875rem;
+    font-size: clamp(0.875rem, 1vw, 1.25rem);
     letter-spacing: 0.05rem;
     text-transform: lowercase;
     color: var(--primaryLight);

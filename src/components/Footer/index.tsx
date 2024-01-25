@@ -6,7 +6,7 @@ import { montserrat } from "@/lib/fonts";
 
 function Footer() {
   return (
-    <Container>
+    <Container className="scroll-align">
       <Logo href="#" />
       <span className={montserrat.className}>
         © Copyright {new Date().getFullYear()} - {new Date().getFullYear() + 1}{" "}

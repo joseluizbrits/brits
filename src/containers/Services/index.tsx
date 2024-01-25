@@ -21,13 +21,15 @@ function Services() {
             <p>
               <strong>{title}</strong> {desc}
             </p>
+
             <ButtonProject href={href} />
           </Text>
+
           <ImageWrapper id={`img-${index + 1}`}>
             <Image
               src={img}
               alt={alt}
-              sizes="50vw"
+              sizes="(max-width: 1024px) 85vw, 50vw"
               fill
               priority
               unoptimized

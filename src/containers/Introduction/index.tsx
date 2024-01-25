@@ -3,8 +3,8 @@
 import { Container, Content, Labels } from "./styles";
 import { useState } from "react";
 
-import Button from "@/components/Button";
 import ConvinceMe from "@/components/ConvinceMe";
+import Button from "@/components/Button";
 import Up from "@/icons/Up";
 
 function Introduction() {
@@ -12,14 +12,17 @@ function Introduction() {
 
   return (
     <Container className="scroll-align">
-      <Content>
+      <Content className="container">
         <h2>
-          Aumente a visibilidade de seus produtos e serviços
           <small>Credibilidade online</small>
+          Aumente a visibilidade de seus produtos e serviços
         </h2>
+
         <div>
           <Button setActive={setActive}>Me convença</Button>
+
           <ConvinceMe active={active} setActive={setActive} />
+
           <Labels>
             <li>
               <span>clientes</span>

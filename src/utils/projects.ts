@@ -15,7 +15,7 @@ const projects = [
   {
     id: "project-2",
     title: "Sites One-Page:",
-    desc: "Com conteúdo otimizado em uma página que impacta",
+    desc: "Com conteúdo otimizado em uma única página",
     img: img2.src,
     alt: "Tela do site da academia Magic Box",
     href: "https://joseluizbrits.github.io/magic-box/",

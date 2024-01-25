@@ -8,7 +8,7 @@ export const Container = styled.section`
   display: flex;
   position: relative;
 
-  /* &::before {
+  &::before {
     content: "";
     display: block;
     width: 500px;
@@ -18,5 +18,5 @@ export const Container = styled.section`
     position: absolute;
     top: 24%;
     left: 52%;
-  } */
+  }
 `;

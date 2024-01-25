@@ -3,11 +3,11 @@ import styled from "styled-components";
 export const Title = styled.div`
   display: flex;
   justify-content: center;
-  padding: 200px 0;
+  padding: 10.42% 0;
 
   h2 {
     font-weight: 400;
-    font-size: 4rem;
+    font-size: clamp(2rem, 5vw, 7rem);
     color: var(--white);
   }
 
@@ -61,16 +61,17 @@ export const ProjectWrapper = styled.div`
     gap: 80px;
   }
 
-  &#project-2 p {
+  &#project-2 p,
+  &#project-4 p {
     text-align: end;
   }
 
   p {
-    font-size: 5rem;
+    font-size: clamp(2rem, 5vw, 7rem);
     line-height: 1.25em;
     height: max-content;
     color: var(--primaryDark);
-    padding: 120px 0;
+    padding: 20vh 0;
 
     position: sticky;
     top: 0;
@@ -80,25 +81,55 @@ export const ProjectWrapper = styled.div`
     font-weight: normal;
     color: var(--primaryLight);
   }
+
+  @media screen and (max-width: 1024px) {
+    &#project-1,
+    &#project-3 {
+      padding-left: 20px;
+    }
+
+    &#project-2,
+    &#project-4 {
+      padding-right: 20px;
+    }
+
+    &#project-4 {
+      /* justify-content: initial; */
+      gap: 40px;
+    }
+
+    p {
+      font-size: clamp(2rem, 4vw, 7rem);
+    }
+  }
 `;
 
 export const Text = styled.div`
   position: relative;
 
-  > div {
-    position: sticky;
-    top: 65%;
-    z-index: 1;
-  }
-
-  &#text-1 > div,
-  &#text-3 > div {
+  &#text-1 > a,
+  &#text-3 > a {
     transform: translateX(45vw);
   }
 
-  &#text-2 > div,
-  &#text-4 > div {
+  &#text-2 > a,
+  &#text-4 > a {
     transform: translateX(-12vw);
+  }
+
+  @media screen and (max-width: 1024px) {
+    &#text-1 > a,
+    &#text-3 > a {
+      transform: translateX(23vw);
+    }
+
+    &#text-2 > a {
+      transform: translateX(-8vw);
+    }
+
+    &#text-4 > a {
+      transform: translateX(-16vw);
+    }
   }
 `;
 
@@ -114,7 +145,6 @@ export const ImageWrapper = styled.div`
 
   &#img-4 {
     width: 25vw;
-    margin-left: 200px;
   }
 
   img {
@@ -128,5 +158,13 @@ export const ImageWrapper = styled.div`
 
   &#img-4 img {
     border-radius: 50px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    width: 80vw;
+
+    &#img-4 {
+      width: 40vw;
+    }
   }
 `;

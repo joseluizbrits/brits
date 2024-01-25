@@ -1,30 +1,24 @@
 import styled from "styled-components";
 
-export const ButtonWrapper = styled.div`
-  width: 220px;
-  height: 220px;
+export const ButtonWrapper = styled.a`
+  width: clamp(160px, 15vw, 220px);
+  height: clamp(160px, 15vw, 220px);
   border-radius: 50%;
   background: var(--gradientOne);
+
+  outline: 1px solid var(--tertiaryClear);
+  outline-offset: -20px;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
-  a {
-    width: 80%;
-    height: 80%;
-    border-radius: 50%;
-    border: 1px solid var(--tertiary);
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    position: relative;
-  }
+  position: sticky;
+  top: 50%;
+  z-index: 1;
 
   span {
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
     letter-spacing: 0.05rem;
     line-height: 1.25em;
     max-width: 5em;
@@ -32,8 +26,11 @@ export const ButtonWrapper = styled.div`
   }
 
   svg {
+    scale: 0.6;
+    opacity: 0.3;
+
     position: absolute;
-    top: 50%;
-    left: 70%;
+    top: 52%;
+    left: 64%;
   }
 `;
