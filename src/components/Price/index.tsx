@@ -7,33 +7,67 @@ import {
   Observation,
   ButtonShowPrice,
   ButtonBack,
+  ButtonClose,
 } from "./styles";
 
-import { useState } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
 import { ubuntu } from "@/lib/fonts";
 
 import Input from "../Input";
 import Back from "@/icons/Back";
+
 import priceSteps from "@/utils/priceSteps";
+import { toCurrencyBRL } from "@/utils/toCurrencyBRL";
+import Close from "@/icons/Close";
 
-function Price() {
+interface IPrice {
+  active: boolean;
+  setActive: Dispatch<SetStateAction<boolean>>;
+}
+
+function Price({ active, setActive }: IPrice) {
   const [stepNumber, setStepNumber] = useState(1);
-  const [amount, setAmount] = useState(0);
+  const [amount, setAmount] = useState<number[]>([]);
+  const [animetionDirection, setAnimetionDirection] = useState("right");
 
-  console.log(amount);
+  const handleActive = (target: EventTarget) => {
+    const element = target as HTMLElement;
+
+    if (element.classList.contains("close")) {
+      document.documentElement.style.overflow = "auto";
+      setActive(false);
+    }
+    return;
+  };
+
+  const handleBack = (target: EventTarget & HTMLButtonElement) => {
+    if (target.id) setAmount((amount) => amount.slice(1));
+    setStepNumber((step) => step - 1);
+    setAnimetionDirection("left");
+  };
+
+  const handlePrice = () => {
+    setStepNumber((step) => step + 1);
+    setAnimetionDirection("right");
+  };
 
   return (
-    <Container>
+    <Container
+      className={active ? "close active" : "close"}
+      onClick={({ target }) => handleActive(target)}
+    >
       {priceSteps.map(({ id, desc, ask, opts }, index) => (
         <Content
           key={id}
           className={id.includes(String(stepNumber)) ? "active" : ""}
+          $animetionDirection={animetionDirection}
         >
           <CardHeader>
             {index > 0 && (
               <ButtonBack
                 aria-label="voltar"
-                onClick={() => setStepNumber((state) => state - 1)}
+                id="by-step"
+                onClick={({ currentTarget }) => handleBack(currentTarget)}
               >
                 <Back />
                 <span className={ubuntu.className}>voltar</span>
@@ -57,6 +91,7 @@ function Price() {
                   value={value}
                   setAmount={setAmount}
                   setStepNumber={setStepNumber}
+                  setAnimationDirection={setAnimetionDirection}
                 />
                 <label htmlFor={id}>{answer}</label>
               </li>
@@ -64,9 +99,7 @@ function Price() {
           </Options>
 
           {opts[index].type === "checkbox" && (
-            <ButtonShowPrice
-              onClick={() => setStepNumber((state) => state + 1)}
-            >
+            <ButtonShowPrice onClick={handlePrice}>
               <span className={ubuntu.className}>Ver preço</span>
             </ButtonShowPrice>
           )}
@@ -74,10 +107,10 @@ function Price() {
       ))}
 
       {stepNumber > priceSteps.length && (
-        <Content className="voila">
+        <Content className="voila" $animetionDirection={animetionDirection}>
           <ButtonBack
             aria-label="voltar"
-            onClick={() => setStepNumber((state) => state - 1)}
+            onClick={({ currentTarget }) => handleBack(currentTarget)}
           >
             <Back />
             <span className={ubuntu.className}>voltar</span>
@@ -85,12 +118,13 @@ function Price() {
           <p>VOILA! A pechincha sairia por:</p>
 
           <Value>
-            <p>
-              {amount.toLocaleString("pt-br", {
-                style: "currency",
-                currency: "BRL",
-              })}
-            </p>
+            {
+              <p>
+                {toCurrencyBRL(
+                  Math.ceil(amount.reduce((acc, value) => acc + value, 0))
+                )}
+              </p>
+            }
           </Value>
 
           <Observation>
@@ -100,6 +134,13 @@ function Price() {
           </Observation>
         </Content>
       )}
+      <ButtonClose
+        aria-label="fechar"
+        className="close"
+        onClick={({ currentTarget }) => handleActive(currentTarget)}
+      >
+        <Close />
+      </ButtonClose>
     </Container>
   );
 }

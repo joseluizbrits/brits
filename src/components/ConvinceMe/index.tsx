@@ -14,9 +14,9 @@ interface IConvinceMe {
 
 function ConvinceMe({ active, setActive }: IConvinceMe) {
   const handleActive = (target: EventTarget) => {
-    const element = target as Element;
+    const element = target as HTMLElement;
 
-    if (element.classList.contains("shadow")) {
+    if (element.classList.contains("close")) {
       document.documentElement.style.overflow = "auto";
       setActive(false);
     }

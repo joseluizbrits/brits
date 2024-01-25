@@ -17,7 +17,7 @@ function Project() {
           expectativas
         </h2>
         <Button setActive={setActive}>Simular preço</Button>
-        <Price />
+        <Price active={active} setActive={setActive} />
       </Content>
     </Container>
   );

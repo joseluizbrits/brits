@@ -5,24 +5,35 @@ interface IInput {
   name: string;
   type: string;
   value: number;
-  setAmount: Dispatch<SetStateAction<number>>;
+  setAmount: Dispatch<SetStateAction<number[]>>;
   setStepNumber: Dispatch<SetStateAction<number>>;
+  setAnimationDirection: Dispatch<SetStateAction<string>>;
 }
 
-function Input({ id, name, type, value, setAmount, setStepNumber }: IInput) {
-  const handleChange = (target: EventTarget) => {
-    const input = target as HTMLInputElement;
-
-    if (input.checked) {
-      setAmount((state) => state + value);
+function Input({
+  id,
+  name,
+  type,
+  value,
+  setAmount,
+  setStepNumber,
+  setAnimationDirection,
+}: IInput) {
+  const handleChange = (target: EventTarget & HTMLInputElement) => {
+    if (target.checked) {
+      setAmount((amount) =>
+        type === "checkbox" ? [...amount, value] : [value, ...amount]
+      );
     } else {
-      setAmount((state) => state - value);
+      setAmount((amount) => amount.filter((item) => item !== value));
     }
 
     if (type === "checkbox") return;
 
     setTimeout(() => {
-      setStepNumber((state) => state + 1);
+      setStepNumber((step) => step + 1);
+      setAnimationDirection("right");
+      target.checked = false;
     }, 200);
   };
 
@@ -32,7 +43,7 @@ function Input({ id, name, type, value, setAmount, setStepNumber }: IInput) {
       name={name}
       type={type}
       value={value}
-      onChange={({ target }) => handleChange(target)}
+      onChange={({ currentTarget }) => handleChange(currentTarget)}
     />
   );
 }
