@@ -34,7 +34,7 @@ const GlobalStyles = createGlobalStyle`
 
   html,
   body {
-    scroll-snap-type: y mandatory;
+    scroll-snap-type: y proximity;
   }
 
   a {
