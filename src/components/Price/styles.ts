@@ -2,9 +2,17 @@ import styled from "styled-components";
 import check from "../../../public/check.svg";
 
 export const Container = styled.div`
+  opacity: 0;
+  pointer-events: none;
+
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+
   width: 100%;
   height: 100vh;
-  background-color: var(--secondary);
+  background-color: var(--secondaryShadow);
 
   overflow-y: scroll;
   overflow-x: hidden;
@@ -17,7 +25,7 @@ export const Container = styled.div`
   left: 0;
 `;
 
-export const Content = styled.div`
+export const Content = styled.div<{ $animetionDirection: string }>`
   grid-area: 1/1;
 
   height: fit-content;
@@ -56,16 +64,24 @@ export const Content = styled.div`
     padding-bottom: 48px;
   }
 
-  animation: sideways 0.3s ease-out forwards;
+  animation: ${({ $animetionDirection }) => $animetionDirection} 0.3s ease-out
+    forwards;
 
-  @keyframes sideways {
+  @keyframes left {
     from {
-      transform: translateX(100%);
-      opacity: 0;
+      transform: translateX(-50%);
     }
     to {
       transform: translateX(0%);
-      opacity: 1;
+    }
+  }
+
+  @keyframes right {
+    from {
+      transform: translateX(50%);
+    }
+    to {
+      transform: translateX(0%);
     }
   }
 `;
@@ -234,4 +250,10 @@ export const Observation = styled.span`
     top: 40px;
     left: -13px;
   }
+`;
+
+export const ButtonClose = styled.button`
+  position: absolute;
+  top: 40px;
+  right: 40px;
 `;

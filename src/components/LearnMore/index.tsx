@@ -11,9 +11,9 @@ interface ILearnMore {
 
 function LearnMore({ active, setActive }: ILearnMore) {
   const handleActive = (target: EventTarget) => {
-    const element = target as Element;
+    const element = target as HTMLElement;
 
-    if (element.classList.contains("shadow")) {
+    if (element.classList.contains("close")) {
       document.documentElement.style.overflow = "auto";
       setActive(false);
     }
@@ -22,7 +22,7 @@ function LearnMore({ active, setActive }: ILearnMore) {
 
   return (
     <Container
-      className={active ? "shadow active" : "shadow"}
+      className={active ? "close active" : "close"}
       onClick={({ target }) => handleActive(target)}
     >
       <div>
