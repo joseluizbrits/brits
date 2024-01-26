@@ -8,8 +8,8 @@ export const Container = styled.aside`
   &::after {
     content: "";
     display: block;
-    width: 200px;
-    height: 160px;
+    width: clamp(20px, 10vw, 160px);
+    height: clamp(80px, 10vw, 160px);
     border-radius: 50px 0 0 50px;
     background-color: var(--tertiary);
 
@@ -19,18 +19,50 @@ export const Container = styled.aside`
   }
 
   a {
+    display: flex;
+
     position: relative;
-    top: 50%;
-    left: 54%;
+    top: 48%;
+    left: 50%;
   }
 
   span {
-    font-size: 3rem;
+    font-size: clamp(1.5rem, 3vw, 4rem);
+    line-height: 1.5em;
     color: var(--white);
-    max-width: 15ch;
+
+    display: block;
+    max-width: 12.5ch;
   }
 
   svg {
-    transform: translate(36px, 12px);
+    align-self: end;
+    transform: translate(-64px, -6px);
+  }
+
+  @media screen and (max-width: 1440px) {
+    span {
+      font-size: 2rem;
+    }
+
+    svg {
+      transform: translate(-78px, 7px);
+      scale: 0.7;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    a {
+      top: 51%;
+    }
+
+    span {
+      font-size: 1.5rem;
+    }
+
+    svg {
+      transform: translate(-48px, 7px);
+      scale: 0.7;
+    }
   }
 `;

@@ -34,6 +34,7 @@ export const Container = styled.div`
   label {
     font-size: 3rem;
     color: var(--white);
+    min-width: 160px;
   }
 
   input,
@@ -79,9 +80,59 @@ export const Container = styled.div`
 
   span.error {
     color: var(--warning);
-    margin-top: -24px;
+    margin-top: -20px;
 
     justify-self: end;
     grid-column: span 2;
+  }
+
+  @media screen and (max-width: 1440px) {
+    .fields,
+    .fields div {
+      gap: 28px;
+    }
+
+    label {
+      font-size: 2.5rem;
+      min-width: 120px;
+    }
+  }
+
+  @media screen and (max-width: 1440px) {
+    form {
+      margin: 0 80px;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    form {
+      margin: 0 40px;
+    }
+
+    .fields,
+    .fields div {
+      gap: 20px;
+    }
+
+    .fields div {
+      grid-template-columns: 1fr;
+    }
+
+    label {
+      font-size: 2rem;
+    }
+
+    button,
+    span.success {
+      position: initial;
+    }
+
+    span.error {
+      font-size: 0.875rem;
+      margin-top: -8px;
+
+      justify-self: auto;
+      grid-column: auto;
+    }
   }
 `;

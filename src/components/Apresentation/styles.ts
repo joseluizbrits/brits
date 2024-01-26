@@ -22,9 +22,9 @@ export const Container = styled.div`
   }
 `;
 
-export const ImageWrapper = styled.div`
-  width: 400px;
-  height: 400px;
+export const Me = styled.div`
+  width: clamp(240px, 26vw, 400px);
+  height: clamp(240px, 26vw, 400px);
   border-radius: 50%;
 
   position: relative;
@@ -36,7 +36,7 @@ export const ImageWrapper = styled.div`
 `;
 
 export const Baloon = styled.div`
-  width: fit-content;
+  width: max-content;
   height: max-content;
   border-radius: 25px;
   background-color: var(--primaryDark);
@@ -49,7 +49,7 @@ export const Baloon = styled.div`
   position: relative;
 
   span {
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
     line-height: 1.5em;
     color: var(--primaryLight);
   }
@@ -64,13 +64,13 @@ export const Baloon = styled.div`
   }
 
   &.baloon-short {
-    top: -500px;
-    right: -360px;
+    bottom: 38%;
+    left: 80%;
   }
 
   &.baloon-large {
-    bottom: 230px;
-    left: 400px;
+    top: 60%;
+    left: 85%;
   }
 
   &.baloon-short::before {
@@ -100,5 +100,15 @@ export const Baloon = styled.div`
   &.baloon-large span {
     max-width: 37ch;
     padding: 48px 56px;
+  }
+
+  @media screen and (max-width: 1440px) {
+    &.baloon-short span {
+      padding: 28px 36px;
+    }
+
+    &.baloon-large span {
+      padding: 32px 40px;
+    }
   }
 `;

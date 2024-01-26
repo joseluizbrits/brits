@@ -15,8 +15,8 @@ export const Title = styled.h2`
   &::after {
     content: "";
     display: block;
-    width: 200px;
-    height: 64px;
+    width: clamp(100px, 15vw, 200px);
+    height: clamp(24px, 6vw, 64px);
 
     background-color: var(--tertiary);
     opacity: 0.8;
@@ -40,13 +40,13 @@ export const Title = styled.h2`
 
   small {
     font-weight: 400;
-    font-size: 1.25rem;
+    font-size: clamp(0.875rem, 1.25vw, 1.5rem);
     color: var(--primaryDark);
   }
 
   span {
     font-weight: 400;
-    font-size: 4rem;
+    font-size: clamp(2.5rem, 4vw, 7rem);
     line-height: 1.25em;
     color: var(--white);
     max-width: 19ch;
