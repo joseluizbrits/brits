@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { ubuntu } from "@/lib/fonts";
 
 import StylesProvider from "@/styles/StylesProvider";
+import SmoothScroll from "@/components/SmoothScroll";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -19,9 +20,11 @@ export default function RootLayout({
     <html lang="pt-br">
       <body className={ubuntu.className}>
         <StylesProvider>
-          <Header />
-          {children}
-          <Footer />
+          <SmoothScroll>
+            <Header />
+            {children}
+            <Footer />
+          </SmoothScroll>
         </StylesProvider>
       </body>
     </html>

@@ -10,7 +10,7 @@ function Project() {
   const [active, setActive] = useState(false);
 
   return (
-    <Container className="scroll-align">
+    <Container>
       <Content className="container">
         <h2>
           Cada projeto é uma oportunidade para nos reinventarmos e superar

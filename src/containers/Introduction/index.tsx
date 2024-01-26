@@ -11,7 +11,7 @@ function Introduction() {
   const [active, setActive] = useState(false);
 
   return (
-    <Container className="scroll-align">
+    <Container>
       <Content className="container">
         <h2>
           <small>Credibilidade online</small>

@@ -28,13 +28,7 @@ const GlobalStyles = createGlobalStyle`
 
   html {
     background: var(--primaryGradient);
-    scroll-behavior: smooth;
     overflow-x: hidden;
-  }
-
-  html,
-  body {
-    scroll-snap-type: y proximity;
   }
 
   a {
@@ -73,8 +67,26 @@ const GlobalStyles = createGlobalStyle`
     padding: 0 120px;
   }
 
-  .scroll-align {
-    scroll-snap-align: start;
+  /* LENIS SCROLL SMOOTH */
+
+  html.lenis {
+    height: auto;
+  }
+
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+
+  .lenis.lenis-scrolling iframe {
+    pointer-events: none;
   }
 
   @media screen and (max-width: 1440px) {

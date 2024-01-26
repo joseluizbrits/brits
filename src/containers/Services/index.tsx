@@ -8,7 +8,7 @@ import projects from "@/utils/projects";
 
 function Services() {
   return (
-    <section className="scroll-align">
+    <section id="services">
       <Title>
         <h2>
           O que <em>Brits</em> pode te oferecer:
