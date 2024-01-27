@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import { ubuntu } from "@/lib/fonts";
 
 import StylesProvider from "@/styles/StylesProvider";
-import SmoothScroll from "@/components/SmoothScroll";
+import PopupProvider from "@/contexts/PopupContext";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SmoothScroll from "@/components/SmoothScroll";
 
 export const metadata: Metadata = {
   title: "BRITS",
@@ -20,11 +21,13 @@ export default function RootLayout({
     <html lang="pt-br">
       <body className={ubuntu.className}>
         <StylesProvider>
-          <SmoothScroll>
-            <Header />
-            {children}
-            <Footer />
-          </SmoothScroll>
+          <PopupProvider>
+            <SmoothScroll>
+              <Header />
+              {children}
+              <Footer />
+            </SmoothScroll>
+          </PopupProvider>
         </StylesProvider>
       </body>
     </html>

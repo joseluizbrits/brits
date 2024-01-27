@@ -19,6 +19,13 @@ export const Container = styled.section`
     top: 0;
     right: 0;
   }
+
+  @media screen and (max-width: 768px) {
+    &,
+    &::after {
+      height: calc(100vh - 80px);
+    }
+  }
 `;
 
 export const Content = styled.div`
@@ -53,14 +60,48 @@ export const Content = styled.div`
     background-color: var(--secondary);
     border-radius: 50px;
     padding: 20px 32px;
-    width: fit-content;
-
-    align-self: start;
   }
 
   @media screen and (min-width: 1680px) {
+    span {
+      font-size: 1.5rem;
+    }
+
     h1 {
-      font-size: clamp(4rem, 8vw, 9rem);
+      font-size: clamp(2rem, 7vw, 9rem);
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    h1 {
+      margin-bottom: 36px;
+    }
+
+    a {
+      font-size: 0.875rem;
+      padding: 18px 28px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    div {
+      margin-top: -120px;
+    }
+
+    span {
+      font-size: 0.75rem;
+    }
+
+    h1 {
+      font-size: clamp(2.5rem, 7vw, 9rem);
+      line-height: 1.25em;
+      margin-top: 4px;
+      margin-bottom: 28px;
+    }
+
+    a {
+      font-size: 0.75rem;
+      padding: 14px 24px;
     }
   }
 `;
@@ -85,5 +126,14 @@ export const Media = styled.div`
 
   @media screen and (max-width: 1024px) {
     right: 40px;
+  }
+
+  @media screen and (max-width: 768px) {
+    right: 10px;
+
+    a {
+      scale: 0.7;
+      padding: 4px;
+    }
   }
 `;

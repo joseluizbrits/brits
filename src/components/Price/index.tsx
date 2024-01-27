@@ -10,7 +10,7 @@ import {
   ButtonClose,
 } from "./styles";
 
-import { Dispatch, SetStateAction, useState } from "react";
+import { useState } from "react";
 import { ubuntu } from "@/lib/fonts";
 
 import Input from "../Input";
@@ -19,24 +19,22 @@ import Back from "@/icons/Back";
 import priceSteps from "@/utils/priceSteps";
 import { toCurrencyBRL } from "@/utils/toCurrencyBRL";
 import Close from "@/icons/Close";
+import usePopup from "@/hooks/usePopup";
 
-interface IPrice {
-  active: boolean;
-  setActive: Dispatch<SetStateAction<boolean>>;
-}
-
-function Price({ active, setActive }: IPrice) {
+function Price() {
   const [stepNumber, setStepNumber] = useState(1);
   const [amount, setAmount] = useState<number[]>([]);
   const [animetionDirection, setAnimetionDirection] = useState("right");
 
+  const { getPopup, setPopup } = usePopup();
+
+  const popup = getPopup(3);
+
   const handleActive = (target: EventTarget) => {
     const element = target as HTMLElement;
 
-    if (element.classList.contains("close")) {
-      document.documentElement.style.overflow = "auto";
-      setActive(false);
-    }
+    if (element.classList.contains("close")) setPopup(3, "close");
+
     return;
   };
 
@@ -53,8 +51,9 @@ function Price({ active, setActive }: IPrice) {
 
   return (
     <Container
-      className={active ? "close active" : "close"}
+      className={popup ? "close active" : "close"}
       onClick={({ target }) => handleActive(target)}
+      data-lenis-prevent
     >
       {priceSteps.map(({ id, desc, ask, opts }, index) => (
         <Content

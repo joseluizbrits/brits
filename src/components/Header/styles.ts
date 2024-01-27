@@ -30,4 +30,17 @@ export const Container = styled.header`
     padding: 12px 24px;
     border-radius: 50px;
   }
+
+  @media screen and (max-width: 768px) {
+    height: 80px;
+
+    ul > :nth-child(1) {
+      display: none;
+    }
+
+    ul :last-child a {
+      font-size: 0.75rem;
+      padding: 10px 20px;
+    }
+  }
 `;

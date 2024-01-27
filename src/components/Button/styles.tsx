@@ -14,4 +14,12 @@ export const ButtonWrapper = styled.button<{ $secondary?: boolean }>`
     color: ${(props) =>
       !props.$secondary ? "var(--primaryDark)" : "var(--white)"};
   }
+
+  @media screen and (max-width: 768px) {
+    padding: 16px 24px;
+
+    span {
+      font-size: 0.875rem;
+    }
+  }
 `;

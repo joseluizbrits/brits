@@ -1,32 +1,31 @@
 import { Container } from "./styles";
-import { Dispatch, SetStateAction } from "react";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
 
-import convince from "@/utils/convince";
 import ConvinceMeCard from "../ConvinceMeCard";
+import convince from "@/utils/convince";
+import usePopup from "@/hooks/usePopup";
 
-interface IConvinceMe {
-  active: boolean;
-  setActive: Dispatch<SetStateAction<boolean>>;
-}
+function ConvinceMe() {
+  const { getPopup, setPopup } = usePopup();
 
-function ConvinceMe({ active, setActive }: IConvinceMe) {
-  const handleActive = (target: EventTarget) => {
+  const popup = getPopup(1);
+
+  const handlePopup = (target: EventTarget) => {
     const element = target as HTMLElement;
 
     if (element.classList.contains("close")) {
+      setPopup(1, "close");
       document.documentElement.style.overflow = "auto";
-      setActive(false);
     }
     return;
   };
 
   return (
     <Container
-      className={active ? "active" : ""}
-      onClick={({ target }) => handleActive(target)}
+      className={popup ? "active" : ""}
+      onClick={({ target }) => handlePopup(target)}
+      data-lenis-prevent
     >
       <Swiper
         pagination={{

@@ -100,6 +100,12 @@ const GlobalStyles = createGlobalStyle`
       padding: 0 40px;
     }
   }
+
+  @media screen and (max-width: 1024px) {
+    .container {
+      padding: 0 40px;
+    }
+  }
 `;
 
 export default GlobalStyles;

@@ -1,15 +1,12 @@
 "use client";
 
 import { Container, Content, Labels } from "./styles";
-import { useState } from "react";
 
 import ConvinceMe from "@/components/ConvinceMe";
 import Button from "@/components/Button";
 import Up from "@/icons/Up";
 
 function Introduction() {
-  const [active, setActive] = useState(false);
-
   return (
     <Container>
       <Content className="container">
@@ -19,19 +16,21 @@ function Introduction() {
         </h2>
 
         <div>
-          <Button setActive={setActive}>Me convença</Button>
+          <Button popupId={1}>Me convença</Button>
 
-          <ConvinceMe active={active} setActive={setActive} />
+          <ConvinceMe />
 
           <Labels>
             <li>
               <span>clientes</span>
               <Up />
             </li>
+
             <li>
               <span>vendas</span>
               <Up />
             </li>
+
             <li>
               <span>faturameto</span>
               <Up />

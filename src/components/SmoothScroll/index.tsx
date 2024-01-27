@@ -1,22 +1,31 @@
 "use client";
 
-import { ReactNode, useEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from "@studio-freight/lenis";
 
+import { ReactNode, useEffect } from "react";
+import usePopup from "@/hooks/usePopup";
+
 function SmoothScroll({ children }: { children: ReactNode }) {
+  const { getPopup } = usePopup();
+
+  const popup1 = getPopup(1);
+  const popup2 = getPopup(2);
+
   useEffect(() => {
-    const lenis = new Lenis({
-      duration: 3,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    gsap.registerPlugin(ScrollTrigger);
+
+    const lenis = new Lenis();
+
+    lenis.on("scroll", ScrollTrigger.update);
+
+    gsap.ticker.add((time) => {
+      lenis.raf(time * 500);
     });
 
-    function raf(time: number) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-  }, []);
+    gsap.ticker.lagSmoothing(0);
+  }, [popup1, popup2]);
 
   return <>{children}</>;
 }

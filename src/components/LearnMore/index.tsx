@@ -2,28 +2,29 @@
 
 import { Container, Text } from "./styles";
 import AccordionList from "../AccordionList";
-import { Dispatch, SetStateAction } from "react";
+import usePopup from "@/hooks/usePopup";
 
-interface ILearnMore {
-  active: boolean;
-  setActive: Dispatch<SetStateAction<boolean>>;
-}
+function LearnMore() {
+  const { getPopup, setPopup } = usePopup();
 
-function LearnMore({ active, setActive }: ILearnMore) {
-  const handleActive = (target: EventTarget) => {
+  const popup = getPopup(2);
+
+  const handlePopup = (target: EventTarget) => {
     const element = target as HTMLElement;
 
     if (element.classList.contains("close")) {
+      setPopup(2, "close");
       document.documentElement.style.overflow = "auto";
-      setActive(false);
     }
+
     return;
   };
 
   return (
     <Container
-      className={active ? "close active" : "close"}
-      onClick={({ target }) => handleActive(target)}
+      className={popup ? "close active" : "close"}
+      onClick={({ target }) => handlePopup(target)}
+      data-lenis-prevent
     >
       <div>
         <Text>

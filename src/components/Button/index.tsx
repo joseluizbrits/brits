@@ -1,23 +1,26 @@
 "use client";
 
 import { ButtonWrapper } from "./styles";
-import { ReactNode, Dispatch, SetStateAction } from "react";
+import { ReactNode } from "react";
 import { ubuntu } from "@/lib/fonts";
+import usePopup from "@/hooks/usePopup";
 
 interface IButton {
   children: ReactNode;
   secondary?: boolean;
-  setActive: Dispatch<SetStateAction<boolean>>;
+  popupId: number;
 }
 
-function Button({ children, secondary, setActive }: IButton) {
-  const handleActive = () => {
+function Button({ children, secondary, popupId }: IButton) {
+  const { setPopup } = usePopup();
+
+  const handlePopup = () => {
+    setPopup(popupId, "show");
     document.documentElement.style.overflow = "hidden";
-    setActive(true);
   };
 
   return (
-    <ButtonWrapper $secondary={secondary} onClick={handleActive}>
+    <ButtonWrapper $secondary={secondary} onClick={handlePopup}>
       <span className={ubuntu.className}>{children}</span>
     </ButtonWrapper>
   );

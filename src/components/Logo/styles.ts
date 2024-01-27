@@ -19,4 +19,26 @@ export const Container = styled.a`
 
     padding-right: 20px;
   }
+
+  @media screen and (max-width: 1440px) {
+    span {
+      font-size: 2rem;
+      padding: 12px;
+    }
+
+    svg {
+      scale: 0.8;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    span {
+      font-size: 1.5rem;
+      padding: 3px;
+    }
+
+    svg {
+      scale: 0.6;
+    }
+  }
 `;

@@ -32,6 +32,7 @@ function ConvinceMeCard({ id, text, img, link }: IConvinceMeCard) {
               </span>
             ))}
           </p>
+
           <Quotes className="quote-1" />
           <Quotes className="quote-2" />
         </Text>
@@ -44,6 +45,7 @@ function ConvinceMeCard({ id, text, img, link }: IConvinceMeCard) {
             alt={img.alt}
           />
         )}
+
         {link && <Link href="#">Dar um alô</Link>}
       </Content>
     </Container>

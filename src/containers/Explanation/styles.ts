@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import note from "../../../public/note.jpg";
+import img from "../../../public/note.jpg";
 
 export const Container = styled.section`
   background: var(--gradientThree);
@@ -11,7 +11,7 @@ export const Container = styled.section`
     display: block;
     width: 34.9%;
     height: 100vh;
-    background: url(${note.src}) 40% center no-repeat;
+    background: url(${img.src}) 40% center no-repeat;
     background-size: cover;
     opacity: 0.4;
 
@@ -33,6 +33,13 @@ export const Container = styled.section`
     top: 0;
     right: 65%;
   }
+
+  @media screen and (max-width: 768px) {
+    &::before {
+      background: url(${img.src}) 21% center no-repeat;
+      background-size: cover;
+    }
+  }
 `;
 
 export const Content = styled.div`
@@ -48,7 +55,7 @@ export const Content = styled.div`
 
   h2 {
     font-weight: 400;
-    font-size: clamp(2rem, 6vw, 9rem);
+    font-size: clamp(3rem, 6vw, 9rem);
     line-height: 1.25em;
     text-align: end;
     color: var(--white);
@@ -63,7 +70,7 @@ export const Content = styled.div`
   }
 
   small {
-    font-size: clamp(1rem, 1.25vw, 1.5rem);
+    font-size: clamp(0.875rem, 1.25vw, 1.5rem);
     letter-spacing: 0.05rem;
     text-transform: lowercase;
     color: var(--primaryLight);
@@ -103,5 +110,21 @@ export const Labels = styled.ul`
     letter-spacing: 0.05rem;
     text-transform: lowercase;
     color: var(--primaryLight);
+  }
+
+  @media screen and (max-width: 1024px) {
+    gap: 20px;
+
+    li {
+      gap: 4px;
+    }
+
+    svg {
+      scale: 0.7;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    display: none;
   }
 `;
