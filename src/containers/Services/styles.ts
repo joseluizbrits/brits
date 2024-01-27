@@ -7,7 +7,7 @@ export const Title = styled.div`
 
   h2 {
     font-weight: 400;
-    font-size: clamp(2rem, 5vw, 7rem);
+    font-size: clamp(1.5rem, 5vw, 7rem);
     color: var(--white);
   }
 
@@ -94,12 +94,35 @@ export const ProjectWrapper = styled.div`
     }
 
     &#project-4 {
-      /* justify-content: initial; */
       gap: 40px;
     }
 
     p {
-      font-size: clamp(2rem, 4vw, 7rem);
+      font-size: clamp(1.5rem, 4vw, 7rem);
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    &#project-1,
+    &#project-3 {
+      padding-left: 10px;
+
+      img {
+        border-radius: 25px 0 0 25px;
+      }
+    }
+
+    &#project-2,
+    &#project-4 {
+      padding-right: 10px;
+
+      img {
+        border-radius: 0 25px 25px 0;
+      }
+    }
+
+    &#project-4 {
+      gap: 10px;
     }
   }
 `;
@@ -165,6 +188,18 @@ export const ImageWrapper = styled.div`
 
     &#img-4 {
       width: 40vw;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 90vw;
+
+    &#img-4 {
+      width: 62vw;
+    }
+
+    &#img-4 img {
+      border-radius: 0 25px 25px 0;
     }
   }
 `;

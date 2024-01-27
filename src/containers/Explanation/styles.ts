@@ -43,7 +43,7 @@ export const Content = styled.div`
 
   h2 {
     font-weight: 400;
-    font-size: clamp(3rem, 6vw, 9rem);
+    font-size: clamp(2.5rem, 6vw, 9rem);
     line-height: 1.25em;
     text-align: end;
     color: var(--white);
