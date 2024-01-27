@@ -137,7 +137,7 @@ export const Text = styled.div`
 
   &#text-2 > a,
   &#text-4 > a {
-    transform: translateX(-12vw);
+    transform: translateX(-13vw);
   }
 
   @media screen and (max-width: 1024px) {
@@ -151,7 +151,32 @@ export const Text = styled.div`
     }
 
     &#text-4 > a {
-      transform: translateX(-16vw);
+      transform: translateX(-13vw);
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    &#text-1 > a,
+    &#text-3 > a {
+      transform: translate(20vw, -70px);
+    }
+
+    &#text-2 > a {
+      transform: translate(-9vw, -70px);
+    }
+
+    &#text-4 > a {
+      transform: translate(-16vw, -70px);
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    &#text-2 > a {
+      transform: translate(-17vw, -70px);
+    }
+
+    &#text-4 > a {
+      transform: translate(-20vw, -120px);
     }
   }
 `;
