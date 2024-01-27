@@ -15,23 +15,11 @@ export const Container = styled.section`
     background-size: cover;
     opacity: 0.4;
 
+    clip-path: polygon(0 0, 100.1% 0%, 50.1% 100%, 0% 100%);
+
     position: absolute;
     top: 0;
     left: 0;
-  }
-
-  &::after {
-    content: "";
-    display: block;
-    background: var(--gradientTwo);
-
-    width: 35%;
-    height: 100vh;
-    clip-path: polygon(100% 0, 100% 100%, 0 100%);
-
-    position: absolute;
-    top: 0;
-    right: 30%;
   }
 
   @media screen and (max-width: 768px) {
@@ -51,7 +39,6 @@ export const Content = styled.div`
   grid-template-columns: 1fr;
 
   position: relative;
-  z-index: 1;
 
   h2 {
     font-weight: 400;

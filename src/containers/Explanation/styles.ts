@@ -15,23 +15,11 @@ export const Container = styled.section`
     background-size: cover;
     opacity: 0.4;
 
+    clip-path: polygon(0 0, 0% 100%, 100.3% 0);
+
     position: absolute;
     top: 0;
     left: 0;
-  }
-
-  &::after {
-    content: "";
-    display: block;
-    background: var(--gradientThree);
-
-    width: 35%;
-    height: 100vh;
-    clip-path: polygon(100% 0, 100% 100%, 0 100%);
-
-    position: absolute;
-    top: 0;
-    right: 65%;
   }
 
   @media screen and (max-width: 768px) {
