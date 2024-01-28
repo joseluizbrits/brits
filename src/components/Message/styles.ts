@@ -67,4 +67,30 @@ export const Container = styled.aside`
       scale: 0.7;
     }
   }
+
+  @media screen and (max-width: 640px) {
+    width: 55%;
+    display: grid;
+    place-items: center;
+
+    &::after {
+      opacity: 0.8;
+      bottom: 2%;
+    }
+
+    a {
+      position: initial;
+    }
+
+    a span {
+      font-size: 1.25rem;
+      color: var(--primaryLight);
+    }
+
+    a svg {
+      transform: translate(-112px, 30px);
+      scale: 0.4;
+      border-radius: 50%;
+    }
+  }
 `;

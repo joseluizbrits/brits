@@ -82,6 +82,8 @@ export const Point = styled.div`
   }
 
   @media screen and (max-width: 480px) {
+    opacity: 0.8;
+
     &#point-1,
     &#point-4,
     &#point-6 {
@@ -99,6 +101,26 @@ export const Point = styled.div`
     &#point-7 {
       width: 24px;
       height: 24px;
+    }
+
+    &#point-1 {
+      left: 0;
+    }
+
+    &#point-3 {
+      top: 4%;
+    }
+
+    &#point-5 {
+      display: none;
+    }
+
+    &#point-6 {
+      display: none;
+    }
+
+    &#point-7 {
+      left: 0;
     }
   }
 `;

@@ -26,4 +26,12 @@ export const Container = styled.section`
     top: 24%;
     left: 45%;
   }
+
+  @media screen and (max-width: 640px) {
+    &::before {
+      top: 10%;
+      left: -23%;
+      opacity: 0.8;
+    }
+  }
 `;

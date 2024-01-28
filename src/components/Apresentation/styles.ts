@@ -8,6 +8,11 @@ export const Container = styled.div`
 
   display: flex;
   align-items: center;
+
+  @media screen and (max-width: 640px) {
+    background: none;
+    clip-path: none;
+  }
 `;
 
 export const Me = styled.div`
@@ -124,8 +129,11 @@ export const Baloon = styled.div`
 
   @media screen and (max-width: 768px) {
     &.baloon-short {
-      bottom: 108%;
-      left: 45%;
+      bottom: 140%;
+    }
+
+    &.baloon-large {
+      top: 70%;
     }
 
     &.baloon-short::before {
@@ -173,6 +181,22 @@ export const Baloon = styled.div`
       position: absolute;
       top: -24px;
       left: -8px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    &.baloon-large {
+      left: 5%;
+    }
+
+    &.baloon-large::before {
+      top: -20px;
+      left: 24px;
+    }
+
+    &.baloon-large::after {
+      top: -36px;
+      left: 32px;
     }
   }
 `;
