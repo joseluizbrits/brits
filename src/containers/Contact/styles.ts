@@ -6,17 +6,18 @@ export const Container = styled.section`
 `;
 
 export const Title = styled.h2`
+  padding: 200px 0;
+  padding-left: 120px;
   display: grid;
   justify-content: center;
 
   position: relative;
 
-  &::before,
   &::after {
     content: "";
     display: block;
-    width: clamp(100px, 15vw, 200px);
-    height: clamp(24px, 6vw, 64px);
+    width: clamp(120px, 20vw, 240px);
+    height: clamp(24px, 4vw, 64px);
 
     background-color: var(--tertiary);
     opacity: 0.8;
@@ -24,18 +25,11 @@ export const Title = styled.h2`
     position: absolute;
   }
 
-  &::before {
+  &::after {
     border-radius: 0 50px 50px 0;
 
-    bottom: -80px;
+    bottom: 120px;
     left: 0;
-  }
-
-  &::after {
-    border-radius: 50px 0 0 50px;
-
-    top: 0;
-    right: 0;
   }
 
   small {
@@ -50,5 +44,17 @@ export const Title = styled.h2`
     line-height: 1.25em;
     color: var(--white);
     max-width: 19ch;
+  }
+
+  @media screen and (max-width: 1440px) {
+    padding-top: 120px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    padding: 80px 0 120px 120px;
+
+    &::after {
+      bottom: 80px;
+    }
   }
 `;

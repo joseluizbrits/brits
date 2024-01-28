@@ -33,7 +33,10 @@ function Price() {
   const handleActive = (target: EventTarget) => {
     const element = target as HTMLElement;
 
-    if (element.classList.contains("close")) setPopup(3, "close");
+    if (element.classList.contains("close")) {
+      setPopup(3, "close");
+      document.documentElement.style.overflow = "auto";
+    }
 
     return;
   };

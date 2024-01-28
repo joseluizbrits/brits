@@ -16,7 +16,9 @@ function SmoothScroll({ children }: { children: ReactNode }) {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    const lenis = new Lenis();
+    const lenis = new Lenis({
+      duration: 2.5,
+    });
 
     lenis.on("scroll", ScrollTrigger.update);
 

@@ -1,30 +1,18 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 40%;
-  height: 160vh;
-  padding-top: 240px;
+  height: 100vh;
   padding-left: 40px;
   background: var(--gradientTwoToPrimary);
+  clip-path: polygon(0 0, 40% 0, 80% 100%, 0% 100%);
 
-  &::before {
-    content: "";
-    display: block;
-    background: var(--gradientTwoToPrimary);
-
-    width: 60%;
-    height: 160vh;
-    clip-path: polygon(0 0, 100% 100%, 0 100%);
-
-    position: absolute;
-    top: 0;
-    left: 40%;
-  }
+  display: flex;
+  align-items: center;
 `;
 
 export const Me = styled.div`
-  width: clamp(240px, 26vw, 400px);
-  height: clamp(240px, 26vw, 400px);
+  width: clamp(120px, 20vw, 240px);
+  height: clamp(120px, 20vw, 240px);
   border-radius: 50%;
 
   position: relative;
@@ -64,13 +52,13 @@ export const Baloon = styled.div`
   }
 
   &.baloon-short {
-    bottom: 38%;
+    bottom: 70%;
     left: 80%;
   }
 
   &.baloon-large {
-    top: 60%;
-    left: 85%;
+    top: 18%;
+    left: 110%;
   }
 
   &.baloon-short::before {
@@ -103,12 +91,88 @@ export const Baloon = styled.div`
   }
 
   @media screen and (max-width: 1440px) {
+    &.baloon-short {
+      bottom: 54%;
+      left: 80%;
+    }
+
+    &.baloon-large {
+      top: 45%;
+      left: 100%;
+    }
+
     &.baloon-short span {
       padding: 28px 36px;
     }
 
     &.baloon-large span {
       padding: 32px 40px;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    &.baloon-short {
+      bottom: 80%;
+      left: 72%;
+    }
+
+    &.baloon-large {
+      top: 55%;
+      left: 50%;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    &.baloon-short {
+      bottom: 108%;
+      left: 45%;
+    }
+
+    &.baloon-short::before {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      clip-path: none;
+
+      bottom: -20px;
+      left: 25px;
+    }
+
+    &.baloon-short::after {
+      content: "";
+      display: block;
+      background-color: inherit;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      clip-path: none;
+
+      position: absolute;
+      bottom: -32px;
+      left: 20px;
+    }
+
+    &.baloon-large::before {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      clip-path: none;
+
+      top: -12px;
+      left: 0;
+    }
+
+    &.baloon-large::after {
+      content: "";
+      display: block;
+      background-color: inherit;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+
+      position: absolute;
+      top: -24px;
+      left: -8px;
     }
   }
 `;

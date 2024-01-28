@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
 export const Container = styled.aside`
-  max-height: 100vh;
-  flex: 1;
+  width: 45%;
+  justify-self: end;
+
   position: relative;
 
   &::after {
@@ -14,16 +15,17 @@ export const Container = styled.aside`
     background-color: var(--tertiary);
 
     position: absolute;
-    bottom: 0;
+    bottom: 18%;
     right: 0;
   }
 
   a {
+    width: max-content;
+    margin: auto;
     display: flex;
 
     position: relative;
-    top: 48%;
-    left: 50%;
+    top: 35%;
   }
 
   span {

@@ -37,9 +37,10 @@ export const Container = styled.section`
 
 export const Content = styled.div`
   height: 100%;
-  padding-top: 120px;
   padding-bottom: 48px;
+
   display: grid;
+  align-items: end;
 
   position: relative;
   z-index: 1;
