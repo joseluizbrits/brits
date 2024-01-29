@@ -3,9 +3,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
 
 import ConvinceMeCard from "../ConvinceMeCard";
+import Close from "@/icons/Close";
+
 import convince from "@/utils/convince";
 import usePopup from "@/hooks/usePopup";
-import Close from "@/icons/Close";
 
 function ConvinceMe() {
   const { getPopup, setPopup } = usePopup();

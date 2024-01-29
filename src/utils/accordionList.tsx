@@ -21,7 +21,7 @@ const accordionList = [
     id: "more-3",
     summary: "Responsividade",
     details:
-      "Um site moderno precisa se adaptar a todos os tamanhos de telas. Deixar o layout quebrado já é considerado um ato criminoso e sem direito à fiança.",
+      "Um site moderno precisa se adaptar a todos os tamanhos de telas. Deixar o layout quebrado já é considerado um crime sem direito à fiança.",
     icon: <StarThree />,
   },
 ];

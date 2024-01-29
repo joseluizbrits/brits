@@ -1,7 +1,8 @@
 "use client";
 
-import { Container, Text } from "./styles";
+import { Container, Text, ButtonClose } from "./styles";
 import AccordionList from "../AccordionList";
+import Close from "@/icons/Close";
 import usePopup from "@/hooks/usePopup";
 
 function LearnMore() {
@@ -45,6 +46,14 @@ function LearnMore() {
           aos visitantes.
         </p>
       </div>
+
+      <ButtonClose
+        aria-label="fechar"
+        className="close"
+        onClick={({ currentTarget }) => handlePopup(currentTarget)}
+      >
+        <Close />
+      </ButtonClose>
     </Container>
   );
 }

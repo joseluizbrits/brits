@@ -29,11 +29,12 @@ export const Content = styled.div<{ $animetionDirection: string }>`
   grid-area: 1/1;
 
   height: fit-content;
-  background-color: var(--primaryDark);
   padding: 64px;
   padding-top: 40px;
   margin: 0 120px;
   border-radius: 50px;
+  background-color: var(--primaryDark);
+  box-shadow: -3px 3px 6px rgba(0, 0, 0, 0.1);
 
   display: none;
 
@@ -256,4 +257,9 @@ export const ButtonClose = styled.button`
   position: absolute;
   top: 40px;
   right: 40px;
+
+  @media screen and (max-width: 768px) {
+    top: 20px;
+    right: 20px;
+  }
 `;

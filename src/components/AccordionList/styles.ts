@@ -35,6 +35,43 @@ export const Container = styled.ul`
   li + li {
     margin-top: 28px;
   }
+
+  @media screen and (max-width: 1440px) {
+    margin: 40px 0;
+
+    li + li {
+      margin-top: 12px;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    li + li {
+      margin-top: 8px;
+    }
+
+    li svg {
+      scale: 0.8;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 28px 40px;
+    padding-left: 20px;
+
+    li {
+      gap: 4px;
+    }
+
+    li svg {
+      scale: 0.6;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    padding: 28px 14px;
+    padding-left: 4px;
+    margin: 28px 0;
+  }
 `;
 
 export const Summary = styled.div`
@@ -52,7 +89,7 @@ export const Summary = styled.div`
 
   h3 {
     font-weight: 400;
-    font-size: 1.5rem;
+    font-size: clamp(1.25rem, 1.5vw, 2rem);
     color: var(--primaryDark);
   }
 
@@ -66,6 +103,22 @@ export const Summary = styled.div`
 
   &.active svg {
     rotate: 180deg;
+  }
+
+  @media screen and (max-width: 1024px) {
+    padding: 12px 28px;
+
+    h3 {
+      font-size: 1rem;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 8px 20px;
+  }
+
+  @media screen and (max-width: 480px) {
+    margin-left: -6px;
   }
 `;
 
@@ -85,7 +138,7 @@ export const Details = styled.div`
   }
 
   &.active p {
-    font-size: 1.25rem;
+    font-size: clamp(1rem, 1.25vw, 1.5rem);
     line-height: 1.5em;
     color: var(--white);
 
@@ -93,5 +146,17 @@ export const Details = styled.div`
     padding-left: 16px;
     padding-right: 40px;
     align-self: flex-start;
+  }
+
+  @media screen and (max-width: 1440px) {
+    &.active {
+      height: 56px;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    &.active {
+      height: 88px;
+    }
   }
 `;

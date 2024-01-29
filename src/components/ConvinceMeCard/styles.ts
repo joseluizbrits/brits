@@ -41,6 +41,7 @@ export const Content = styled.div<{ $src: string }>`
   margin: 0 120px;
   border-radius: 50px;
   background-color: var(--primaryDark);
+  box-shadow: -3px 3px 6px rgba(0, 0, 0, 0.1);
 
   position: relative;
 
@@ -50,6 +51,7 @@ export const Content = styled.div<{ $src: string }>`
     object-fit: cover;
     border-radius: 25px;
     position: absolute;
+    box-shadow: -3px 3px 6px rgba(0, 0, 0, 0.1);
   }
 
   #img-1 {

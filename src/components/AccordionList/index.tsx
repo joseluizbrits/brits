@@ -3,7 +3,6 @@ import { useState } from "react";
 
 import Drop from "@/icons/Drop";
 import accordionList from "@/utils/accordionList";
-import StarOne from "@/icons/StarOne";
 
 function AccordionList() {
   const [activeItem, setActiveItem] = useState("");

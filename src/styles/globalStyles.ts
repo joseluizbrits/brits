@@ -7,6 +7,7 @@ const GlobalStyles = createGlobalStyle`
     --primaryLight: #B576F5;
     --primaryLightShadow: rgba(181, 118, 245, 0.2);
     --primaryDark: #4D1981;
+    --primaryDarkShadow: rgba(77, 25, 129, 0.8);
     --primaryGradient: linear-gradient(to right, #692FA4, #764BA2, #8659B4);
     --secondary: #41F7EC;
     --secondaryShadow: rgba(65, 247, 236, 0.8);
@@ -101,9 +102,9 @@ const GlobalStyles = createGlobalStyle`
     }
   }
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 768px) {
     .container {
-      padding: 0 40px;
+      padding: 0 20px;
     }
   }
 `;
