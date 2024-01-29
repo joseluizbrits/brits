@@ -11,7 +11,7 @@ export const Container = styled.section`
     display: block;
     background: var(--gradientOne);
 
-    width: 30%;
+    width: var(--triangleWidth);
     height: calc(100vh - 100px);
     clip-path: polygon(100% 0, 100% 100%, 0 100%);
 
@@ -36,6 +36,11 @@ export const Content = styled.div`
 
   position: relative;
   z-index: 1;
+
+  .hero-title {
+    /* animate */
+    opacity: 0;
+  }
 
   span {
     color: var(--primaryLight);
@@ -114,6 +119,11 @@ export const Media = styled.div`
   right: 120px;
 
   z-index: 1;
+
+  &.hero-media {
+    /* animate */
+    opacity: 0;
+  }
 
   a {
     padding: 10px;

@@ -5,12 +5,15 @@ import Link from "next/link";
 
 import GitHub from "@/icons/GitHub";
 import Instagram from "@/icons/Instagram";
+import Animation from "./animation";
 
 function Hero() {
+  Animation();
+
   return (
-    <Container className="container">
+    <Container id="hero" className="container">
       <Content>
-        <div>
+        <div className="hero-title">
           <span>Desenvolvimento web</span>
           <h1>
             Unindo estética e performance para abrilhantar sua presença online
@@ -19,7 +22,7 @@ function Hero() {
         </div>
       </Content>
 
-      <Media>
+      <Media className="hero-media">
         <Link href="#">
           <GitHub />
         </Link>
