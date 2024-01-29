@@ -12,9 +12,8 @@ export const Container = styled.div`
 
   width: 100%;
   height: 100vh;
-  background-color: var(--secondaryShadow);
+  background-color: var(--primaryDarkShadow);
 
-  overflow-y: scroll;
   overflow-x: hidden;
 
   display: grid;
@@ -43,12 +42,13 @@ export const Content = styled.div<{ $animetionDirection: string }>`
     display: block;
   }
 
-  .desc {
-    font-size: 1.5rem;
+  span.desc {
+    font-size: clamp(1rem, 1.5vw, 2rem);
+    line-height: 1.25em;
     color: var(--primaryLight);
   }
 
-  .desc::after {
+  span.desc::after {
     content: "";
     display: block;
     width: 100%;
@@ -59,7 +59,8 @@ export const Content = styled.div<{ $animetionDirection: string }>`
   }
 
   p {
-    font-size: 5rem;
+    font-size: clamp(2rem, 5vw, 5rem);
+    line-height: 1.25em;
     color: var(--white);
     padding-top: 40px;
     padding-bottom: 48px;
@@ -85,6 +86,29 @@ export const Content = styled.div<{ $animetionDirection: string }>`
       transform: translateX(0%);
     }
   }
+
+  @media screen and (max-width: 1024px) {
+    padding: 40px;
+    margin: 40px;
+  }
+
+  @media screen and (max-width: 768px) {
+    margin: 20px;
+
+    span.desc::after {
+      margin-top: 28px;
+      height: 1px;
+    }
+
+    p {
+      padding-top: 32px;
+      padding-bottom: 40px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    padding: 40px 28px;
+  }
 `;
 
 export const CardHeader = styled.div`
@@ -98,6 +122,10 @@ export const CardHeader = styled.div`
     text-align: end;
     color: var(--primaryLight);
     opacity: 0.4;
+  }
+
+  @media screen and (max-width: 768px) {
+    margin-bottom: 28px;
   }
 `;
 
@@ -133,6 +161,7 @@ export const Options = styled.ul`
 
     width: 1em;
     height: 1em;
+    margin-top: 2px;
     border: 1px solid var(--primaryLight);
 
     display: flex;
@@ -174,10 +203,16 @@ export const Options = styled.ul`
   }
 
   label {
-    font-size: 1.25rem;
+    font-size: clamp(1rem, 1.25vw, 1%.25rem);
     color: var(--white);
     padding-left: 16px;
     cursor: pointer;
+  }
+
+  @media screen and (max-width: 480px) {
+    li {
+      padding-left: 12px;
+    }
   }
 `;
 
@@ -197,6 +232,24 @@ export const ButtonShowPrice = styled.button`
     text-transform: uppercase;
     color: var(--primaryDark);
   }
+
+  @media screen and (max-width: 1024px) {
+    bottom: 24px;
+    right: 40px;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 16px 24px;
+
+    span {
+      font-size: 0.875rem;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    bottom: -64px;
+    right: 12px;
+  }
 `;
 
 export const Value = styled.div`
@@ -208,7 +261,7 @@ export const Value = styled.div`
   margin-bottom: 40px;
 
   p {
-    font-size: 6rem;
+    font-size: clamp(2rem, 6vw, 6rem);
     padding: 0;
 
     background-image: var(--gradientTwo);
@@ -219,10 +272,15 @@ export const Value = styled.div`
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
   }
+
+  @media screen and (max-width: 1024px) {
+    padding: 28px;
+    margin-bottom: 0;
+  }
 `;
 
 export const Observation = styled.span`
-  font-size: 1.25rem;
+  font-size: clamp(0.875rem, 1.25vw, 1.25rem);
   line-height: 1.5em;
   color: var(--primaryLight);
   opacity: 0.8;
@@ -250,6 +308,29 @@ export const Observation = styled.span`
     position: absolute;
     top: 40px;
     left: -13px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    &::before {
+      margin-top: 56px;
+      margin-bottom: 24px;
+    }
+
+    &::after {
+      top: 24px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    &::before {
+      height: 1px;
+      margin-top: 48px;
+      margin-bottom: 20px;
+    }
+
+    &::after {
+      top: 20px;
+    }
   }
 `;
 

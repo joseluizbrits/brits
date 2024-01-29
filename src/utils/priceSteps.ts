@@ -71,7 +71,7 @@ const priceSteps = [
         id: "content-4",
         name: "content",
         type: "radio",
-        answer: "Possuo um layout com design pronto",
+        answer: "Possuo layout com design pronto",
         value: 5,
       },
       {
