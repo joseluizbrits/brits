@@ -7,24 +7,6 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
 
-  .quote-1,
-  .quote-2 {
-    position: absolute;
-  }
-
-  .quote-1 {
-    top: 40px;
-    left: 48px;
-  }
-
-  .quote-2 {
-    rotate: 180deg;
-    bottom: 64px;
-    right: 64px;
-  }
-
-  /* IMAGENS */
-
   img {
     object-fit: cover;
     border-radius: 25px;
@@ -143,6 +125,80 @@ export const Content = styled.div<{ $src: string }>`
     right: 40px;
     z-index: 1;
   }
+
+  @media screen and (max-width: 1440px) {
+    img {
+      scale: 0.7;
+    }
+
+    #img-1 {
+      right: -100px;
+    }
+
+    #img-3 {
+      right: -120px;
+      rotate: 20deg;
+    }
+
+    #img-6 {
+      right: -100px;
+      rotate: 20deg;
+    }
+
+    &#cm-card-7::after {
+      width: 50%;
+      right: 0;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    margin: 0 52px;
+
+    img {
+      scale: 0.55;
+    }
+
+    #img-3 {
+      top: -100px;
+      right: -112px;
+    }
+
+    #img-4 {
+      top: -80px;
+      right: -76px;
+    }
+
+    &#cm-card-5::after {
+      width: 60%;
+    }
+
+    #img-6 {
+      top: -80px;
+      right: -80px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    margin: 0 20px;
+
+    img {
+      scale: 0.55;
+    }
+
+    #img-1 {
+      top: -140px;
+      right: -40px;
+    }
+
+    #img-3 {
+      top: -140px;
+      right: -80px;
+    }
+
+    #img-6 {
+      top: -120px;
+    }
+  }
 `;
 
 export const Text = styled.div`
@@ -154,7 +210,7 @@ export const Text = styled.div`
 
   p {
     font-weight: 900;
-    font-size: 2rem;
+    font-size: clamp(1.25rem, 2vw, 3rem);
     line-height: 1.25em;
     letter-spacing: 0.05rem;
     color: var(--white);
@@ -165,6 +221,65 @@ export const Text = styled.div`
 
     span {
       font-style: italic;
+    }
+  }
+
+  svg.quote-1,
+  svg.quote-2 {
+    position: absolute;
+  }
+
+  svg.quote-1 {
+    top: 40px;
+    left: 48px;
+  }
+
+  svg.quote-2 {
+    rotate: 180deg;
+    bottom: 64px;
+    right: 64px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    padding: 80px 100px;
+
+    p {
+      line-height: 1.5em;
+    }
+
+    svg {
+      scale: 0.4;
+    }
+
+    svg.quote-1 {
+      top: 20px;
+      left: 20px;
+    }
+
+    svg.quote-2 {
+      bottom: 28px;
+      right: 50px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 56px 64px;
+
+    p {
+      line-height: 1.5em;
+      max-width: 35ch;
+    }
+
+    svg {
+      scale: 0.3;
+    }
+
+    svg.quote-1 {
+      top: -12px;
+    }
+
+    svg.quote-2 {
+      bottom: 12px;
     }
   }
 `;

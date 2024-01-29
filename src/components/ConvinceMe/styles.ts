@@ -55,5 +55,6 @@ export const Container = styled.div`
 
   .swiper-button-disabled {
     opacity: 0;
+    pointer-events: none;
   }
 `;
