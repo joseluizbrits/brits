@@ -199,6 +199,34 @@ export const Content = styled.div<{ $src: string }>`
       top: -120px;
     }
   }
+
+  @media screen and (max-width: 640px) {
+    #img-1,
+    #img-3 {
+      top: -170px;
+    }
+
+    #img-4 {
+      top: -180px;
+    }
+
+    #img-6 {
+      top: -140px;
+    }
+
+    &#cm-card-2::after,
+    &#cm-card-5::after,
+    &#cm-card-7::after {
+      width: 100%;
+      border-radius: 50px;
+      background-position: 17%;
+    }
+
+    a {
+      bottom: 20px;
+      right: 20px;
+    }
+  }
 `;
 
 export const Text = styled.div`
@@ -263,7 +291,7 @@ export const Text = styled.div`
   }
 
   @media screen and (max-width: 768px) {
-    padding: 56px 64px;
+    padding: 64px 64px;
 
     p {
       line-height: 1.5em;
@@ -280,6 +308,22 @@ export const Text = styled.div`
 
     svg.quote-2 {
       bottom: 12px;
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    padding: 64px 48px;
+
+    p {
+      max-width: 20ch;
+    }
+
+    svg.quote-1 {
+      left: 0;
+    }
+
+    svg.quote-2 {
+      right: -24px;
     }
   }
 `;

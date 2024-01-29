@@ -30,7 +30,7 @@ function Price() {
 
   const popup = getPopup(3);
 
-  const handleActive = (target: EventTarget) => {
+  const handlePopup = (target: EventTarget) => {
     const element = target as HTMLElement;
 
     if (element.classList.contains("close")) {
@@ -55,7 +55,7 @@ function Price() {
   return (
     <Container
       className={popup ? "close active" : "close"}
-      onClick={({ target }) => handleActive(target)}
+      onClick={({ target }) => handlePopup(target)}
       data-lenis-prevent
     >
       {priceSteps.map(({ id, desc, ask, opts }, index) => (
@@ -139,7 +139,7 @@ function Price() {
       <ButtonClose
         aria-label="fechar"
         className="close"
-        onClick={({ currentTarget }) => handleActive(currentTarget)}
+        onClick={({ currentTarget }) => handlePopup(currentTarget)}
       >
         <Close />
       </ButtonClose>

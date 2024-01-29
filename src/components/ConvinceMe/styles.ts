@@ -42,8 +42,8 @@ export const Container = styled.div`
   }
 
   .swiper-button-next {
-    width: 100px;
-    height: 100px;
+    width: clamp(48px, 10vw, 100px);
+    height: clamp(48px, 10vw, 100px);
     background: url(${arrow.src}) center center no-repeat;
     background-size: cover;
     cursor: pointer;
@@ -56,5 +56,37 @@ export const Container = styled.div`
   .swiper-button-disabled {
     opacity: 0;
     pointer-events: none;
+  }
+
+  .swiper-pagination {
+    padding: 8px;
+    margin: 12px;
+    border-radius: 8px;
+    color: var(--primaryDark);
+    background-color: var(--primaryLight);
+  }
+
+  @media screen and (max-width: 1024px) {
+    .swiper-button-next {
+      right: 80px;
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    .swiper-button-next {
+      bottom: 112px;
+      right: 64px;
+    }
+  }
+`;
+
+export const ButtonClose = styled.button`
+  position: absolute;
+  top: 40px;
+  right: 40px;
+
+  @media screen and (max-width: 768px) {
+    top: 20px;
+    right: 20px;
   }
 `;

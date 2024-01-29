@@ -1,10 +1,11 @@
-import { Container } from "./styles";
+import { Container, ButtonClose } from "./styles";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
 
 import ConvinceMeCard from "../ConvinceMeCard";
 import convince from "@/utils/convince";
 import usePopup from "@/hooks/usePopup";
+import Close from "@/icons/Close";
 
 function ConvinceMe() {
   const { getPopup, setPopup } = usePopup();
@@ -45,6 +46,14 @@ function ConvinceMe() {
           </SwiperSlide>
         ))}
       </Swiper>
+
+      <ButtonClose
+        aria-label="fechar"
+        className="close"
+        onClick={({ currentTarget }) => handlePopup(currentTarget)}
+      >
+        <Close />
+      </ButtonClose>
     </Container>
   );
 }
