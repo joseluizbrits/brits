@@ -32,7 +32,7 @@ export const Container = styled.div`
   }
 
   label {
-    font-size: 3rem;
+    font-size: clamp(3rem);
     color: var(--white);
     min-width: 160px;
   }
@@ -78,6 +78,15 @@ export const Container = styled.div`
     color: var(--primaryDark);
   }
 
+  button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  span.success {
+    text-align: center;
+  }
+
   span.error {
     color: var(--warning);
     margin-top: -20px;
@@ -86,7 +95,17 @@ export const Container = styled.div`
     grid-column: span 2;
   }
 
+  span.failed {
+    line-height: 1.25em;
+    text-align: end;
+    color: var(--warning);
+  }
+
   @media screen and (max-width: 1440px) {
+    form {
+      margin: 0 80px;
+    }
+
     .fields,
     .fields div {
       gap: 28px;
@@ -95,12 +114,6 @@ export const Container = styled.div`
     label {
       font-size: 2.5rem;
       min-width: 120px;
-    }
-  }
-
-  @media screen and (max-width: 1440px) {
-    form {
-      margin: 0 80px;
     }
   }
 
@@ -133,6 +146,60 @@ export const Container = styled.div`
 
       justify-self: auto;
       grid-column: auto;
+    }
+
+    span.failed {
+      padding-top: 8px;
+      text-align: start;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    form {
+      padding: 40px;
+      margin: 0 20px;
+    }
+
+    .fields div {
+      gap: 12px;
+    }
+
+    label {
+      font-size: 1.5rem;
+    }
+
+    input,
+    textarea {
+      padding: 12px;
+    }
+  }
+`;
+
+export const Loading = styled.span`
+  color: transparent;
+  opacity: 0.8;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 6px solid var(--tertiary);
+    border-bottom-color: transparent;
+    animation: loading 1s linear infinite;
+  }
+
+  @keyframes loading {
+    from {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(360deg);
     }
   }
 `;

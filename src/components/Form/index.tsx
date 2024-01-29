@@ -1,14 +1,16 @@
-import { Container } from "./styles";
+import { Container, Loading } from "./styles";
 import { useEffect, useState } from "react";
 
-import useForm from "@/hooks/useForm";
 import Field from "../Field";
+import useForm from "@/hooks/useForm";
 
-import emailjs from "@emailjs/browser";
+import { ubuntu } from "@/lib/fonts";
+import { sendEmail } from "@/utils/sendEmail";
 
 function Form() {
-  const [loading, setLoading] = useState<"" | "loading">("");
+  const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [error, setError] = useState(false);
   const name = useForm(false);
   const email = useForm("email");
   const message = useForm("");
@@ -16,41 +18,14 @@ function Form() {
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    setLoading("loading");
-
-    if (email.validate() && message.validate()) {
-      const templateParams = {
-        from_name: name.value,
-        email: email.value,
-        message: message.value,
-      };
-
-      emailjs
-        .send(
-          "service_ovc51pi",
-          "template_ra9q7ua",
-          templateParams,
-          "s_YA3z6mo4qOe0thA"
-        )
-        .then(
-          () => {
-            setLoading("");
-            setSuccess(true);
-            name.setValue("");
-            email.setValue("");
-            message.setValue("");
-          },
-          (err: Error) => {
-            console.error("Erro ao enviar o menssagem: " + err);
-            setLoading("");
-            name.setValue("");
-            email.setValue("");
-            message.setValue("");
-          }
-        );
-    } else {
-      setLoading("");
-    }
+    sendEmail({
+      name,
+      email,
+      message,
+      setLoading,
+      setSuccess,
+      setError,
+    });
   }
 
   useEffect(() => {
@@ -61,7 +36,13 @@ function Form() {
         setSuccess(false);
       }, 10000);
     }
-  }, [success, name.error, email.error, message.error]);
+
+    if (error) {
+      setTimeout(() => {
+        setError(false);
+      }, 5000);
+    }
+  }, [success, error, name.error, email.error, message.error]);
 
   return (
     <Container>
@@ -77,11 +58,20 @@ function Form() {
           />
 
           {!success ? (
-            <button className={loading}>
-              <span>Mandar</span>
+            <button aria-label="enviar" disabled={loading}>
+              {loading ? (
+                <Loading />
+              ) : (
+                <span className={ubuntu.className}>Mandar</span>
+              )}
             </button>
           ) : (
             <span className="success">Foi! 👍</span>
+          )}
+          {error && (
+            <span className="failed">
+              Ops! Ocorreu um erro ao enviar a mensagem!
+            </span>
           )}
         </div>
       </form>
