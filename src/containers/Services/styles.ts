@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Title = styled.div`
   display: flex;
   justify-content: center;
-  padding: 10.42% 0;
+  padding: 200px 0;
 
   h2 {
     font-weight: 400;
@@ -21,6 +21,14 @@ export const Title = styled.div`
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
+  }
+
+  @media screen and (max-width: 1024px) {
+    padding: 120px 0;
+  }
+
+  @media screen and (max-width: 640px) {
+    padding: 80px 0;
   }
 `;
 

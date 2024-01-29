@@ -30,7 +30,7 @@ export const Container = styled.section`
   @media screen and (max-width: 640px) {
     &::before {
       top: 10%;
-      left: -23%;
+      left: -29%;
       opacity: 0.8;
     }
   }

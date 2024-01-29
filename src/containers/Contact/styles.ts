@@ -40,18 +40,14 @@ export const Title = styled.h2`
 
   span {
     font-weight: 400;
-    font-size: clamp(2.5rem, 4vw, 7rem);
+    font-size: clamp(2rem, 4vw, 7rem);
     line-height: 1.25em;
     color: var(--white);
     max-width: 19ch;
   }
 
-  @media screen and (max-width: 1440px) {
-    padding-top: 120px;
-  }
-
   @media screen and (max-width: 1024px) {
-    padding: 80px 0 120px 120px;
+    padding: 160px 0;
 
     &::after {
       bottom: 80px;
