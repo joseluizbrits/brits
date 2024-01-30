@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Container = styled.section`
   height: calc(100vh - 100px);
   background: var(--primaryGradient);
+  overflow-x: hidden;
 
   position: relative;
 

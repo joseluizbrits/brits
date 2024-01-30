@@ -27,7 +27,7 @@ const Animation = (component: MutableRefObject<null>, projects: IProject[]) => {
           start: "4% bottom",
           end: "80% center",
         },
-        y: 100,
+        y: 40,
         opacity: 0,
       });
 

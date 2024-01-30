@@ -18,18 +18,16 @@ export const Title = styled.h2`
     display: block;
     width: clamp(120px, 20vw, 240px);
     height: clamp(24px, 4vw, 64px);
-
+    border-radius: 0 50px 50px 0;
     background-color: var(--tertiary);
     opacity: 0.8;
 
     position: absolute;
-  }
-
-  &::after {
-    border-radius: 0 50px 50px 0;
-
     bottom: 120px;
     left: 0;
+
+    /* animate */
+    transform: var(--aboutDeco);
   }
 
   small {

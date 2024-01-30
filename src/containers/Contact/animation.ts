@@ -12,35 +12,23 @@ const Animation = (component: MutableRefObject<null>) => {
 
       gsap.registerPlugin(ScrollTrigger);
 
-      gsap.from(component.current, {
+      gsap.from("#contact h2", {
         scrollTrigger: {
-          trigger: component.current,
-          start: "top bottom",
-          end: "210% center",
-          scrub: true,
-        },
-        "--shortTriangle": "polygon(0 30%, 0% 100%, 0% 100%)",
-      });
-
-      gsap.from("#project h2", {
-        scrollTrigger: {
-          trigger: "#project h2",
-          start: "20% 80%",
-          end: "bottom center",
-        },
-        y: 200,
-        opacity: 0,
-        duration: 2.5,
-      });
-
-      gsap.from("#project button", {
-        scrollTrigger: {
-          trigger: component.current,
-          start: "85% 80%",
+          trigger: "#contact h2",
+          start: "+=200px 80%",
           end: "bottom center",
         },
         y: 100,
         opacity: 0,
+      });
+
+      gsap.from("#contact h2", {
+        scrollTrigger: {
+          trigger: "#contact h2",
+          start: "50% 80%",
+          end: "bottom center",
+        },
+        "--aboutDeco": "translateX(-400px)",
       });
     }, component);
 

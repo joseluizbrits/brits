@@ -28,11 +28,12 @@ const Animation = () => {
       gsap.fromTo(
         ".hero-media",
         {
-          y: 80,
+          y: -80,
+          x: 100,
         },
         {
           y: 0,
-
+          x: 0,
           opacity: 1,
           delay: 0.6,
         }

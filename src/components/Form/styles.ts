@@ -32,7 +32,7 @@ export const Container = styled.div`
   }
 
   label {
-    font-size: clamp(3rem);
+    font-size: 3rem;
     color: var(--white);
     min-width: 160px;
   }

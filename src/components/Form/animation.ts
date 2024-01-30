@@ -15,44 +15,52 @@ const Animation = (component: MutableRefObject<null>) => {
       gsap.from(component.current, {
         scrollTrigger: {
           trigger: component.current,
-          start: "top bottom",
+          start: "top 80%",
           end: "bottom center",
-          scrub: true,
         },
-        "--middleTriangleBottom": "polygon(0 0, 25% 0, 80% 100%, 0% 100%)",
+        y: 100,
+        opacity: 0,
       });
 
-      gsap.from("#me img", {
+      gsap.from(".fields label", {
         scrollTrigger: {
           trigger: component.current,
-          start: "20% 80%",
+          start: "top 80%",
           end: "bottom center",
-          scrub: true,
         },
-        clipPath: "circle(0% at 50% 50%)",
-      });
-
-      gsap.from(".baloon-short", {
-        scrollTrigger: {
-          trigger: component.current,
-          start: "40% 80%",
-          end: "bottom center",
-          scrub: true,
-        },
-        y: 80,
         x: -40,
         opacity: 0,
       });
 
-      gsap.from(".baloon-large", {
+      gsap.from(".fields input", {
         scrollTrigger: {
           trigger: component.current,
-          start: "90% 80%",
+          start: "top 80%",
           end: "bottom center",
-          scrub: true,
         },
-        y: -80,
-        x: 80,
+        x: -40,
+        opacity: 0,
+        delay: 0.1,
+      });
+
+      gsap.from(".fields textarea", {
+        scrollTrigger: {
+          trigger: component.current,
+          start: "top 80%",
+          end: "bottom center",
+        },
+        x: -40,
+        opacity: 0,
+        delay: 0.1,
+      });
+
+      gsap.from(".send", {
+        scrollTrigger: {
+          trigger: component.current,
+          start: "40% 80%",
+          end: "bottom center",
+        },
+        y: 40,
         opacity: 0,
       });
     }, component);

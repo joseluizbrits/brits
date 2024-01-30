@@ -1,13 +1,18 @@
 import { Container, Loading } from "./styles";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 import Field from "../Field";
 import useForm from "@/hooks/useForm";
 
 import { ubuntu } from "@/lib/fonts";
 import { sendEmail } from "@/utils/sendEmail";
+import Animation from "./animation";
 
 function Form() {
+  const comp = useRef(null);
+
+  Animation(comp);
+
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
@@ -45,7 +50,7 @@ function Form() {
   }, [success, error, name.error, email.error, message.error]);
 
   return (
-    <Container>
+    <Container ref={comp}>
       <form onSubmit={handleSubmit}>
         <div className="fields">
           <Field label="Nome: " type="text" name="name" {...name} />
@@ -58,7 +63,7 @@ function Form() {
           />
 
           {!success ? (
-            <button aria-label="enviar" disabled={loading}>
+            <button className="send" aria-label="enviar" disabled={loading}>
               {loading ? (
                 <Loading />
               ) : (
