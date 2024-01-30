@@ -26,10 +26,6 @@ const Animation = (component: MutableRefObject<null>, projects: IProject[]) => {
           trigger: component.current,
           start: "3% bottom",
           end: "80% center",
-<<<<<<< HEAD
-=======
-          markers: true,
->>>>>>> ff36c545aaff3fcd5b2109adeab0f174c4ebc460
         },
         y: 200,
         opacity: 0,
