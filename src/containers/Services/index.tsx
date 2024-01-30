@@ -28,7 +28,7 @@ function Services() {
               <strong>{title}</strong> {desc}
             </p>
 
-            <ButtonProject href={href} />
+            <ButtonProject id={`see-project-${index + 1}`} href={href} />
           </Text>
 
           <ImageWrapper id={`img-${index + 1}`}>

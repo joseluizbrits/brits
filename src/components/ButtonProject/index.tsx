@@ -2,9 +2,9 @@ import { ButtonWrapper } from "./styles";
 import { montserrat, ubuntu } from "@/lib/fonts";
 import Arrow from "@/icons/Arrow";
 
-function ButtonProject({ href }: { href: string }) {
+function ButtonProject({ href, id }: { href: string; id: string }) {
   return (
-    <ButtonWrapper id="see-project" href={href} target="_blank">
+    <ButtonWrapper id={id} href={href} target="_blank">
       <span className={montserrat.className}>Conhecer projeto</span>
       <Arrow />
     </ButtonWrapper>
