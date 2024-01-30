@@ -6,7 +6,7 @@ const Animation = () => {
     const ctx = gsap.context(() => {
       gsap.defaults({
         ease: "circ.out",
-        duration: 1.5,
+        duration: 2,
       });
 
       gsap.fromTo(

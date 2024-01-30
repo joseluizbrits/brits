@@ -11,11 +11,11 @@ export const Container = styled.section`
     display: block;
     width: 69.9%;
     height: 100vh;
-    background: url(${img.src}) 30% 40%;
+    background: url(${img.src}) -70% 40%;
     background-size: cover;
     opacity: 0.4;
 
-    clip-path: polygon(0 0, 100.1% 0%, 50.1% 100%, 0% 100%);
+    clip-path: var(--middleTriangle);
 
     position: absolute;
     top: 0;

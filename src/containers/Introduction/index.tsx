@@ -5,10 +5,16 @@ import { Container, Content, Labels } from "./styles";
 import ConvinceMe from "@/components/ConvinceMe";
 import Button from "@/components/Button";
 import Up from "@/icons/Up";
+import Animation from "./animation";
+import { useRef } from "react";
 
 function Introduction() {
+  const section = useRef(null);
+
+  Animation(section);
+
   return (
-    <Container>
+    <Container id="intro" ref={section}>
       <Content className="container">
         <h2>
           <small>Credibilidade online</small>
