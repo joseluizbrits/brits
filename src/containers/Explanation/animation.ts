@@ -27,7 +27,6 @@ const Animation = (component: MutableRefObject<null>) => {
           trigger: component.current,
           start: "40% 80%",
           end: "bottom center",
-          markers: true,
         },
         y: 200,
         opacity: 0,
