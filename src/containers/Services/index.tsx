@@ -5,10 +5,16 @@ import Image from "next/image";
 
 import ButtonProject from "@/components/ButtonProject";
 import projects from "@/utils/projects";
+import { useRef } from "react";
+import Animation from "./animation";
 
 function Services() {
+  const section = useRef(null);
+
+  Animation(section, projects);
+
   return (
-    <section id="services">
+    <section id="services" ref={section}>
       <Title>
         <h2>
           O que <em>Brits</em> pode te oferecer:
