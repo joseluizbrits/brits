@@ -16,36 +16,27 @@ const Animation = (component: MutableRefObject<null>) => {
         scrollTrigger: {
           trigger: component.current,
           start: "top bottom",
-          end: "150% center",
+          end: "50% center",
           scrub: true,
         },
-        "--middleTriangle": "polygon(100% 0, 100% 100%, 100% 100%)",
+        "--shortTriangle": "polygon(85% 0, 100% 100%, 55% 55%)",
       });
 
-      gsap.from("#intro h2", {
+      gsap.from("#project h2", {
         scrollTrigger: {
-          trigger: "#intro h2",
+          trigger: "#project h2",
           start: "20% 80%",
           end: "bottom center",
         },
         y: 200,
         opacity: 0,
+        duration: 2.5,
       });
 
-      gsap.from("#intro ul", {
+      gsap.from("#project button", {
         scrollTrigger: {
           trigger: component.current,
-          start: "70% 80%",
-          end: "bottom center",
-        },
-        y: 100,
-        opacity: 0,
-      });
-
-      gsap.from("#intro button", {
-        scrollTrigger: {
-          trigger: component.current,
-          start: "70% 80%",
+          start: "85% 80%",
           end: "bottom center",
         },
         y: 100,
