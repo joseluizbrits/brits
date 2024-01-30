@@ -19,9 +19,8 @@ const GlobalStyles = createGlobalStyle`
     --gradientTwo: linear-gradient(to bottom, #692FA4, #8A2A99);
     --gradientThree: linear-gradient(to bottom, #8A2A99 15%, #8DFFF8);
     --gradientTwoToPrimary: linear-gradient(to bottom, #692fa4, #8A2A99, #692FA4 99%);
-    
-    /* animate */
     --middleTriangle: polygon(0 0, 100.1% 0%, 50.1% 100%, 0% 100%);
+    --largeTriangle: polygon(0 0, 0% 100%, 100.3% 0);
   }
 
  * {

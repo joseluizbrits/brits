@@ -15,7 +15,7 @@ export const Container = styled.section`
     background-size: cover;
     opacity: 0.4;
 
-    clip-path: polygon(0 0, 0% 100%, 100.3% 0);
+    clip-path: var(--largeTriangle);
 
     position: absolute;
     top: 0;

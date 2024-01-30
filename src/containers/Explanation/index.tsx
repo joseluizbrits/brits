@@ -5,10 +5,16 @@ import { Container, Content, Labels } from "./styles";
 import Button from "@/components/Button";
 import LearnMore from "@/components/LearnMore";
 import Up from "@/icons/Up";
+import Animation from "./animation";
+import { useRef } from "react";
 
 function Explanation() {
+  const section = useRef(null);
+
+  Animation(section);
+
   return (
-    <Container>
+    <Container id="explan" ref={section}>
       <Content className="container">
         <h2>
           <small>Marketing alavancado</small>
