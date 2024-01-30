@@ -1,11 +1,17 @@
 import { Baloon, Container, Me } from "./styles";
 import Image from "next/image";
 import img from "../../../public/perfil.jpg";
+import Animation from "./animation";
+import { useRef } from "react";
 
 function Apresentation() {
+  const comp = useRef(null);
+
+  Animation(comp);
+
   return (
-    <Container>
-      <Me>
+    <Container ref={comp}>
+      <Me id="me">
         <Image
           src={img.src}
           alt="Imagem do Brits sorrindo com o fundo atrás dele em roxo claro"

@@ -11,7 +11,7 @@ export const Container = styled.section`
     display: block;
     width: 69.9%;
     height: 100vh;
-    background: url(${img.src}) -70% 40%;
+    background: url(${img.src}) 20% 40%;
     background-size: cover;
     opacity: 0.4;
 

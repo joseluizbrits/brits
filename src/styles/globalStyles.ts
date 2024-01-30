@@ -21,7 +21,10 @@ const GlobalStyles = createGlobalStyle`
     --gradientTwoToPrimary: linear-gradient(to bottom, #692fa4, #8A2A99, #692FA4 99%);
     --shortTriangle: polygon(0 0, 100% 100%, 0 100%);
     --middleTriangle: polygon(0 0, 100.1% 0%, 50.1% 100%, 0% 100%);
+    --middleTriangleBottom: polygon(0 0, 40% 0, 80% 100%, 0% 100%);
     --largeTriangle: polygon(0 0, 0% 100%, 100.3% 0);
+    --aboutDeco: translateX(0);
+    --me: circle(50% at 50% 50%);
   }
 
  * {

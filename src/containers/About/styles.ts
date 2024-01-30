@@ -25,6 +25,9 @@ export const Container = styled.section`
     position: absolute;
     top: 24%;
     left: 45%;
+
+    /* animate */
+    transform: var(--aboutDeco);
   }
 
   @media screen and (max-width: 640px) {

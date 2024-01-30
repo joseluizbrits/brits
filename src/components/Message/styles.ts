@@ -14,6 +14,8 @@ export const Container = styled.aside`
     border-radius: 50px 0 0 50px;
     background-color: var(--tertiary);
 
+    transform: var(--aboutDeco);
+
     position: absolute;
     bottom: 18%;
     right: 0;

@@ -4,7 +4,7 @@ export const Container = styled.div`
   height: 100vh;
   padding-left: 40px;
   background: var(--gradientTwoToPrimary);
-  clip-path: polygon(0 0, 40% 0, 80% 100%, 0% 100%);
+  clip-path: var(--middleTriangleBottom);
 
   display: flex;
   align-items: center;
@@ -25,6 +25,7 @@ export const Me = styled.div`
   img {
     object-fit: cover;
     border-radius: 50%;
+    clip-path: var(--me);
   }
 `;
 
