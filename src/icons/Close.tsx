@@ -14,27 +14,25 @@ function Close() {
       <defs>
         <linearGradient
           id="a"
-          x1="14.74"
-          x2="25.42"
-          y1="20"
-          y2="20"
+          x1="23.09"
+          x2="23.13"
+          y1="16.75"
+          y2="25.42"
           gradientUnits="userSpaceOnUse"
         >
           <stop stopColor="#692FA4"></stop>
-          <stop offset="0.49" stopColor="#764BA2"></stop>
-          <stop offset="1" stopColor="#8659B4"></stop>
+          <stop offset="1" stopColor="#8A2A99"></stop>
         </linearGradient>
         <linearGradient
           id="b"
-          x1="2.59"
-          x2="37.92"
-          y1="20"
-          y2="20"
+          x1="30.23"
+          x2="30.35"
+          y1="9.26"
+          y2="37.92"
           gradientUnits="userSpaceOnUse"
         >
           <stop stopColor="#692FA4"></stop>
-          <stop offset="0.49" stopColor="#764BA2"></stop>
-          <stop offset="1" stopColor="#8659B4"></stop>
+          <stop offset="1" stopColor="#8A2A99"></stop>
         </linearGradient>
       </defs>
     </svg>

@@ -7,6 +7,11 @@ export const ButtonWrapper = styled.button<{ $secondary?: boolean }>`
   background-color: ${(props) =>
     !props.$secondary ? "var(--secondary)" : "var(--tertiary)"};
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+
   transition: 0.3s ease-out;
 
   span {
@@ -25,6 +30,11 @@ export const ButtonWrapper = styled.button<{ $secondary?: boolean }>`
 
       span {
         color: ${(props) =>
+          !props.$secondary ? "var(--secondary)" : "var(--primaryLight)"};
+      }
+
+      svg path {
+        fill: ${(props) =>
           !props.$secondary ? "var(--secondary)" : "var(--primaryLight)"};
       }
     }

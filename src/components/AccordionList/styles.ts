@@ -168,13 +168,13 @@ export const Details = styled.div`
 
   @media screen and (max-width: 560px) {
     &.active {
-      height: 140px;
+      height: 150px;
     }
   }
 
   @media screen and (max-width: 400px) {
     &.active {
-      height: 160px;
+      height: 180px;
     }
   }
 `;
