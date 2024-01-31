@@ -78,6 +78,10 @@ export const Container = styled.div`
     color: var(--primaryDark);
   }
 
+  button {
+    transition: 0.3s ease-out;
+  }
+
   button:disabled {
     opacity: 0.6;
     cursor: not-allowed;
@@ -99,6 +103,16 @@ export const Container = styled.div`
     line-height: 1.25em;
     text-align: end;
     color: var(--warning);
+  }
+
+  @media screen and (min-width: 1024px) {
+    button:hover {
+      background-color: var(--primaryDark);
+
+      span {
+        color: var(--secondary);
+      }
+    }
   }
 
   @media screen and (max-width: 1440px) {

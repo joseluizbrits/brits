@@ -35,6 +35,30 @@ export const Container = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+
+    img {
+      opacity: 0;
+      transform: translate(-200px, -200px);
+      transition: 0.6s ease-out;
+      transition-delay: 1s;
+    }
+
+    .cm-card::after {
+      filter: opacity(0);
+      transition: 0.6s ease-out;
+      transition-delay: 1s;
+    }
+  }
+
+  .swiper-slide-active {
+    img {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+
+    .cm-card::after {
+      filter: opacity(1);
+    }
   }
 
   .swiper-pagination {

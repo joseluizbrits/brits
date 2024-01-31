@@ -23,7 +23,7 @@ interface IConvinceMeCard {
 function ConvinceMeCard({ id, text, img, link }: IConvinceMeCard) {
   return (
     <Container className="close">
-      <Content id={id} $src={!img.alt ? img.src : ""}>
+      <Content id={id} className="cm-card" $src={!img.alt ? img.src : ""}>
         <Text>
           <p>
             {text.map((txt) => (

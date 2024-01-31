@@ -22,7 +22,7 @@ export const Container = styled.div`
   z-index: 10;
 
   > div {
-    margin: 160px;
+    margin: 120px 160px;
     padding: 64px;
     border-radius: 50px;
     background: var(--gradientThree);
@@ -37,13 +37,13 @@ export const Container = styled.div`
 
   @media screen and (max-width: 1440px) {
     > div {
-      margin: 160px 80px;
+      margin: 120px 80px;
     }
   }
 
   @media screen and (max-width: 1024px) {
     > div {
-      margin: 140px 40px;
+      margin: 120px 40px;
     }
   }
 

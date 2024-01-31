@@ -159,4 +159,22 @@ export const Details = styled.div`
       height: 88px;
     }
   }
+
+  @media screen and (max-width: 640px) {
+    &.active {
+      height: 100px;
+    }
+  }
+
+  @media screen and (max-width: 560px) {
+    &.active {
+      height: 140px;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    &.active {
+      height: 160px;
+    }
+  }
 `;

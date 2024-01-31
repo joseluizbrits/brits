@@ -74,6 +74,30 @@ const GlobalStyles = createGlobalStyle`
     padding: 0 120px;
   }
 
+  /* ---------- SCROLLBAR ---------- */
+
+  *::-webkit-scrollbar,
+  body::-webkit-scrollbar,
+  html::-webkit-scrollbar {
+    background: var(--primaryGradient);
+    width: 12px;
+    height: 12px;
+  }
+
+  *::-webkit-scrollbar-thumb,
+  body::-webkit-scrollbar-thumb,
+  html::-webkit-scrollbar-thumb {
+    background: var(--gradientThree);
+    border-radius: 25px;
+    border: 5px solid var(--primaryGradient);
+  }
+
+  *::-webkit-scrollbar-thumb:hover,
+  body::-webkit-scrollbar-thumb:hover,
+  html::-webkit-scrollbar-thumb:hover {
+    background: var(--secondaryShadow);
+  }
+
   /* LENIS SCROLL SMOOTH */
 
   html.lenis {
