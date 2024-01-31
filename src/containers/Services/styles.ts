@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+export const Container = styled.section`
+  background: var(--primaryGradient);
+`;
+
 export const Title = styled.div`
   display: flex;
   justify-content: center;
@@ -7,7 +11,8 @@ export const Title = styled.div`
 
   h2 {
     font-weight: 400;
-    font-size: clamp(1.5rem, 5vw, 7rem);
+    font-size: clamp(2rem, 5vw, 7rem);
+    line-height: 1.25em;
     color: var(--white);
   }
 
@@ -29,6 +34,11 @@ export const Title = styled.div`
 
   @media screen and (max-width: 640px) {
     padding: 80px 0;
+
+    h2 {
+      max-width: 15ch;
+      margin-left: -40px;
+    }
   }
 `;
 

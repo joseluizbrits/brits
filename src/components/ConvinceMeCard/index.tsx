@@ -46,7 +46,11 @@ function ConvinceMeCard({ id, text, img, link }: IConvinceMeCard) {
           />
         )}
 
-        {link && <Link href="#">Dar um alô</Link>}
+        {link && (
+          <Link href="https://api.whatsapp.com/send?phone=5521977201981&text=Ola,%20Brits!%20Eu%20gostaria%20de%20fazer%20um%20or%C3%A7amento">
+            Dar um alô
+          </Link>
+        )}
       </Content>
     </Container>
   );

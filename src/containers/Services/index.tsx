@@ -1,6 +1,6 @@
 "use client";
 
-import { Title, Text, ProjectWrapper, ImageWrapper } from "./styles";
+import { Container, Title, Text, ProjectWrapper, ImageWrapper } from "./styles";
 import Image from "next/image";
 
 import ButtonProject from "@/components/ButtonProject";
@@ -14,7 +14,7 @@ function Services() {
   Animation(section, projects);
 
   return (
-    <section id="services" ref={section}>
+    <Container id="services" ref={section}>
       <Title>
         <h2>
           O que <em>Brits</em> pode te oferecer:
@@ -43,7 +43,7 @@ function Services() {
           </ImageWrapper>
         </ProjectWrapper>
       ))}
-    </section>
+    </Container>
   );
 }
 

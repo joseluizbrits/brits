@@ -34,7 +34,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   html {
-    background: var(--primaryGradient);
+    background: var(--primary);
     overflow-x: hidden;
   }
 

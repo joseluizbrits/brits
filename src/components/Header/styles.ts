@@ -4,7 +4,7 @@ export const Container = styled.header`
   padding-top: 20px;
   padding-bottom: 20px;
   height: 100px;
-  background-color: var(--primaryGradient);
+  background: var(--primaryGradient);
 
   display: flex;
   justify-content: space-between;

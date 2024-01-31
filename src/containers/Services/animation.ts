@@ -32,16 +32,6 @@ const Animation = (component: MutableRefObject<null>, projects: IProject[]) => {
       });
 
       projects.map((_, index) => {
-        gsap.from(`#services #text-${index + 1}`, {
-          scrollTrigger: {
-            trigger: `#services #text-${index + 1}`,
-            start: "+=100px 80%",
-            end: "center center",
-          },
-          opacity: 0,
-          duration: 1,
-        });
-
         gsap.from(`#services #see-project-${index + 1}`, {
           scrollTrigger: {
             trigger: `#services #see-project-${index + 1}`,

@@ -39,7 +39,7 @@ const Animation = (component: MutableRefObject<null>) => {
           start: "85% 80%",
           end: "bottom center",
         },
-        y: 100,
+        y: 40,
         opacity: 0,
       });
     }, component);

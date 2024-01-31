@@ -11,7 +11,10 @@ function Message() {
 
   return (
     <Container ref={comp}>
-      <a href="#" id="send-message">
+      <a
+        href="https://api.whatsapp.com/send?phone=5521977201981&text=Ola,%20Brits!%20Eu%20gostaria%20de%20fazer%20um%20or%C3%A7amento"
+        id="send-message"
+      >
         <span>
           Me mande uma
           <br />
