@@ -8,8 +8,30 @@ import Footer from "@/components/Footer";
 import SmoothScroll from "@/components/SmoothScroll";
 
 export const metadata: Metadata = {
-  title: "BRITS",
-  description: "BRITS | Desenvolvimento web front-end",
+  title: "Criação de sites profissionais | BRITS Desenvolvimento Web",
+  description: "Está querendo criar um site? [continuar aqui...]",
+  keywords: [
+    "site",
+    "website",
+    "desenvolvimento de sites",
+    "front-end",
+    "criação de sites",
+  ],
+  alternates: {
+    canonical: "/",
+    languages: {
+      "pt-BR": "/pt-BR",
+    },
+  },
+  metadataBase: new URL("https://brits.com.br"),
+  openGraph: {
+    title: "Criação de sites profissionais | BRITS Desenvolvimento Web",
+    description: "Está querendo criar um site? [continuar aqui...]",
+    type: "website",
+    url: "https://brits.com.br",
+    siteName: "BRITS",
+    locale: "pt_BR",
+  },
 };
 
 export default function RootLayout({
