@@ -1,11 +1,12 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  opacity: 0;
+  clip-path: circle(0 at 0 100%);
   pointer-events: none;
+  transition: 0.6s ease-out;
 
   &.active {
-    opacity: 1;
+    clip-path: circle(150% at 0 100%);
     pointer-events: all;
   }
 
@@ -75,6 +76,16 @@ export const ButtonClose = styled.button`
   position: absolute;
   top: 40px;
   right: 40px;
+
+  svg {
+    transition: 0.3s ease-out;
+  }
+
+  @media screen and (min-width: 1024px) {
+    &:hover svg {
+      scale: 0.8;
+    }
+  }
 
   @media screen and (max-width: 768px) {
     top: 20px;

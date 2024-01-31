@@ -113,6 +113,18 @@ const GlobalStyles = createGlobalStyle`
       padding: 0 20px;
     }
   }
+
+  @keyframes gradientAnimation {
+    0% {
+      background-position:0% 97%
+    }
+    50% {
+      background-position:100% 4%
+    }
+    100% {
+      background-position:0% 97%
+    }
+  }
 `;
 
 export default GlobalStyles;

@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const Container = styled.section`
   height: calc(100vh - 100px);
   background: var(--primaryGradient);
-  overflow-x: hidden;
 
+  overflow: hidden;
   position: relative;
 
   &::after {
@@ -63,9 +63,19 @@ export const Content = styled.div`
     text-transform: uppercase;
     color: var(--primaryDark);
 
-    background-color: var(--secondary);
-    border-radius: 50px;
     padding: 20px 32px;
+    border-radius: 50px;
+    background-color: var(--secondary);
+    box-shadow: -1px 1px 3px rgba(0, 0, 0, 0.1);
+
+    transition: 0.3s ease-out;
+  }
+
+  @media screen and (min-width: 1024px) {
+    a:hover {
+      background-color: var(--primaryDark);
+      color: var(--secondary);
+    }
   }
 
   @media screen and (min-width: 1680px) {
@@ -129,6 +139,14 @@ export const Media = styled.div`
   a {
     padding: 10px;
     cursor: pointer;
+
+    transition: 0.3s ease-out;
+  }
+
+  @media screen and (min-width: 1024px) {
+    a:hover {
+      scale: 1.2;
+    }
   }
 
   @media screen and (max-width: 1440px) {
