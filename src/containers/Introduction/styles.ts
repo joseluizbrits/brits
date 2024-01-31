@@ -24,7 +24,7 @@ export const Container = styled.section`
 
   @media screen and (max-width: 768px) {
     &::before {
-      background: url(${img.src}) 34% center no-repeat;
+      background: url(${img.src}) 29% center no-repeat;
       background-size: cover;
     }
   }

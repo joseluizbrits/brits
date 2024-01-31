@@ -19,7 +19,7 @@ const Animation = (component: MutableRefObject<null>) => {
           end: "150% center",
           scrub: true,
         },
-        "--middleTriangle": "polygon(100% 0, 100% 100%, 100% 100%)",
+        "--middleTriangle": "polygon(100% 0, 100% 100%, 100% 100%, 100% 50%)",
       });
 
       gsap.from("#intro h2", {

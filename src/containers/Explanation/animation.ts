@@ -16,7 +16,7 @@ const Animation = (component: MutableRefObject<null>) => {
         scrollTrigger: {
           trigger: component.current,
           start: "top bottom",
-          end: "80% center",
+          end: "50% center",
           scrub: true,
         },
         "--largeTriangle": "polygon(100% 0, 100% 100%, 100% 100%)",
