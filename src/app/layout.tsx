@@ -9,13 +9,24 @@ import SmoothScroll from "@/components/SmoothScroll";
 
 export const metadata: Metadata = {
   title: "Criação de sites profissionais | BRITS Desenvolvimento Web",
-  description: "Está querendo criar um site? [continuar aqui...]",
+  description:
+    "Está pensando em criar um site? Inicie agora sua presença online com um design exclusivo e profissional. Descubra aquele orçamento que cabe no seu bolso!",
   keywords: [
     "site",
     "website",
-    "desenvolvimento de sites",
+    "site profissional",
+    "website profissional",
     "front-end",
+    "desenvolvimento de sites",
+    "desenvolvimento de websites",
+    "desenvolvimento front-end",
     "criação de sites",
+    "criador de websites",
+    "desenvolvedor de sites",
+    "desenvolvedor de websites",
+    "desenvolvedor front-end",
+    "design",
+    "web design",
   ],
   alternates: {
     canonical: "/",
@@ -26,7 +37,8 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://brits.com.br"),
   openGraph: {
     title: "Criação de sites profissionais | BRITS Desenvolvimento Web",
-    description: "Está querendo criar um site? [continuar aqui...]",
+    description:
+      "Está pensando em criar um site? Inicie agora sua presença online com um design exclusivo e profissional. Descubra aquele orçamento que cabe no seu bolso!",
     type: "website",
     url: "https://brits.com.br",
     siteName: "BRITS",

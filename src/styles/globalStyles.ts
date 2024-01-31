@@ -87,7 +87,7 @@ const GlobalStyles = createGlobalStyle`
   *::-webkit-scrollbar-thumb,
   body::-webkit-scrollbar-thumb,
   html::-webkit-scrollbar-thumb {
-    background: var(--gradientThree);
+    background: var(--gradientOne);
     border-radius: 25px;
     border: 5px solid var(--primaryGradient);
   }
@@ -95,7 +95,7 @@ const GlobalStyles = createGlobalStyle`
   *::-webkit-scrollbar-thumb:hover,
   body::-webkit-scrollbar-thumb:hover,
   html::-webkit-scrollbar-thumb:hover {
-    background: var(--secondaryShadow);
+    background: var(--gradientThree);
   }
 
   /* LENIS SCROLL SMOOTH */
