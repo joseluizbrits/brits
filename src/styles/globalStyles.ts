@@ -34,7 +34,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   html {
-    background: var(--primary);
+    background: var(--primaryDark);
     overflow-x: hidden;
   }
 

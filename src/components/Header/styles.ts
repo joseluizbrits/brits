@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
-export const Container = styled.header`
+export const Container = styled.header<{ $bg: string }>`
   padding-top: 20px;
   padding-bottom: 20px;
   height: 100px;
-  background: var(--primaryGradient);
+  background: ${({ $bg }) => ($bg ? "transparent" : "var(--primaryGradient)")};
 
   display: flex;
   justify-content: space-between;

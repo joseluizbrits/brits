@@ -5,10 +5,5 @@ export default function BlogLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return (
-    <div>
-      <header>Header do Blog</header>
-      {children}
-    </div>
-  );
+  return <div>{children}</div>;
 }
