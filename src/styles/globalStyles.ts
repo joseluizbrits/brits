@@ -77,6 +77,11 @@ const GlobalStyles = createGlobalStyle`
     padding: 0 120px;
   }
 
+  .blog-wrapper {
+    background-color: var(--blogBody);
+    padding: 40px 400px 120px 400px;
+  }
+
   /* ---------- SCROLLBAR ---------- */
 
   *::-webkit-scrollbar,
@@ -127,17 +132,43 @@ const GlobalStyles = createGlobalStyle`
     .container {
       padding: 0 80px;
     }
+
+    .blog-wrapper {
+      background-color: var(--blogBody);
+      padding: 40px 240px 120px 240px;
+    }
   }
 
   @media screen and (max-width: 1024px) {
     .container {
       padding: 0 40px;
     }
+
+    .blog-wrapper {
+      background-color: var(--blogBody);
+      padding: 40px 160px 120px 160px;
+    }
   }
 
   @media screen and (max-width: 768px) {
     .container {
       padding: 0 20px;
+    }
+
+    .blog-wrapper {
+      background-color: var(--blogBody);
+      padding: 40px 40px 120px 40px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .container {
+      padding: 0 20px;
+    }
+
+    .blog-wrapper {
+      background-color: var(--blogBody);
+      padding: 40px 20px 120px 20px;
     }
   }
 

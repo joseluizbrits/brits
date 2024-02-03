@@ -6,6 +6,7 @@ export const Container = styled.section`
   display: flex;
   align-items: center;
 
+  overflow: hidden;
   position: relative;
 
   .bars.top {
@@ -20,6 +21,32 @@ export const Container = styled.section`
     bottom: 0;
     left: 0;
   }
+
+  @media screen and (max-width: 1024px) {
+    .bars.top {
+      scale: 0.6;
+      right: -40px;
+    }
+
+    .bars.bottom {
+      scale: 0.6;
+      left: -40px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .bars {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    height: calc(100vh - 80px);
+  }
+
+  @media screen and (max-width: 640px) {
+    height: 60vh;
+  }
 `;
 
 export const Content = styled.div`
@@ -33,7 +60,7 @@ export const Content = styled.div`
     content: "";
     display: block;
     width: 100%;
-    height: clamp(2rem, 5vw, 6rem);
+    height: clamp(4rem, 5vw, 6rem);
     margin-top: calc(clamp(2rem, 5vw, 6rem) * -1);
     background-color: var(--primaryLight);
 
@@ -43,9 +70,10 @@ export const Content = styled.div`
 
   h1 {
     font-weight: 500;
-    font-size: clamp(2rem, 5vw, 6rem);
+    font-size: clamp(4rem, 5vw, 6rem);
     color: var(--white);
     max-width: 18ch;
+    padding-right: 20px;
   }
 
   h1 span {
@@ -61,8 +89,11 @@ export const Content = styled.div`
     color: var(--primaryLight);
     margin-right: 120px;
     margin-top: 12px;
-
     justify-self: end;
+
+    opacity: 0;
+    animation: fadeRight 0.6s ease-out forwards;
+    animation-delay: 1.3s;
   }
 
   @keyframes fromRight {
@@ -72,5 +103,63 @@ export const Content = styled.div`
     to {
       translate: 0%;
     }
+  }
+
+  @keyframes fadeRight {
+    from {
+      translate: 40px;
+      opacity: 0;
+    }
+    to {
+      translate: 0;
+      opacity: 1;
+    }
+  }
+
+  @media screen and (max-width: 1440px) {
+    margin-left: 200px;
+
+    &::before {
+      transform: translateY(-6px);
+    }
+
+    p {
+      margin-right: 80px;
+      margin-top: 0;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    margin-left: 120px;
+
+    &::before {
+      height: 3rem;
+    }
+
+    h1 {
+      font-size: 3rem;
+    }
+
+    p {
+      margin-right: 40px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    margin-left: 80px;
+
+    &::before {
+      transform: translateY(-16px);
+    }
+
+    p {
+      margin-right: 20px;
+      margin-top: -8px;
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    margin-left: 20px;
+    margin-top: 40px;
   }
 `;

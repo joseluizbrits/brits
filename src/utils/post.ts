@@ -1,4 +1,5 @@
-import img from "../../public/chorrindo-blog.jpg";
+import img1 from "../../public/rick.jpg";
+import img2 from "../../public/chorrindo-blog.jpg";
 
 export const post = {
   id: 1,
@@ -10,6 +11,15 @@ export const post = {
     "Uma reflexão sobre a evolução das IAs e seus impactos no mercado de trabalho",
   date: "01/02/04",
   content: [
+    {
+      type: "img",
+      src: img1,
+      alt: "Rick do seriado Rick and Morty com a mão no queixo em um semblante pensativo",
+    },
+    {
+      type: "paragraph",
+      text: "Tem horas que eu me pego pensando se ainda serei um profissional relevante no futuro, se o que faço hoje ainda será valorizado daqui a alguns anos pela sociedade — e quando digo “alguns anos” me refiro a não mais do que 5 anos somente —, pois a cada dia que passa esse mundo caótico fica cada vez mais acelerado.",
+    },
     {
       type: "title",
       text: "O boom das IAs e o perfume da Boticário",
@@ -44,7 +54,7 @@ export const post = {
     },
     {
       type: "img",
-      src: img,
+      src: img2,
       alt: "Meme do chorrindo, um senhor que parece que está sorrindo e chorando ao mesmo tempo",
     },
     {
