@@ -1,21 +1,21 @@
 import styled from "styled-components";
-import img from "../../../public/eye.jpg";
+import img from "../../../../public/note.jpg";
 
 export const Container = styled.section`
-  background: var(--gradientTwo);
+  background: var(--gradientThree);
   height: 100vh;
   position: relative;
 
   &::before {
     content: "";
     display: block;
-    width: 69.9%;
+    width: 34.9%;
     height: 100vh;
-    background: url(${img.src}) 20% 40%;
+    background: url(${img.src}) 40% center no-repeat;
     background-size: cover;
     opacity: 0.4;
 
-    clip-path: var(--middleTriangle);
+    clip-path: var(--largeTriangle);
 
     position: absolute;
     top: 0;
@@ -24,7 +24,7 @@ export const Container = styled.section`
 
   @media screen and (max-width: 768px) {
     &::before {
-      background: url(${img.src}) 29% center no-repeat;
+      background: url(${img.src}) 21% center no-repeat;
       background-size: cover;
     }
   }
@@ -39,6 +39,7 @@ export const Content = styled.div`
   grid-template-columns: 1fr;
 
   position: relative;
+  z-index: 1;
 
   h2 {
     font-weight: 400;
@@ -46,7 +47,7 @@ export const Content = styled.div`
     line-height: 1.25em;
     text-align: end;
     color: var(--white);
-    max-width: 18ch;
+    max-width: 20ch;
 
     justify-self: end;
     align-self: center;
@@ -61,7 +62,11 @@ export const Content = styled.div`
     letter-spacing: 0.05rem;
     text-transform: lowercase;
     color: var(--primaryLight);
-    margin-bottom: -7%;
+    margin-bottom: -6%;
+  }
+
+  button {
+    z-index: 1;
   }
 
   > div {
@@ -89,7 +94,7 @@ export const Labels = styled.ul`
   }
 
   span {
-    font-size: clamp(0.875rem, 1vw, 1.25rem);
+    font-size: 0.875rem;
     letter-spacing: 0.05rem;
     text-transform: lowercase;
     color: var(--primaryLight);

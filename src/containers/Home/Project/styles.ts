@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import img from "../../../public/art-desktop.jpg";
+import desktop from "../../../../public/art-desktop.jpg";
+import tablet from "../../../../public/art-tablet.jpg";
 
 export const Container = styled.section`
   width: 100%;
@@ -12,7 +13,7 @@ export const Container = styled.section`
     display: block;
     width: 100%;
     height: 100%;
-    background: url(${img.src}) no-repeat center center;
+    background: url(${desktop.src}) no-repeat center center;
     background-size: cover;
     opacity: 0.3;
 
@@ -33,6 +34,13 @@ export const Container = styled.section`
     position: absolute;
     top: 0;
     left: 0;
+  }
+
+  @media screen and (max-width: 1024px) {
+    &::before {
+      background: url(${tablet.src}) no-repeat center center;
+      background-size: cover;
+    }
   }
 `;
 
