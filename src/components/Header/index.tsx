@@ -2,8 +2,8 @@
 
 import { Container } from "./styles";
 import { montserrat } from "@/lib/fonts";
-import Logo from "../Logo";
 import { useParams } from "next/navigation";
+import Logo from "../Logo";
 
 function Header() {
   const params = useParams<{ slug: string }>();

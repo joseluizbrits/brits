@@ -1,5 +1,6 @@
 "use client";
 
+import Bars from "@/icons/Bars";
 import { Container, Content } from "./styles";
 
 function HeroBlog() {
@@ -14,6 +15,8 @@ function HeroBlog() {
           trabalho
         </p>
       </Content>
+      <Bars className="top" />
+      <Bars className="bottom" />
     </Container>
   );
 }

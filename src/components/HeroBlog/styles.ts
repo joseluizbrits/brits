@@ -5,6 +5,21 @@ export const Container = styled.section`
 
   display: flex;
   align-items: center;
+
+  position: relative;
+
+  .bars.top {
+    position: absolute;
+    top: 0;
+    right: 0;
+    rotate: 180deg;
+  }
+
+  .bars.bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
 `;
 
 export const Content = styled.div`
