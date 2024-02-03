@@ -11,10 +11,13 @@ const GlobalStyles = createGlobalStyle`
     --primaryGradient: linear-gradient(to right, #692FA4, #764BA2, #8659B4);
     --secondary: #41F7EC;
     --secondaryShadow: rgba(65, 247, 236, 0.8);
+    --secondaryClear: rgba(65, 247, 236, 0.2);
     --tertiary: #D22AE8;
     --tertiaryShadow: rgba(210, 42 , 232, 0.9);
     --tertiaryClear: rgba(210, 42 , 232, 0.2);
     --warning: #FB4B4B;
+    --blogBody: #220341;
+    --blogText: #F7EFFF;
     --gradientOne: linear-gradient(to bottom, #862FA4 30%, #692FA4);
     --gradientTwo: linear-gradient(to bottom, #692FA4, #8A2A99);
     --gradientThree: linear-gradient(to bottom, #8A2A99 15%, #8DFFF8);
