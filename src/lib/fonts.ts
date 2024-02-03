@@ -7,5 +7,5 @@ export const montserrat = Montserrat({
 
 export const ubuntu = Ubuntu({
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["400", "500", "700"],
 });

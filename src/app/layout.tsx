@@ -5,7 +5,6 @@ import StylesProvider from "@/styles/StylesProvider";
 import PopupProvider from "@/contexts/PopupContext";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import SmoothScroll from "@/components/SmoothScroll";
 
 export const metadata: Metadata = {
   title: "Criação de sites profissionais | BRITS Desenvolvimento Web",
@@ -56,11 +55,9 @@ export default function RootLayout({
       <body className={ubuntu.className}>
         <StylesProvider>
           <PopupProvider>
-            <SmoothScroll>
-              <Header />
-              {children}
-              <Footer />
-            </SmoothScroll>
+            <Header />
+            {children}
+            <Footer />
           </PopupProvider>
         </StylesProvider>
       </body>

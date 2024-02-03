@@ -8,6 +8,7 @@ export const Container = styled.a`
     font-style: italic;
     font-weight: 900;
     font-size: 2.5rem;
+    text-shadow: -1px 1px 1px rgba(0, 0, 0, 0.1);
 
     background-image: var(--gradientThree);
     background-clip: text;

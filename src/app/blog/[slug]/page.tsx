@@ -1,5 +1,11 @@
+import HeroBlog from "@/components/HeroBlog";
+
 function page() {
-  return <div>Corpo do Blog</div>;
+  return (
+    <>
+      <HeroBlog />
+    </>
+  );
 }
 
 export default page;
