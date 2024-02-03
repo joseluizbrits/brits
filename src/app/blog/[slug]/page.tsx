@@ -1,6 +1,9 @@
 import Author from "@/components/Author";
+import CallMe from "@/components/CallMe";
 import HeroBlog from "@/components/HeroBlog";
+import Intro from "@/components/Intro";
 import Share from "@/components/Share";
+import Content from "@/containers/Blog/Content";
 
 function page() {
   return (
@@ -9,11 +12,15 @@ function page() {
       <main
         style={{
           backgroundColor: "var(--blogBody)",
-          padding: "40px 400px 80px 400px",
+          padding: "40px 400px 120px 400px",
         }}
       >
-        <Share />
+        <Share position="top" />
         <Author />
+        <Intro />
+        <Content />
+        <Share position="bottom" />
+        <CallMe />
       </main>
     </>
   );

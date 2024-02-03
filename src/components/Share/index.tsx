@@ -1,29 +1,45 @@
 "use client";
 
+import { Wrapper } from "./styles";
 import FacebookSquare from "@/icons/FacebookSquare";
-import { Wrapper, Media } from "./styles";
 import WhatsAppSquare from "@/icons/WhatsAppSquare";
 import XTwitterSquare from "@/icons/XTwitterSquare";
 import LinkedInSquare from "@/icons/LinkedInSquare";
 
-function Share() {
+function Share({ position }: { position: "top" | "bottom" }) {
   return (
-    <Wrapper>
+    <Wrapper className={position}>
       <span>Compartilhe!</span>
-      <Media>
+      <div>
         <a href="#">
-          <WhatsAppSquare color="var(--primaryDark)" />
+          <WhatsAppSquare
+            color={
+              position === "top" ? "var(--primaryDark)" : "var(--tertiary)"
+            }
+          />
         </a>
         <a href="#">
-          <FacebookSquare color="var(--primaryDark)" />
+          <FacebookSquare
+            color={
+              position === "top" ? "var(--primaryDark)" : "var(--tertiary)"
+            }
+          />
         </a>
         <a href="#">
-          <XTwitterSquare color="var(--primaryDark)" />
+          <XTwitterSquare
+            color={
+              position === "top" ? "var(--primaryDark)" : "var(--tertiary)"
+            }
+          />
         </a>
         <a href="#">
-          <LinkedInSquare color="var(--primaryDark)" />
+          <LinkedInSquare
+            color={
+              position === "top" ? "var(--primaryDark)" : "var(--tertiary)"
+            }
+          />
         </a>
-      </Media>
+      </div>
     </Wrapper>
   );
 }
