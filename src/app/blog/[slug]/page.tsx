@@ -1,3 +1,4 @@
+import Author from "@/components/Author";
 import HeroBlog from "@/components/HeroBlog";
 import Share from "@/components/Share";
 
@@ -12,6 +13,7 @@ function page() {
         }}
       >
         <Share />
+        <Author />
       </main>
     </>
   );
