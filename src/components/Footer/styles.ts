@@ -51,12 +51,30 @@ export const Container = styled.footer<{ $bg: string }>`
     }
   }
 
+  @media screen and (max-width: 1280px) {
+    .bars.top {
+      scale: 0.4;
+      right: -56px;
+    }
+
+    .bars.bottom {
+      scale: 0.4;
+      left: -56px;
+    }
+  }
+
   @media screen and (max-width: 1024px) {
     flex-direction: column;
     gap: 8px;
 
     > span {
       font-size: 0.875rem;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .bars {
+      display: none;
     }
   }
 `;

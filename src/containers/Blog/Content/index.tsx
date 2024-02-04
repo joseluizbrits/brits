@@ -8,8 +8,13 @@ import { Paragraph } from "@/styles/Blog/Paragraph";
 import { lato } from "@/lib/fonts";
 import { post } from "@/utils/post";
 import { Quote } from "@/styles/Blog/Quote";
+import { notFound, useParams } from "next/navigation";
 
 function Content() {
+  const params = useParams<{ slug: string }>();
+
+  if (params.slug !== post.slug) notFound();
+
   const elements = post.content;
 
   return (

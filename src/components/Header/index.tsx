@@ -19,7 +19,10 @@ function Header() {
                 home
               </a>
             ) : (
-              <a className={montserrat.className} href={`/blog/1`}>
+              <a
+                className={montserrat.className}
+                href={`/blog/eu-ainda-serei-um-profissional-relevante-no-futuro`}
+              >
                 blog
               </a>
             )}
