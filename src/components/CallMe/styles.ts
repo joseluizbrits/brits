@@ -17,6 +17,13 @@ export const Wrapper = styled.div`
 
   a {
     color: var(--primaryLight);
+    transition: 0.3s ease;
+  }
+
+  @media screen and (min-width: 1024px) {
+    a:hover {
+      color: var(--tertiary);
+    }
   }
 
   @media screen and (max-width: 1280px) {

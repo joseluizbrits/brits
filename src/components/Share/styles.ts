@@ -44,7 +44,23 @@ export const Wrapper = styled.div`
     padding: 6px;
   }
 
+  &.top svg,
+  &.bottom svg {
+    transition: 0.3s ease-out;
+  }
+
   &.top svg {
     scale: 0.7;
+  }
+
+  @media screen and (min-width: 1024px) {
+    &.top a:hover svg {
+      scale: 0.8;
+      filter: contrast(150%);
+    }
+
+    &.bottom a:hover svg {
+      filter: contrast(150%);
+    }
   }
 `;

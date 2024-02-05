@@ -50,7 +50,7 @@ export const post = {
     },
     {
       type: "quote",
-      text: "Lembre-se, não mais do que 5 anos. Se você não está a par disso é melhor pegar o bonde andando e corra... porque ele tá acelerando",
+      text: "Lembre-se, não mais do que 5 anos. Se você não está a par disso é melhor pegar o bonde andando — ou melhor, correndo... porque ele tá acelerando!",
     },
     {
       type: "img",
@@ -63,11 +63,15 @@ export const post = {
     },
     {
       type: "paragraph",
-      text: "Para aqueles que não gostam de estudar — assim como eu — eu tenho uma péssima notícia: você terá que estudar continuamente de agora em diante se quiser se manter minimamente atualizado e relevante no mercado de trabalho, pois a sua profissão ou área de atuação poderá mudar radicalmente em questão de anos, correndo até mesmo o risco de parar de existir da noite para o dia. Aquela coisa ancestral que seus avós faziam “se especializar em uma área específica e construir uma carreira de 25 anos em uma única empresa” dificilmente isso se aplicará a você. Tudo indica que vamos precisar ter mais de uma profissão durante a vida, pois as coisas estão mudando muuuuuito rápido e com isso a gente fica como? Assustados…",
+      text: "Para aqueles que não gostam de estudar — assim como eu — eu tenho uma péssima notícia: você terá que estudar continuamente de agora em diante se quiser se manter minimamente atualizado e relevante no mercado de trabalho, pois a sua profissão ou área de atuação poderá mudar radicalmente em questão de anos, correndo até mesmo o risco de parar de existir da noite para o dia. Aquela coisa ancestral que seus avós faziam “se especializar em uma área específica e construir uma carreira de 25 anos em uma única empresa” dificilmente se aplicará a você. Tudo indica que vamos precisar ter mais de uma profissão durante a vida, pois as coisas estão mudando muuuuuito rápido. E acaba que diante disso tudo a gente fica como? Assustados, né?",
     },
     {
       type: "paragraph",
       text: "Ah, ansiedade, sua linda, seja bem-vinda! 💃 🕺",
+    },
+    {
+      type: "paragraph",
+      text: "P.S. Esse texto não foi escrito pelo ChatGPT — ou foi? Você nunca saberá.",
     },
   ],
 };
