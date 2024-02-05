@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { ubuntu } from "@/lib/fonts";
 
+import { GoogleAnalytics } from "@next/third-parties/google";
+
 import StylesProvider from "@/styles/StylesProvider";
 import PopupProvider from "@/contexts/PopupContext";
 import Header from "@/components/Header";
@@ -60,6 +62,7 @@ export default function RootLayout({
             <Footer />
           </PopupProvider>
         </StylesProvider>
+        <GoogleAnalytics gaId="G-6TLCXHMYYH" />
       </body>
     </html>
   );
