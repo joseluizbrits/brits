@@ -3,8 +3,6 @@ import Author from "@/components/Author";
 import Share from "@/components/Share";
 import CallMe from "@/components/CallMe";
 
-import React from "react";
-
 export default function BlogLayout({
   children,
 }: {
