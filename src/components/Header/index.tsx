@@ -14,21 +14,22 @@ function Header() {
       <nav>
         <ul>
           <li>
-            {params.slug ? (
-              <a className={montserrat.className} href={`/`}>
-                home
-              </a>
-            ) : (
-              <a
-                className={montserrat.className}
-                href={`/blog/eu-ainda-serei-um-profissional-relevante-no-futuro`}
-              >
-                blog
+            {!params.slug && (
+              <a className={montserrat.className} href="#services">
+                Services
               </a>
             )}
           </li>
           <li>
-            <a href="#contact">Contato</a>
+            {params.slug ? (
+              <a href="https://api.whatsapp.com/send?phone=5521977201981&text=Ola,%20Brits!%20Eu%20gostaria%20de%20fazer%20um%20or%C3%A7amento">
+                Contato
+              </a>
+            ) : (
+              <a href="/blog/eu-ainda-serei-um-profissional-relevante-no-futuro">
+                Blog
+              </a>
+            )}
           </li>
         </ul>
       </nav>
