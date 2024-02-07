@@ -1,0 +1,99 @@
+{
+  "id": "blog_post",
+  "label": "Blog Post",
+  "format": "page",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "config": {
+          "label": "UID",
+          "placeholder": "Título do post (sem caracteres especiais)"
+        },
+        "type": "UID"
+      },
+      "hero": {
+        "type": "Group",
+        "config": {
+          "label": "Hero",
+          "repeat": false,
+          "fields": {
+            "blog_title": {
+              "type": "StructuredText",
+              "config": {
+                "label": "Title",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "heading2"
+              }
+            },
+            "blog_title_emphasis": {
+              "type": "Text",
+              "config": {
+                "label": "Título Ênfase",
+                "placeholder": ""
+              }
+            },
+            "blog_subtitle": {
+              "type": "StructuredText",
+              "config": {
+                "label": "Sub-título",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "paragraph"
+              }
+            }
+          }
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "quote": {
+              "type": "SharedSlice"
+            },
+            "blog_image": {
+              "type": "SharedSlice"
+            },
+            "paragraph": {
+              "type": "SharedSlice"
+            },
+            "paragraph_title": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    },
+    "SEO & Metadata": {
+      "meta_title": {
+        "config": {
+          "label": "Meta Title",
+          "placeholder": "A title of the page used for social media and search engines"
+        },
+        "type": "Text"
+      },
+      "meta_description": {
+        "config": {
+          "label": "Meta Description",
+          "placeholder": "A brief summary of the page"
+        },
+        "type": "Text"
+      },
+      "og_image": {
+        "config": {
+          "label": "OG Image",
+          "constraint": {
+            "height": 630,
+            "width": 1200
+          },
+          "thumbnails": []
+        },
+        "type": "Image"
+      }
+    }
+  }
+}

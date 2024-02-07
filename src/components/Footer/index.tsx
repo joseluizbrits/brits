@@ -9,10 +9,10 @@ import GitHub from "@/icons/GitHub";
 import Instagram from "@/icons/Instagram";
 
 function Footer() {
-  const params = useParams<{ slug: string }>();
+  const params = useParams<{ uid: string }>();
 
   return (
-    <Container $bg={params.slug}>
+    <Container $bg={params.uid}>
       <Logo href="/" />
       <span className={montserrat.className}>
         © Copyright {new Date().getFullYear()} - {new Date().getFullYear() + 1}{" "}
@@ -28,7 +28,7 @@ function Footer() {
         </a>
       </div>
 
-      {params.slug && (
+      {params.uid && (
         <>
           <Bars className="top" />
           <Bars className="bottom" />

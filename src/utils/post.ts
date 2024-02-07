@@ -2,7 +2,7 @@ import img1 from "../../public/rick.jpg";
 import img2 from "../../public/chorrindo-blog.jpg";
 
 export const post = {
-  slug: "eu-ainda-serei-um-profissional-relevante-no-futuro",
+  uid: "eu-ainda-serei-um-profissional-relevante-no-futuro",
   title: {
     text: "Eu ainda serei um profissional relevante",
     emphasis: "no futuro?",

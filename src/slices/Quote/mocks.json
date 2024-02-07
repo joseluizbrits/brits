@@ -1,0 +1,20 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"blog_quote": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Irure aute in aute laborum cupidatat sit irure amet elit nulla reprehenderit elit qui excepteur."
+						}
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

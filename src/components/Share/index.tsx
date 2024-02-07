@@ -11,8 +11,8 @@ import LinkedInSquare from "@/icons/LinkedInSquare";
 // https://www.linkedin.com/shareArticle/?mini=true&url=https:https://www.brits.com.br/blog/eu-ainda-serei-um-profissional-relevante-no-futuro&title=Eu%20ainda%20serei%20um%20profissional%20relevante%20no%20futuro%3F&summary=Eu%20acabei%20de%20ler%20este%20texto%20muito%20legal%20escrito%20pelo%20Brits.%20Leia%20voc%C3%AA%20tamb%C3%A9m!&source=https://www.brits.com.br/blog/eu-ainda-serei-um-profissional-relevante-no-futuro
 
 function Share({ position }: { position: "top" | "bottom" }) {
-  const params = useParams<{ slug: string }>();
-  const link = `https://www.brits.com.br/blog/${params.slug}`;
+  const params = useParams<{ uid: string }>();
+  const link = `https://www.brits.com.br/blog/${params.uid}`;
 
   return (
     <Wrapper className={position}>

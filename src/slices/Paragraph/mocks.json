@@ -1,0 +1,20 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"blog_paragraph": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Sit pariatur elit aliqua veniam eiusmod. Ex duis nostrud ullamco quis veniam occaecat. Velit ea sunt aute occaecat."
+						}
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

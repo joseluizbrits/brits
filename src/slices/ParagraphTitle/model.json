@@ -1,0 +1,28 @@
+{
+  "id": "paragraph_title",
+  "type": "SharedSlice",
+  "name": "ParagraphTitle",
+  "description": "ParagraphTitle",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "blog_paragraph_title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Título do Parágrafo",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading2"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}
