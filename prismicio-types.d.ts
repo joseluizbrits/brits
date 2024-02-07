@@ -69,7 +69,18 @@ interface BlogPostDocumentData {
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#slices
    */
-  slices: prismic.SliceZone<BlogPostDocumentDataSlicesSlice> /**
+  slices: prismic.SliceZone<BlogPostDocumentDataSlicesSlice>;
+
+  /**
+   * Data da publicação field in *Blog Post*
+   *
+   * - **Field Type**: Date
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blog_post.blog_post_date
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#date
+   */
+  blog_post_date: prismic.DateField /**
    * Meta Title field in *Blog Post*
    *
    * - **Field Type**: Text

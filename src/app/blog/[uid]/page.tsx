@@ -22,7 +22,7 @@ export default async function Page({ params }: { params: Params }) {
       <HeroBlog data={page.data.hero[0]} />
       <article className="blog-wrapper">
         <Share position="top" />
-        <Author />
+        <Author date={page.data.blog_post_date} />
         <SliceZone slices={page.data.slices} components={components} />
         <Share position="bottom" />
         <CallMe />

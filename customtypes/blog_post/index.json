@@ -66,6 +66,13 @@
             }
           }
         }
+      },
+      "blog_post_date": {
+        "type": "Date",
+        "config": {
+          "label": "Data da publicação",
+          "placeholder": ""
+        }
       }
     },
     "SEO & Metadata": {
