@@ -3,6 +3,9 @@ import { ubuntu } from "@/lib/fonts";
 
 import { GoogleAnalytics } from "@next/third-parties/google";
 
+import { PrismicPreview } from "@prismicio/next";
+import { repositoryName } from "@/prismicio";
+
 import StylesProvider from "@/styles/StylesProvider";
 import PopupProvider from "@/contexts/PopupContext";
 import Header from "@/components/Header";
@@ -64,6 +67,7 @@ export default function RootLayout({
         </StylesProvider>
         <GoogleAnalytics gaId="G-6TLCXHMYYH" />
       </body>
+      <PrismicPreview repositoryName={repositoryName} />
     </html>
   );
 }
