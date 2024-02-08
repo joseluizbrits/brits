@@ -4,7 +4,7 @@ export default function NotFound() {
   return (
     <div
       style={{
-        height: "calc(100vh - 200px)",
+        height: "calc(100vh - 240px)",
         margin: "0 80px",
         display: "grid",
         alignItems: "center",

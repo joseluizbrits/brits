@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.footer<{ $type: "blog" | "blogPost" | "home" }>`
   width: 100%;
-  height: 120px;
+  height: 160px;
   padding: 0 40px;
   background: ${({ $type }) =>
     $type === "blog"
