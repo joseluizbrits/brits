@@ -13,6 +13,10 @@ const Wrapper = styled.div`
   img {
     object-fit: cover;
   }
+
+  @media screen and (max-width: 1024px) {
+    height: 120px;
+  }
 `;
 
 function GalaxiesImage({ position }: { position: "top" | "bottom" }) {

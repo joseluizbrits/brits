@@ -1,6 +1,12 @@
 "use client";
 
-import { Content, ImageWrapper, PostDate, TextWrapper } from "./styles";
+import {
+  Container,
+  Content,
+  ImageWrapper,
+  PostDate,
+  TextWrapper,
+} from "./styles";
 import { PrismicRichText } from "@prismicio/react";
 import { AllDocumentTypes } from "../../../prismicio-types";
 
@@ -10,29 +16,40 @@ import Link from "next/link";
 import Calender from "@/icons/Calender";
 import ArrowRight from "@/icons/ArrowRight";
 import { formatDate } from "@/utils/formatDate";
+import useMedia from "@/hooks/useMedia";
+import { lato } from "@/lib/fonts";
 
 function BlogPostList({ posts }: { posts: AllDocumentTypes[] }) {
+  const mobile = useMedia("(max-width: 992px)");
+
   return (
-    <ul>
-      {posts.map(({ uid, data }) => (
-        <Content key={uid}>
+    <Container>
+      {posts.map(({ uid, data }, index) => (
+        <Content key={uid} $reverse={!mobile ? index % 2 === 1 : false}>
           <ImageWrapper>
             <Image
               src={data.blog_post_image.url ?? ""}
               alt={data.blog_post_image.alt ?? ""}
               fill
-              sizes="(max-width: 768px) 70vw, (max-width: 1200px) 50vw, 40vw"
+              sizes="(max-width: 768px) 70vw, (max-width: 1280px) 50vw, 40vw"
               unoptimized
             />
           </ImageWrapper>
 
-          <TextWrapper>
+          <TextWrapper $reverse={!mobile ? index % 2 === 1 : false}>
             <h2>{data.meta_title}</h2>
 
-            <PrismicRichText field={data.hero[0]?.blog_subtitle} />
+            <PrismicRichText
+              field={data.hero[0]?.blog_subtitle}
+              components={{
+                paragraph: ({ children }) => (
+                  <p className={lato.className}>{children}</p>
+                ),
+              }}
+            />
 
             <div>
-              <PostDate>
+              <PostDate $reverse={!mobile ? index % 2 === 1 : false}>
                 <Calender />
                 {formatDate(data.blog_post_date)}
               </PostDate>
@@ -45,7 +62,7 @@ function BlogPostList({ posts }: { posts: AllDocumentTypes[] }) {
           </TextWrapper>
         </Content>
       ))}
-    </ul>
+    </Container>
   );
 }
 

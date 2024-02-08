@@ -16,7 +16,7 @@ async function page() {
         className="container"
         style={{
           backgroundColor: "var(--blogBody)",
-          paddingBottom: "80px",
+          paddingBottom: "40px",
           display: "grid",
           gap: "80px",
         }}
