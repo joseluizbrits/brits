@@ -72,17 +72,6 @@ interface BlogPostDocumentData {
   blog_post_date: prismic.DateField;
 
   /**
-   * Slice Zone field in *Blog Post*
-   *
-   * - **Field Type**: Slice Zone
-   * - **Placeholder**: *None*
-   * - **API ID Path**: blog_post.slices[]
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#slices
-   */
-  slices: prismic.SliceZone<BlogPostDocumentDataSlicesSlice>;
-
-  /**
    * Imagem do Post field in *Blog Post*
    *
    * - **Field Type**: Image
@@ -91,7 +80,18 @@ interface BlogPostDocumentData {
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#image
    */
-  blog_post_image: prismic.ImageField<never> /**
+  blog_post_image: prismic.ImageField<never>;
+
+  /**
+   * Slice Zone field in *Blog Post*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blog_post.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<BlogPostDocumentDataSlicesSlice> /**
    * Meta Title field in *Blog Post*
    *
    * - **Field Type**: Text

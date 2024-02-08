@@ -54,6 +54,17 @@
           "placeholder": ""
         }
       },
+      "blog_post_image": {
+        "type": "Image",
+        "config": {
+          "label": "Imagem do Post",
+          "constraint": {
+            "width": 1200,
+            "height": 680
+          },
+          "thumbnails": []
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
@@ -72,17 +83,6 @@
               "type": "SharedSlice"
             }
           }
-        }
-      },
-      "blog_post_image": {
-        "type": "Image",
-        "config": {
-          "label": "Imagem do Post",
-          "constraint": {
-            "width": 780,
-            "height": 440
-          },
-          "thumbnails": []
         }
       }
     },

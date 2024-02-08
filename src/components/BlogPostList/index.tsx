@@ -7,17 +7,16 @@ import {
   PostDate,
   TextWrapper,
 } from "./styles";
-import { PrismicRichText } from "@prismicio/react";
 import { AllDocumentTypes } from "../../../prismicio-types";
-
-import Image from "next/image";
+import { PrismicRichText } from "@prismicio/react";
+import { PrismicNextImage } from "@prismicio/next";
+import { lato } from "@/lib/fonts";
 import Link from "next/link";
 
 import Calender from "@/icons/Calender";
 import ArrowRight from "@/icons/ArrowRight";
-import { formatDate } from "@/utils/formatDate";
 import useMedia from "@/hooks/useMedia";
-import { lato } from "@/lib/fonts";
+import { formatDate } from "@/utils/formatDate";
 
 function BlogPostList({ posts }: { posts: AllDocumentTypes[] }) {
   const mobile = useMedia("(max-width: 992px)");
@@ -27,9 +26,8 @@ function BlogPostList({ posts }: { posts: AllDocumentTypes[] }) {
       {posts.map(({ uid, data }, index) => (
         <Content key={uid} $reverse={!mobile ? index % 2 === 1 : false}>
           <ImageWrapper>
-            <Image
-              src={data.blog_post_image.url ?? ""}
-              alt={data.blog_post_image.alt ?? ""}
+            <PrismicNextImage
+              field={data.blog_post_image}
               fill
               sizes="(max-width: 768px) 70vw, (max-width: 1280px) 50vw, 40vw"
               unoptimized
