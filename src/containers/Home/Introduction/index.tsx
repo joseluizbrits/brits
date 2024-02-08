@@ -1,12 +1,13 @@
 "use client";
 
-import { Container, Content, Labels } from "./styles";
+import { Container, Content, ImageWrapper, Labels } from "./styles";
 
 import ConvinceMe from "@/components/ConvinceMe";
 import Button from "@/components/Button";
 import Up from "@/icons/Up";
 import Animation from "./animation";
 import { useRef } from "react";
+import Image from "next/image";
 
 function Introduction() {
   const section = useRef(null);
@@ -15,6 +16,16 @@ function Introduction() {
 
   return (
     <Container id="intro" ref={section}>
+      <ImageWrapper>
+        <Image
+          src="/eye.jpg"
+          alt="Ênfase nos olhos de uma mulher com o rosto coberto de tinta colorida"
+          fill
+          sizes="75vw"
+          unoptimized
+        ></Image>
+      </ImageWrapper>
+
       <Content className="container">
         <h2>
           <small>Credibilidade online</small>

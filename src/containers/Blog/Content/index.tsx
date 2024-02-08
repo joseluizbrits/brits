@@ -11,9 +11,9 @@ import { Quote } from "@/styles/Blog/Quote";
 import { notFound, useParams } from "next/navigation";
 
 function Content() {
-  const params = useParams<{ slug: string }>();
+  const params = useParams<{ uid: string }>();
 
-  if (params.slug !== post.slug) notFound();
+  if (params.uid !== post.uid) notFound();
 
   const elements = post.content;
 

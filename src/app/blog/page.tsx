@@ -1,39 +1,32 @@
-import Link from "next/link";
+import { createClient } from "@/prismicio";
 
-function page() {
+import TitleCircle from "@/components/TitleCircle";
+import GalaxiesImage from "@/components/GalaxiesImage";
+import BlogPostList from "@/components/BlogPostList";
+
+async function page() {
+  const client = createClient();
+  const blogPosts = await client.getAllByType("blog_post");
+
   return (
-    <div
-      style={{
-        height: "calc(100vh - 240px)",
-        margin: "0 80px",
-        display: "grid",
-        alignItems: "center",
-        gap: "20px",
-      }}
-    >
-      <h1
-        style={{
-          fontWeight: 400,
-          fontSize: "clamp(1.5rem, 2vw, 2rem)",
-          color: "var(--blogText)",
-          alignSelf: "end",
-        }}
-      >
-        Eu só tenho um post, então essa página ainda está sendo construída 🙃
-      </h1>
+    <>
+      <GalaxiesImage position="top" />
 
-      <Link
-        href="/blog/eu-ainda-serei-um-profissional-relevante-no-futuro"
+      <main
+        className="container"
         style={{
-          width: "fit-content",
-          borderBottom: "1px solid var(--primaryLight)",
-          color: "var(--primaryLight)",
-          alignSelf: "start",
+          backgroundColor: "var(--blogBody)",
+          paddingBottom: "40px",
+          display: "grid",
+          gap: "80px",
         }}
       >
-        Vá para o meu primeiro post
-      </Link>
-    </div>
+        <TitleCircle>Todos os Posts</TitleCircle>
+        <BlogPostList posts={blogPosts} />
+      </main>
+
+      <GalaxiesImage position="bottom" />
+    </>
   );
 }
 

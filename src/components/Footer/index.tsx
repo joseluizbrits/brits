@@ -2,17 +2,23 @@
 
 import { Container } from "./styles";
 import { montserrat } from "@/lib/fonts";
-import { useParams } from "next/navigation";
+import { useParams, usePathname } from "next/navigation";
 import Logo from "../Logo";
 import Bars from "@/icons/Bars";
 import GitHub from "@/icons/GitHub";
 import Instagram from "@/icons/Instagram";
 
 function Footer() {
-  const params = useParams<{ slug: string }>();
+  const params = useParams<{ uid: string }>();
+  const pathname = usePathname();
+
+  const isBlogPost = params.uid;
+  const isBlog = pathname.includes("blog") && !isBlogPost;
+
+  const type = isBlog ? "blog" : isBlogPost ? "blogPost" : "home";
 
   return (
-    <Container $bg={params.slug}>
+    <Container $type={type}>
       <Logo href="/" />
       <span className={montserrat.className}>
         © Copyright {new Date().getFullYear()} - {new Date().getFullYear() + 1}{" "}
@@ -28,7 +34,7 @@ function Footer() {
         </a>
       </div>
 
-      {params.slug && (
+      {params.uid && (
         <>
           <Bars className="top" />
           <Bars className="bottom" />

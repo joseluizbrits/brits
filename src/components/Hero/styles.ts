@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
-  height: calc(100vh - 100px);
+  height: calc(100vh - 80px);
   background: var(--primaryGradient);
 
   overflow: hidden;
@@ -13,7 +13,7 @@ export const Container = styled.section`
     background: var(--gradientOne);
 
     width: var(--triangleWidth);
-    height: calc(100vh - 100px);
+    height: calc(100vh - 80px);
     clip-path: polygon(100% 0, 100% 100%, 0 100%);
 
     position: absolute;
@@ -24,7 +24,7 @@ export const Container = styled.section`
   @media screen and (max-width: 768px) {
     &,
     &::after {
-      height: calc(100vh - 80px);
+      height: calc(100vh - 64px);
     }
   }
 `;

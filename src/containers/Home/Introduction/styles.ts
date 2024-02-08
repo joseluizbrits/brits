@@ -1,32 +1,26 @@
 import styled from "styled-components";
-import img from "../../../../public/eye.jpg";
 
 export const Container = styled.section`
   background: var(--gradientTwo);
   height: 100vh;
   position: relative;
+`;
 
-  &::before {
-    content: "";
-    display: block;
-    width: 69.9%;
-    height: 100vh;
-    background: url(${img.src}) 20% 40%;
-    background-size: cover;
-    opacity: 0.4;
+export const ImageWrapper = styled.div`
+  width: 69.9%;
+  height: 100vh;
 
-    clip-path: var(--middleTriangle);
+  opacity: 0.4;
 
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
+  clip-path: var(--middleTriangle);
 
-  @media screen and (max-width: 768px) {
-    &::before {
-      background: url(${img.src}) 29% center no-repeat;
-      background-size: cover;
-    }
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  img {
+    object-fit: cover;
+    object-position: 30%;
   }
 `;
 

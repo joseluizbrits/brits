@@ -5,28 +5,22 @@ export const Container = styled.section`
   background: var(--gradientThree);
   height: 100vh;
   position: relative;
+`;
 
-  &::before {
-    content: "";
-    display: block;
-    width: 34.9%;
-    height: 100vh;
-    background: url(${img.src}) 40% center no-repeat;
-    background-size: cover;
-    opacity: 0.4;
+export const ImageWrapper = styled.div`
+  width: 34.9%;
+  height: 100vh;
+  opacity: 0.4;
 
-    clip-path: var(--largeTriangle);
+  clip-path: var(--largeTriangle);
 
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
+  position: absolute;
+  top: 0;
+  left: 0;
 
-  @media screen and (max-width: 768px) {
-    &::before {
-      background: url(${img.src}) 21% center no-repeat;
-      background-size: cover;
-    }
+  img {
+    object-fit: cover;
+    object-position: 20%;
   }
 `;
 

@@ -25,7 +25,7 @@ const Animation = (component: MutableRefObject<null>) => {
       gsap.from("#project h2", {
         scrollTrigger: {
           trigger: "#project h2",
-          start: "20% 80%",
+          start: "top bottom",
           end: "bottom center",
         },
         y: 200,
