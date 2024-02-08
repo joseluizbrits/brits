@@ -8,19 +8,6 @@ export const Container = styled.section`
 
   position: relative;
 
-  &::before {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 100%;
-    background: url(${desktop.src}) no-repeat center center;
-    background-size: cover;
-    opacity: 0.3;
-
-    position: absolute;
-    top: 0;
-  }
-
   &::after {
     content: "";
     display: block;
@@ -35,12 +22,18 @@ export const Container = styled.section`
     top: 0;
     left: 0;
   }
+`;
 
-  @media screen and (max-width: 1024px) {
-    &::before {
-      background: url(${tablet.src}) no-repeat center center;
-      background-size: cover;
-    }
+export const ImageWrapper = styled.div`
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+
+  position: absolute;
+  top: 0;
+
+  img {
+    object-fit: cover;
   }
 `;
 
