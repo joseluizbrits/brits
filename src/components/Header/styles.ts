@@ -1,10 +1,15 @@
 import styled from "styled-components";
 
-export const Container = styled.header<{ $bg: string }>`
+export const Container = styled.header<{ $type: "blog" | "blogPost" | "home" }>`
   padding-top: 20px;
   padding-bottom: 20px;
-  height: 100px;
-  background: ${({ $bg }) => ($bg ? "transparent" : "var(--primaryGradient)")};
+  height: 80px;
+  background: ${({ $type }) =>
+    $type === "blog"
+      ? "var(--gradientOne)"
+      : $type === "blogPost"
+        ? "transparent"
+        : "var(--primaryGradient)"};
 
   display: flex;
   justify-content: space-between;
@@ -46,7 +51,7 @@ export const Container = styled.header<{ $bg: string }>`
   }
 
   @media screen and (max-width: 768px) {
-    height: 80px;
+    height: 64px;
 
     ul > :nth-child(1) {
       display: none;

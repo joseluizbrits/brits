@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
-  height: calc(100vh - 100px);
+  height: calc(100vh - 80px);
 
   display: flex;
   align-items: center;
@@ -41,7 +41,7 @@ export const Container = styled.section`
   }
 
   @media screen and (max-width: 768px) {
-    height: calc(100vh - 80px);
+    height: calc(100vh - 64px);
   }
 
   @media screen and (max-width: 640px) {

@@ -47,6 +47,13 @@
           }
         }
       },
+      "blog_post_date": {
+        "type": "Date",
+        "config": {
+          "label": "Data da publicação",
+          "placeholder": ""
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
@@ -67,11 +74,15 @@
           }
         }
       },
-      "blog_post_date": {
-        "type": "Date",
+      "blog_post_image": {
+        "type": "Image",
         "config": {
-          "label": "Data da publicação",
-          "placeholder": ""
+          "label": "Imagem do Post",
+          "constraint": {
+            "width": 780,
+            "height": 440
+          },
+          "thumbnails": []
         }
       }
     },

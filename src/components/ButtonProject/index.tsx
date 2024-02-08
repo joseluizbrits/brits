@@ -1,6 +1,6 @@
 import { ButtonWrapper } from "./styles";
 import { montserrat } from "@/lib/fonts";
-import Arrow from "@/icons/Arrow";
+import Arrow from "@/icons/ArrowUp";
 
 function ButtonProject({ href, id }: { href: string; id: string }) {
   return (

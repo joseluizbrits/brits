@@ -61,6 +61,17 @@ interface BlogPostDocumentData {
   hero: prismic.GroupField<Simplify<BlogPostDocumentDataHeroItem>>;
 
   /**
+   * Data da publicação field in *Blog Post*
+   *
+   * - **Field Type**: Date
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blog_post.blog_post_date
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#date
+   */
+  blog_post_date: prismic.DateField;
+
+  /**
    * Slice Zone field in *Blog Post*
    *
    * - **Field Type**: Slice Zone
@@ -72,15 +83,15 @@ interface BlogPostDocumentData {
   slices: prismic.SliceZone<BlogPostDocumentDataSlicesSlice>;
 
   /**
-   * Data da publicação field in *Blog Post*
+   * Imagem do Post field in *Blog Post*
    *
-   * - **Field Type**: Date
+   * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: blog_post.blog_post_date
+   * - **API ID Path**: blog_post.blog_post_image
    * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#date
+   * - **Documentation**: https://prismic.io/docs/field#image
    */
-  blog_post_date: prismic.DateField /**
+  blog_post_image: prismic.ImageField<never> /**
    * Meta Title field in *Blog Post*
    *
    * - **Field Type**: Text

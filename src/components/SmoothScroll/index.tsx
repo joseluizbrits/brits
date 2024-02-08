@@ -5,14 +5,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from "@studio-freight/lenis";
 
 import { ReactNode, useEffect } from "react";
-import usePopup from "@/hooks/usePopup";
 
 function SmoothScroll({ children }: { children: ReactNode }) {
-  const { getPopup } = usePopup();
-
-  const popup1 = getPopup(1);
-  const popup2 = getPopup(2);
-
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -27,7 +21,7 @@ function SmoothScroll({ children }: { children: ReactNode }) {
     });
 
     gsap.ticker.lagSmoothing(0);
-  }, [popup1, popup2]);
+  }, []);
 
   return <>{children}</>;
 }

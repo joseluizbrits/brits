@@ -1,10 +1,15 @@
 import styled from "styled-components";
 
-export const Container = styled.footer<{ $bg: string }>`
+export const Container = styled.footer<{ $type: "blog" | "blogPost" | "home" }>`
   width: 100%;
-  height: 160px;
+  height: 120px;
   padding: 0 40px;
-  background: ${({ $bg }) => ($bg ? "transparent" : "var(--primaryGradient)")};
+  background: ${({ $type }) =>
+    $type === "blog"
+      ? "var(--gradientTwo)"
+      : $type === "blogPost"
+        ? "transparent"
+        : "var(--primaryGradient)"};
 
   display: flex;
   justify-content: center;
