@@ -23,7 +23,7 @@ function Header() {
           <li>
             {type === "home" && (
               <a className={montserrat.className} href="#services">
-                Services
+                Serviços
               </a>
             )}
           </li>
