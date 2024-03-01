@@ -36,7 +36,7 @@ const Animation = (component: MutableRefObject<null>, projects: IProject[]) => {
           scrollTrigger: {
             trigger: `#services #see-project-${index + 1}`,
             start: "top 80%",
-            end: "end center",
+            end: "bottom center",
             scrub: true,
           },
           scale: 0,

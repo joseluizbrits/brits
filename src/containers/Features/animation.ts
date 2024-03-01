@@ -32,11 +32,11 @@ const Animation = (
       });
 
       projects.map((_, index) => {
-        gsap.from(`#features #feature-${index + 1}`, {
+        gsap.from(`#features #feat-${index + 1}`, {
           scrollTrigger: {
-            trigger: `#features #feature-${index + 1}`,
-            start: "-20px 80%",
-            end: "end center",
+            trigger: `#features #feat-${index + 1}`,
+            start: "top 80%",
+            end: "bottom 80%",
             scrub: true,
           },
           y: 40,

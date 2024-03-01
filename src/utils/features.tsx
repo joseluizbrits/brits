@@ -6,27 +6,27 @@ import MapsIcon from "@/icons/MapsIcon";
 
 export const features = [
   {
-    id: "feature-1",
+    id: "feat-1",
     name: "Galeria de imagens",
     icon: <GalleryIcon />,
   },
   {
-    id: "feature-2",
+    id: "feat-2",
     name: "Formulário de contato",
     icon: <FormIcon />,
   },
   {
-    id: "feature-3",
+    id: "feat-3",
     name: "Links das redes sociais",
     icon: <Social />,
   },
   {
-    id: "feature-4",
+    id: "feat-4",
     name: "Botão de WhatsApp",
     icon: <WhatsAppGradient />,
   },
   {
-    id: "feature-5",
+    id: "feat-5",
     name: "Google Maps",
     icon: <MapsIcon />,
   },

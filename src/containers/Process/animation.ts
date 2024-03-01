@@ -2,17 +2,13 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { useLayoutEffect, MutableRefObject } from "react";
 
-interface IBenefits {
+interface ISteps {
   id: string;
   title: string;
   desc: string;
-  icon: JSX.Element;
 }
 
-const Animation = (
-  component: MutableRefObject<null>,
-  projects: IBenefits[]
-) => {
+const Animation = (component: MutableRefObject<null>, projects: ISteps[]) => {
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
       gsap.defaults({
@@ -22,7 +18,7 @@ const Animation = (
 
       gsap.registerPlugin(ScrollTrigger);
 
-      gsap.from("#benefits h2", {
+      gsap.from("#process h2", {
         scrollTrigger: {
           trigger: component.current,
           start: "5% 80%",
@@ -33,15 +29,30 @@ const Animation = (
       });
 
       projects.map((_, index) => {
-        gsap.from(`#benefits #benefit-${index + 1}`, {
+        gsap.from(`#process #step-${index + 1}`, {
           scrollTrigger: {
-            trigger: `#benefits #benefit-${index + 1}`,
-            start: "-40px 80%",
+            trigger: `#process #step-${index + 1}`,
+            start: "-20px 80%",
             end: "bottom center",
             scrub: true,
           },
           y: 40,
-          scale: 0.8,
+          scale: 0.9,
+          opacity: 0,
+        });
+      });
+
+      projects.map((_, index) => {
+        gsap.from(`#process #step-${index + 1} svg`, {
+          scrollTrigger: {
+            trigger: `#process #step-${index + 1} svg`,
+            start: "top 65%",
+            end: "bottom center",
+            scrub: true,
+          },
+          y: -40,
+          x: (index + 1) % 2 !== 0 ? -40 : 40,
+          rotate: (index + 1) % 2 !== 0 ? "20deg" : "160deg",
           opacity: 0,
         });
       });
