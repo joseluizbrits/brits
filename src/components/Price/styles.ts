@@ -204,7 +204,7 @@ export const Options = styled.ul`
   }
 
   label {
-    font-size: clamp(1rem, 1.25vw, 1%.25rem);
+    font-size: clamp(1rem, 1.25vw, 1.25rem);
     color: var(--white);
     padding-left: 16px;
     cursor: pointer;
