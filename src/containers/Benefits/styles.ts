@@ -9,7 +9,7 @@ export const Container = styled.section`
   position: relative;
 
   h2 {
-    padding: 120px 0;
+    padding: 160px 0;
     font-weight: 400;
     font-size: clamp(2.25rem, 5vw, 7rem);
 
@@ -118,16 +118,16 @@ export const Container = styled.section`
 
     li div p {
       padding-top: 12px;
-      /* padding-right: 16px; */
     }
   }
 `;
 
 export const Mesh = styled.div`
-  filter: blur(130px);
-  position: absolute;
   width: 400px;
   height: 400px;
+  filter: blur(130px);
+
+  position: absolute;
 
   &::before {
     content: "";
