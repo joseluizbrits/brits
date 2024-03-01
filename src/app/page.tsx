@@ -8,6 +8,7 @@ import Contact from "@/containers/Contact";
 import SmoothScroll from "@/components/SmoothScroll";
 import Benefits from "@/containers/Benefits";
 import Features from "@/containers/Features";
+import Process from "@/containers/Process";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         <Services />
         <Benefits />
         <Features />
+        <Process />
         <Project />
         <About />
         <Contact />
