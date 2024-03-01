@@ -18,9 +18,6 @@ function Benefits() {
         Com <em>Brits</em> você recebe dedicação ao seu projeto
       </h2>
 
-      <Mesh style={{ top: "40%", right: "15%" }} />
-      <Mesh style={{ top: "80%", left: "15%" }} />
-
       <ul>
         {benefits.map(({ id, title, desc, icon }) => (
           <li key={id} id={id}>
