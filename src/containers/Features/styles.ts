@@ -121,10 +121,13 @@ export const Container = styled.section`
   }
 
   @media screen and (max-width: 640px) {
+    padding-bottom: 120px;
+
     h2 {
-      padding-left: 0;
-      margin: 0 auto;
       max-width: 18ch;
+      padding: 120px 20px;
+      padding-bottom: 64px;
+      margin: 0 auto;
     }
 
     ul {
@@ -157,13 +160,6 @@ export const Container = styled.section`
         top: -86px;
         left: -29px;
       }
-    }
-  }
-
-  @media screen and (max-width: 640px) {
-    h2 {
-      padding: 120px 20px;
-      padding-bottom: 64px;
     }
 
     li svg {
