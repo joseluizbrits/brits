@@ -1,12 +1,19 @@
 "use client";
 
-import { benefits } from "@/utils/benefits";
 import { Container, Mesh } from "./styles";
+import Animation from "./animation";
+
+import { useRef } from "react";
+import { benefits } from "@/utils/benefits";
 import { lato } from "@/lib/fonts";
 
 function Benefits() {
+  const section = useRef(null);
+
+  Animation(section, benefits);
+
   return (
-    <Container>
+    <Container id="benefits" ref={section}>
       <h2>
         Com <em>Brits</em> você recebe dedicação ao seu projeto
       </h2>
@@ -16,7 +23,7 @@ function Benefits() {
 
       <ul>
         {benefits.map(({ id, title, desc, icon }) => (
-          <li key={id}>
+          <li key={id} id={id}>
             {icon}
             <div>
               <h3>{title}</h3>
