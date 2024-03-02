@@ -38,7 +38,6 @@ function Services() {
               sizes="(max-width: 1024px) 85vw, 50vw"
               fill
               priority
-              unoptimized
             ></Image>
           </ImageWrapper>
         </ProjectWrapper>

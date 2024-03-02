@@ -21,7 +21,6 @@ function Project() {
           alt="Mulher sentada em um banquinho no museu apreciando quadros artísticos"
           fill
           sizes="100vw"
-          unoptimized
         ></Image>
       </ImageWrapper>
 

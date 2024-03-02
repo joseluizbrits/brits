@@ -22,7 +22,6 @@ function Explanation() {
           alt="Ênfase nos olhos de uma mulher com o rosto coberto de tinta colorida"
           fill
           sizes="75vw"
-          unoptimized
         ></Image>
       </ImageWrapper>
 
