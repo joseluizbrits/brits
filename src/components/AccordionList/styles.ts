@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import img from "../../../public/universe.jpg";
+import img from "../../../public/universe.webp";
 
 export const Container = styled.ul`
   padding: 40px;

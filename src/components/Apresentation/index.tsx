@@ -1,6 +1,6 @@
 import { Baloon, Container, Me } from "./styles";
 import Image from "next/image";
-import img from "../../../public/perfil.jpg";
+import img from "../../../public/perfil.webp";
 import Animation from "./animation";
 import { useRef } from "react";
 

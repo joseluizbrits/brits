@@ -18,7 +18,7 @@ function Introduction() {
     <Container id="intro" ref={section}>
       <ImageWrapper>
         <Image
-          src="/eye.jpg"
+          src="/eye.webp"
           alt="Ênfase nos olhos de uma mulher com o rosto coberto de tinta colorida"
           fill
           sizes="75vw"

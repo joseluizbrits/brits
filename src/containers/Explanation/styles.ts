@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import img from "../../../../public/note.jpg";
 
 export const Container = styled.section`
   background: var(--gradientThree);

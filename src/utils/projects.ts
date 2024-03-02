@@ -1,7 +1,7 @@
-import img1 from "../../public/ana-e-bia.jpg";
-import img2 from "../../public/magic-box.jpg";
-import img3 from "../../public/ta-na-hora.jpg";
-import img4 from "../../public/lili-da-ribeira.jpg";
+import img1 from "../../public/ana-e-bia.webp";
+import img2 from "../../public/magic-box.webp";
+import img3 from "../../public/ta-na-hora.webp";
+import img4 from "../../public/lili-da-ribeira.webp";
 
 const projects = [
   {
