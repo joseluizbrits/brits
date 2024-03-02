@@ -1,9 +1,9 @@
-import img1 from "../../public/velhota.jpg";
+import img1 from "../../public/velhota.webp";
 import img2 from "../../public/sabichao.png";
 import img3 from "../../public/google.jpg";
 import img4 from "../../public/drake.jpg";
 import img5 from "../../public/makeup.png";
-import img6 from "../../public/me-solta.jpg";
+import img6 from "../../public/me-solta.webp";
 import img7 from "../../public/chorrindo.png";
 
 const convince = [

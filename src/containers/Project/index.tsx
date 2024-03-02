@@ -17,7 +17,7 @@ function Project() {
     <Container id="project" ref={section}>
       <ImageWrapper>
         <Image
-          src="/art.jpg"
+          src="/art.webp"
           alt="Mulher sentada em um banquinho no museu apreciando quadros artísticos"
           fill
           sizes="100vw"

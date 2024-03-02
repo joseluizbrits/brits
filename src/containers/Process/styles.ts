@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Container = styled.section`
   background-color: var(--primary);
   padding-bottom: 200px;
+  overflow-x: hidden;
 
   h2 {
     font-weight: 400;

@@ -18,7 +18,7 @@ function Explanation() {
     <Container id="explan" ref={section}>
       <ImageWrapper>
         <Image
-          src="/note.jpg"
+          src="/note.webp"
           alt="Ênfase nos olhos de uma mulher com o rosto coberto de tinta colorida"
           fill
           sizes="75vw"
