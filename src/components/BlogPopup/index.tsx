@@ -19,10 +19,17 @@ function BlogPopup() {
 
   useEffect(() => {
     window.addEventListener("scrollend", watch);
+    window.addEventListener("touchend", watch);
 
-    if (active > 0) window.removeEventListener("scrollend", watch);
+    if (active > 0) {
+      window.removeEventListener("scrollend", watch);
+      window.removeEventListener("touchend", watch);
+    }
 
-    return () => window.removeEventListener("scrollend", watch);
+    return () => {
+      window.removeEventListener("scrollend", watch);
+      window.removeEventListener("touchend", watch);
+    };
   }, [active]);
 
   return (

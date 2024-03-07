@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description:
     "Venha dar uma olhada nos posts do meu blog. Cada artigo vai te trazer uma nova maneira de perceber o mundo social, profissional e pessoal. Leia e compartilhe!",
   openGraph: {
-    title: "odos os posts | BRITS Blog",
+    title: "Todos os posts | BRITS Blog",
     description:
       "Venha dar uma olhada nos posts do meu blog. Cada artigo vai te trazer uma nova maneira de perceber o mundo social, profissional e pessoal. Leia e compartilhe!",
     url: "https://brits.com.br/blog",

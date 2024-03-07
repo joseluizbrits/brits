@@ -58,6 +58,8 @@ export const ImageWrapper = styled.div`
   }
 
   @media screen and (max-width: 640px) {
+    border-radius: 25px;
+
     img {
       border-radius: 25px;
     }
