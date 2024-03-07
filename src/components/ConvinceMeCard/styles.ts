@@ -126,6 +126,15 @@ export const Content = styled.div<{ $src: string }>`
     bottom: 40px;
     right: 40px;
     z-index: 1;
+
+    transition: 0.3s ease;
+  }
+
+  @media screen and (min-width: 1080px) {
+    a:hover {
+      color: var(--secondary);
+      background-color: var(--primaryDark);
+    }
   }
 
   @media screen and (max-width: 1440px) {

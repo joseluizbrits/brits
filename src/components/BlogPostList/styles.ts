@@ -30,14 +30,23 @@ export const Content = styled.li<{ $reverse: boolean }>`
 
 export const ImageWrapper = styled.div`
   width: 100%;
+  border-radius: 50px;
   aspect-ratio: 16/9;
   cursor: pointer;
 
+  overflow: hidden;
   position: relative;
 
   img {
     object-fit: cover;
     border-radius: 50px;
+    transition: 0.3s ease;
+  }
+
+  @media screen and (min-width: 1080px) {
+    &:hover img {
+      scale: 1.05;
+    }
   }
 
   @media screen and (max-width: 1440px) {
@@ -66,6 +75,7 @@ export const TextWrapper = styled.div<{ $reverse: boolean }>`
     text-align: ${({ $reverse }) => ($reverse ? "end" : "start")};
     color: var(--white);
     cursor: pointer;
+    transition: 0.3s ease;
   }
 
   p {
@@ -117,6 +127,10 @@ export const TextWrapper = styled.div<{ $reverse: boolean }>`
   }
 
   @media screen and (min-width: 1024px) {
+    h2:hover {
+      color: var(--primaryLight);
+    }
+
     a:hover {
       background-color: var(--primaryDark);
       color: var(--secondary);

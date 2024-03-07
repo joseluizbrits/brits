@@ -5,6 +5,7 @@ import { SliceZone } from "@prismicio/react";
 import { createClient } from "@/prismicio";
 import { components } from "@/slices";
 import HeroBlog from "@/components/HeroBlog";
+import BlogWrapper from "@/components/BlogWrapper";
 import Author from "@/components/Author";
 import Share from "@/components/Share";
 import CallMe from "@/components/CallMe";
@@ -21,13 +22,13 @@ export default async function Page({ params }: { params: Params }) {
   return (
     <>
       <HeroBlog data={page.data.hero[0]} />
-      <article className="blog-wrapper">
+      <BlogWrapper>
         <Share position="top" />
         <Author date={page.data.blog_post_date} />
         <SliceZone slices={page.data.slices} components={components} />
         <Share position="bottom" />
         <CallMe />
-      </article>
+      </BlogWrapper>
       <BlogPopup />
     </>
   );

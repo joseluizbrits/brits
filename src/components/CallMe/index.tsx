@@ -12,7 +12,7 @@ function CallMe() {
         <a href="https://www.instagram.com/joseluizbrits/?igsh=MTIxZTV4YjI2MmN0bQ%3D%3D&utm_source=qr">
           Instagram
         </a>{" "}
-        e me conta qual é a sua opnião :)
+        e me conta qual é a sua opinião :)
       </p>
     </Wrapper>
   );
