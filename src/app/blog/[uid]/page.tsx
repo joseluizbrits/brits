@@ -8,6 +8,7 @@ import HeroBlog from "@/components/HeroBlog";
 import Author from "@/components/Author";
 import Share from "@/components/Share";
 import CallMe from "@/components/CallMe";
+import BlogPopup from "@/components/BlogPopup";
 
 type Params = { uid: string };
 
@@ -27,6 +28,7 @@ export default async function Page({ params }: { params: Params }) {
         <Share position="bottom" />
         <CallMe />
       </article>
+      <BlogPopup />
     </>
   );
 }

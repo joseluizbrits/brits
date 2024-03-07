@@ -31,6 +31,7 @@ export const Content = styled.li<{ $reverse: boolean }>`
 export const ImageWrapper = styled.div`
   width: 100%;
   aspect-ratio: 16/9;
+  cursor: pointer;
 
   position: relative;
 
@@ -64,6 +65,7 @@ export const TextWrapper = styled.div<{ $reverse: boolean }>`
     line-height: 1.25em;
     text-align: ${({ $reverse }) => ($reverse ? "end" : "start")};
     color: var(--white);
+    cursor: pointer;
   }
 
   p {

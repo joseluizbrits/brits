@@ -1,8 +1,8 @@
 import gsap from "gsap";
-import { useLayoutEffect } from "react";
+import { useEffect, useLayoutEffect } from "react";
 
 const Animation = () => {
-  useLayoutEffect(() => {
+  useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.defaults({
         ease: "circ.out",

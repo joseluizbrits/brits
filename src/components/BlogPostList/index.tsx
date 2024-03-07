@@ -17,15 +17,17 @@ import Calender from "@/icons/Calender";
 import ArrowRight from "@/icons/ArrowRight";
 import useMedia from "@/hooks/useMedia";
 import { formatDate } from "@/utils/formatDate";
+import { useRouter } from "next/navigation";
 
 function BlogPostList({ posts }: { posts: AllDocumentTypes[] }) {
   const mobile = useMedia("(max-width: 992px)");
+  const router = useRouter();
 
   return (
     <Container>
       {posts.map(({ uid, data }, index) => (
         <Content key={uid} $reverse={!mobile ? index % 2 === 1 : false}>
-          <ImageWrapper>
+          <ImageWrapper onClick={() => router.push(`/blog/${uid}`)}>
             <PrismicNextImage
               field={data.blog_post_image}
               fill
@@ -35,7 +37,9 @@ function BlogPostList({ posts }: { posts: AllDocumentTypes[] }) {
           </ImageWrapper>
 
           <TextWrapper $reverse={!mobile ? index % 2 === 1 : false}>
-            <h2>{data.meta_title}</h2>
+            <h2 onClick={() => router.push(`/blog/${uid}`)}>
+              {data.meta_title}
+            </h2>
 
             <PrismicRichText
               field={data.hero[0]?.blog_subtitle}
