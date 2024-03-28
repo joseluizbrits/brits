@@ -9,11 +9,13 @@ import SmoothScroll from "@/components/SmoothScroll";
 import Benefits from "@/containers/Benefits";
 import Features from "@/containers/Features";
 import Process from "@/containers/Process";
+import Story from "@/components/Story";
 
 export default function Home() {
   return (
     <>
       <SmoothScroll>
+        {/* <Story /> */}
         <Hero />
         <Introduction />
         <Explanation />
