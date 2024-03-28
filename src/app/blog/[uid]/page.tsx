@@ -10,6 +10,8 @@ import Author from "@/components/Author";
 import Share from "@/components/Share";
 import CallMe from "@/components/CallMe";
 import BlogPopup from "@/components/BlogPopup";
+import BlogPostList from "@/components/BlogPostList";
+import TitleCircle from "@/components/TitleCircle";
 
 type Params = { uid: string };
 
@@ -19,9 +21,12 @@ export default async function Page({ params }: { params: Params }) {
     .getByUID("blog_post", params.uid)
     .catch(() => notFound());
 
+  const blogPosts = await client.getAllByType("blog_post");
+
   return (
     <>
       <HeroBlog data={page.data.hero[0]} />
+
       <BlogWrapper>
         <Share position="top" />
         <Author date={page.data.blog_post_date} />
@@ -29,6 +34,32 @@ export default async function Page({ params }: { params: Params }) {
         <Share position="bottom" />
         <CallMe />
       </BlogWrapper>
+
+      <div
+        className="container"
+        style={{
+          backgroundColor: "var(--blogBody)",
+          paddingBottom: "120px",
+          display: "grid",
+          gap: "80px",
+        }}
+      >
+        <span
+          style={{
+            fontSize: "3rem",
+            textAlign: "center",
+            letterSpacing: "0.1rem",
+            color: "var(--primary)",
+            fontWeight: 700,
+          }}
+        >
+          Veja também
+          <br />
+          ...
+        </span>
+        <BlogPostList posts={blogPosts} except={page.uid} />
+      </div>
+
       <BlogPopup />
     </>
   );
@@ -45,7 +76,7 @@ export async function generateMetadata({
     .catch(() => notFound());
 
   return {
-    title: page.data.meta_title,
+    title: page.data.meta_title + " | BRITS Blog",
     description: page.data.meta_description,
     openGraph: {
       images: [page.data.og_image.url || ""],
