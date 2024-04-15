@@ -11,7 +11,6 @@ import Share from "@/components/Share";
 import CallMe from "@/components/CallMe";
 import BlogPopup from "@/components/BlogPopup";
 import BlogPostList from "@/components/BlogPostList";
-import TitleCircle from "@/components/TitleCircle";
 
 type Params = { uid: string };
 
