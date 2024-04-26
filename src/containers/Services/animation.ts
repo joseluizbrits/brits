@@ -11,7 +11,7 @@ interface IProject {
   href: string;
 }
 
-const Animation = (component: MutableRefObject<null>, projects: IProject[]) => {
+const Animation = (component: MutableRefObject<null>) => {
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
       gsap.defaults({
@@ -30,23 +30,10 @@ const Animation = (component: MutableRefObject<null>, projects: IProject[]) => {
         y: 40,
         opacity: 0,
       });
-
-      projects.map((_, index) => {
-        gsap.from(`#services #see-project-${index + 1}`, {
-          scrollTrigger: {
-            trigger: `#services #see-project-${index + 1}`,
-            start: "top 80%",
-            end: "bottom center",
-            scrub: true,
-          },
-          scale: 0,
-          opacity: 0,
-        });
-      });
     }, component);
 
     return () => ctx.revert();
-  }, [component, projects]);
+  }, [component]);
 };
 
 export default Animation;

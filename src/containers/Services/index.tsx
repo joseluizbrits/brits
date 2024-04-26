@@ -3,7 +3,6 @@
 import { Container, Title, Text, ProjectWrapper, ImageWrapper } from "./styles";
 import Image from "next/image";
 
-import ButtonProject from "@/components/ButtonProject";
 import projects from "@/utils/projects";
 import { useRef } from "react";
 import Animation from "./animation";
@@ -11,7 +10,7 @@ import Animation from "./animation";
 function Services() {
   const section = useRef(null);
 
-  Animation(section, projects);
+  Animation(section);
 
   return (
     <Container id="services" ref={section}>
@@ -21,14 +20,12 @@ function Services() {
         </h2>
       </Title>
 
-      {projects.map(({ id, title, desc, img, alt, href }, index) => (
+      {projects.map(({ id, title, desc }, index) => (
         <ProjectWrapper key={id} id={id}>
           <Text id={`text-${index + 1}`}>
             <p>
               <strong>{title}</strong> {desc}
             </p>
-
-            <ButtonProject id={`see-project-${index + 1}`} href={href} />
           </Text>
         </ProjectWrapper>
       ))}

@@ -1,9 +1,7 @@
 "use client";
 
-import { Container, Content, ImageWrapper, Labels } from "./styles";
+import { Container, Content, Labels } from "./styles";
 
-import ConvinceMe from "@/components/ConvinceMe";
-import Button from "@/components/Button";
 import Up from "@/icons/Up";
 import Animation from "./animation";
 import { useRef } from "react";
@@ -23,10 +21,6 @@ function Introduction() {
         </h2>
 
         <div>
-          <Button popupId={1}>Me convença</Button>
-
-          <ConvinceMe />
-
           <Labels>
             <li>
               <span>clientes</span>

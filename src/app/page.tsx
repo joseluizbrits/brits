@@ -1,9 +1,5 @@
 import Hero from "@/components/Hero";
 import Introduction from "@/containers/Introduction";
-import Explanation from "@/containers/Explanation";
-import Services from "@/containers/Services";
-import Benefits from "@/containers/Benefits";
-import Features from "@/containers/Features";
 import Process from "@/containers/Process";
 import Project from "@/containers/Project";
 import About from "@/containers/About";
@@ -16,10 +12,6 @@ export default function Home() {
       {/* <SmoothScroll> */}
       <Hero />
       <Introduction />
-      <Explanation />
-      <Services />
-      <Benefits />
-      <Features />
       <Process />
       <Project />
       <About />
