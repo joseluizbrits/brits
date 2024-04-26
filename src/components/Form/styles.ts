@@ -14,7 +14,7 @@ export const Container = styled.div`
     margin: 0 120px;
     border-radius: 50px;
     border: 1px solid rgba(181, 118, 245, 0.2);
-    background: var(--gradientTwo);
+    background: var(--gradient-2);
     box-shadow: -1px 1px 6px rgba(0, 0, 0, 0.1);
 
     position: relative;
@@ -41,8 +41,8 @@ export const Container = styled.div`
   textarea {
     width: 100%;
     border-radius: 8px;
-    border: 1px solid var(--primaryLightShadow);
-    background: var(--gradientOne);
+    border: 1px solid var(--primary-lightShadow);
+    background: var(--gradient-1);
 
     padding: 20px;
     font-size: 1.25rem;
@@ -75,7 +75,7 @@ export const Container = styled.div`
     font-size: 1rem;
     letter-spacing: 0.05rem;
     text-transform: uppercase;
-    color: var(--primaryDark);
+    color: var(--primary-dark);
   }
 
   button {
@@ -107,7 +107,7 @@ export const Container = styled.div`
 
   @media screen and (min-width: 1024px) {
     button:hover {
-      background-color: var(--primaryDark);
+      background-color: var(--primary-dark);
 
       span {
         color: var(--secondary);

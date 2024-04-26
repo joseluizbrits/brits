@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.section`
   height: calc(100vh - 80px);
-  background: var(--primaryGradient);
+  background: var(--primary-gradient);
 
   overflow: hidden;
   position: relative;
@@ -10,7 +10,7 @@ export const Container = styled.section`
   &::after {
     content: "";
     display: block;
-    background: var(--gradientOne);
+    background: var(--gradient-1);
 
     width: var(--triangleWidth);
     height: calc(100vh - 80px);
@@ -44,7 +44,7 @@ export const Content = styled.div`
   }
 
   span {
-    color: var(--primaryLight);
+    color: var(--primary-light);
     text-transform: lowercase;
     letter-spacing: 0.05rem;
   }
@@ -61,7 +61,7 @@ export const Content = styled.div`
     font-weight: 700;
     letter-spacing: 0.05rem;
     text-transform: uppercase;
-    color: var(--primaryDark);
+    color: var(--primary-dark);
 
     padding: 20px 32px;
     border-radius: 50px;
@@ -73,7 +73,7 @@ export const Content = styled.div`
 
   @media screen and (min-width: 1024px) {
     a:hover {
-      background-color: var(--primaryDark);
+      background-color: var(--primary-dark);
       color: var(--secondary);
     }
   }

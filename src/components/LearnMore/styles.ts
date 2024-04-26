@@ -25,14 +25,14 @@ export const Container = styled.div`
     margin: 120px 160px;
     padding: 64px;
     border-radius: 50px;
-    background: var(--gradientThree);
+    background: var(--gradient-3);
     box-shadow: -3px 3px 6px rgba(0, 0, 0, 0.1);
   }
 
   p {
     font-size: clamp(1rem, 2vw, 2rem);
     line-height: 1.5em;
-    color: var(--primaryDark);
+    color: var(--primary-dark);
   }
 
   @media screen and (max-width: 1440px) {

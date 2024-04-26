@@ -62,7 +62,7 @@ export const Content = styled.div`
     width: 100%;
     height: clamp(4rem, 5vw, 6rem);
     margin-top: calc(clamp(2rem, 5vw, 6rem) * -1);
-    background-color: var(--primaryLight);
+    background-color: var(--primary-light);
 
     grid-area: 2/1;
     animation: fromRight ease-out 1.3s forwards;
@@ -78,7 +78,7 @@ export const Content = styled.div`
 
   h1 span {
     display: block;
-    color: var(--primaryDark);
+    color: var(--primary-dark);
     position: relative;
   }
 
@@ -86,7 +86,7 @@ export const Content = styled.div`
     font-size: clamp(1rem, 1.5vw, 1.75rem);
     line-height: 1.25em;
     max-width: 18ch;
-    color: var(--primaryLight);
+    color: var(--primary-light);
     margin-right: 120px;
     margin-top: 12px;
     justify-self: end;

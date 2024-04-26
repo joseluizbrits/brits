@@ -2,33 +2,33 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
   :root {
-    --white: #FFFFFF;
     --primary: #692FA4;
-    --primaryLight: #B576F5;
-    --primaryLightShadow: rgba(181, 118, 245, 0.2);
-    --primaryDark: #4D1981;
-    --primaryDarkShadow: rgba(77, 25, 129, 0.8);
-    --primaryDarkClear: rgba(77, 25, 129, 0.2);
-    --primaryGradient: linear-gradient(to right, #692FA4, #764BA2, #8659B4);
-    --secondary: #41F7EC;
-    --secondaryShadow: rgba(65, 247, 236, 0.8);
-    --secondaryClear: rgba(65, 247, 236, 0.2);
-    --tertiary: #D22AE8;
-    --tertiaryShadow: rgba(210, 42 , 232, 0.9);
-    --tertiaryClear: rgba(210, 42 , 232, 0.2);
+    --primary-light: #B576F5;
+    --primary-dark: #4D1981;
+    --primary-dark-40: rgba(77, 25, 129, 0.4);
+    --primary-gradient: linear-gradient(to right, #692FA4, #764BA2, #8659B4);
+    --secondary: #D22AE8;
+    --secondary-light: #F0A6FA;
+    --secondary-20: rgba(210, 42 , 232, 0.2);
+    --secondary-40: rgba(210, 42 , 232, 0.4);
+    --tertiary: #41F7EC;
+    --tertiary-light: #A3FDF7;
     --warning: #FB4B4B;
-    --blogBody: #220341;
-    --blogText: #F7EFFF;
-    --gradientOne: linear-gradient(to bottom, #862FA4 30%, #692FA4);
-    --gradientTwo: linear-gradient(to bottom, #692FA4, #8A2A99);
-    --gradientThree: linear-gradient(to bottom, #8A2A99 15%, #8DFFF8);
-    --gradientTwoToPrimary: linear-gradient(to bottom, #692fa4, #8A2A99, #692FA4 99%);
-    --shortTriangle: polygon(0 0, 100% 100%, 0 100%);
-    --middleTriangle: polygon(0 0, 100.1% 0%, 50.1% 100%, 0% 100%);
-    --middleTriangleBottom: polygon(0 0, 40% 0, 80% 100%, 0% 100%);
-    --largeTriangle: polygon(0 0, 0% 100%, 100.3% 0);
-    --aboutDeco: translateX(0);
-    --me: circle(50% at 50% 50%);
+    --white: #FFFFFF;
+    --gray: #CBB5E1;
+    --gray-light: #F7EFFF;
+    --black-5: rbga(0, 0, 0, 0.05);
+    --black-10: rbga(0, 0, 0, 0.1);
+    --gradient-1: linear-gradient(to bottom, #862FA4 30%, #692FA4);
+    --gradient-2: linear-gradient(to bottom, #692FA4, #8A2A99);
+    --gradient-3: linear-gradient(to bottom, #8A2A99 15%, #8DFFF8);
+    --bg-1: #320F56;
+    --bg-2: #220341;
+    --bg-3: #2E1746;
+    --bg-4: #2D213A;
+    --bg-5: #271A34;
+    --bg-6: #1E0B32;
+    --bg-7: #16012B;
   }
 
  * {
@@ -38,7 +38,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   html {
-    background: var(--primaryDark);
+    background: var(--bg-2);
     overflow-x: hidden;
   }
 
@@ -83,7 +83,7 @@ const GlobalStyles = createGlobalStyle`
   *::-webkit-scrollbar,
   body::-webkit-scrollbar,
   html::-webkit-scrollbar {
-    background: var(--primaryGradient);
+    background: var(--primary-gradient);
     width: 12px;
     height: 12px;
   }
@@ -91,15 +91,15 @@ const GlobalStyles = createGlobalStyle`
   *::-webkit-scrollbar-thumb,
   body::-webkit-scrollbar-thumb,
   html::-webkit-scrollbar-thumb {
-    background: var(--gradientOne);
+    background: var(--gradient-1);
     border-radius: 25px;
-    border: 5px solid var(--primaryGradient);
+    border: 5px solid var(--primary-gradient);
   }
 
   *::-webkit-scrollbar-thumb:hover,
   body::-webkit-scrollbar-thumb:hover,
   html::-webkit-scrollbar-thumb:hover {
-    background: var(--gradientThree);
+    background: var(--gradient-3);
   }
 
   /* LENIS SCROLL SMOOTH */
@@ -145,18 +145,6 @@ const GlobalStyles = createGlobalStyle`
   @media screen and (max-width: 480px) {
     .container {
       padding: 0 20px;
-    }
-  }
-
-  @keyframes gradientAnimation {
-    0% {
-      background-position:0% 97%
-    }
-    50% {
-      background-position:100% 4%
-    }
-    100% {
-      background-position:0% 97%
     }
   }
 `;

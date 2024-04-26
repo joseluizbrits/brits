@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.a`
+export const LogoWrapper = styled.div`
   display: flex;
   align-items: center;
 
@@ -10,7 +10,7 @@ export const Container = styled.a`
     font-size: 2.5rem;
     text-shadow: -1px 1px 1px rgba(0, 0, 0, 0.1);
 
-    background-image: var(--gradientThree);
+    background-image: var(--gradient-3);
     background-clip: text;
 
     -webkit-background-clip: text;

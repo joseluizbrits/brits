@@ -8,7 +8,7 @@ export const Container = styled.section`
   h2 {
     font-weight: 400;
     font-size: clamp(2.5rem, 6vw, 7rem);
-    color: var(--primaryLight);
+    color: var(--primary-light);
     max-width: 16ch;
     padding: 160px 0;
     margin: 0 auto;
@@ -47,7 +47,7 @@ export const Container = styled.section`
 
     aspect-ratio: 1/1;
     height: clamp(64px, 8vw, 120px);
-    background-color: var(--primaryDark);
+    background-color: var(--primary-dark);
     border-radius: 50%;
 
     display: grid;

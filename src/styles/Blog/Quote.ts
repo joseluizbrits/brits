@@ -7,7 +7,7 @@ export const Quote = styled.i`
   margin-bottom: 0;
   border-left: 6px solid var(--secondary);
   border-radius: 5px;
-  background-color: var(--primaryDark);
+  background-color: var(--primary-dark);
 
   font-style: italic;
   font-size: clamp(1.15rem, 1.5vw, 1.75rem);

@@ -40,7 +40,7 @@ export const Content = styled.div<{ $src: string }>`
   width: 100%;
   margin: 0 120px;
   border-radius: 50px;
-  background-color: var(--primaryDark);
+  background-color: var(--primary-dark);
   box-shadow: -3px 3px 6px rgba(0, 0, 0, 0.1);
 
   position: relative;
@@ -117,7 +117,7 @@ export const Content = styled.div<{ $src: string }>`
     font-weight: 700;
     letter-spacing: 0.05rem;
     text-transform: uppercase;
-    color: var(--primaryDark);
+    color: var(--primary-dark);
     background-color: var(--secondary);
     border-radius: 50px;
     padding: 20px 32px;
@@ -133,7 +133,7 @@ export const Content = styled.div<{ $src: string }>`
   @media screen and (min-width: 1080px) {
     a:hover {
       color: var(--secondary);
-      background-color: var(--primaryDark);
+      background-color: var(--primary-dark);
     }
   }
 

@@ -1,15 +1,13 @@
 import styled from "styled-components";
 
-export const Container = styled.header<{ $type: "blog" | "blogPost" | "home" }>`
+export const HeaderContainer = styled.header<{
+  $type: "blog" | "blogPost" | "home";
+}>`
   padding-top: 20px;
   padding-bottom: 20px;
   height: 80px;
   background: ${({ $type }) =>
-    $type === "blog"
-      ? "var(--gradientOne)"
-      : $type === "blogPost"
-        ? "transparent"
-        : "var(--primaryGradient)"};
+    $type === "blog" ? "var(--gradient-1)" : "transparent"};
 
   display: flex;
   justify-content: space-between;
@@ -18,48 +16,30 @@ export const Container = styled.header<{ $type: "blog" | "blogPost" | "home" }>`
   ul {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 8px;
   }
 
-  li a {
+  .navlink {
+    font-weight: 700;
     text-transform: uppercase;
+    letter-spacing: 0.02em;
     color: var(--white);
     padding: 20px;
 
-    transition: 0.3s ease-out;
-  }
-
-  ul :last-child a {
-    font-weight: 700;
-    letter-spacing: 0.05rem;
-
-    padding: 12px 24px;
-    border-radius: 50px;
-    background-color: var(--tertiary);
-    box-shadow: -1px 1px 3px rgba(0, 0, 0, 0.1);
+    transition: 0.1s ease-out;
   }
 
   @media screen and (min-width: 1024px) {
-    li a:hover {
-      color: var(--primaryLight);
-    }
-
-    ul :last-child a:hover {
-      background-color: var(--primary);
-      color: var(--primaryLight);
+    .navlink:hover {
+      color: var(--tertiary);
     }
   }
 
   @media screen and (max-width: 768px) {
     height: 64px;
 
-    ul > :nth-child(1) {
+    .navlink {
       display: none;
-    }
-
-    ul :last-child a {
-      font-size: 0.75rem;
-      padding: 10px 20px;
     }
   }
 `;

@@ -33,7 +33,7 @@ export const Content = styled.div<{ $animetionDirection: string }>`
   padding-top: 40px;
   margin: 0 120px;
   border-radius: 50px;
-  background-color: var(--primaryDark);
+  background-color: var(--primary-dark);
   box-shadow: -3px 3px 6px rgba(0, 0, 0, 0.1);
 
   display: none;
@@ -46,7 +46,7 @@ export const Content = styled.div<{ $animetionDirection: string }>`
   span.desc {
     font-size: clamp(1rem, 1.5vw, 2rem);
     line-height: 1.25em;
-    color: var(--primaryLight);
+    color: var(--primary-light);
   }
 
   span.desc::after {
@@ -56,7 +56,7 @@ export const Content = styled.div<{ $animetionDirection: string }>`
     height: 2px;
     margin-top: 40px;
     border-radius: 2px;
-    background-color: var(--primaryLightShadow);
+    background-color: var(--primary-lightShadow);
   }
 
   p {
@@ -121,7 +121,7 @@ export const CardHeader = styled.div`
   span {
     flex: 1;
     text-align: end;
-    color: var(--primaryLight);
+    color: var(--primary-light);
     opacity: 0.4;
   }
 
@@ -137,7 +137,7 @@ export const ButtonBack = styled.button`
   padding-right: 16px;
 
   span {
-    color: var(--primaryLight);
+    color: var(--primary-light);
     opacity: 0.4;
   }
 `;
@@ -163,7 +163,7 @@ export const Options = styled.ul`
     width: 1em;
     height: 1em;
     margin-top: 2px;
-    border: 1px solid var(--primaryLight);
+    border: 1px solid var(--primary-light);
 
     display: flex;
     justify-content: center;
@@ -179,7 +179,7 @@ export const Options = styled.ul`
     display: block;
     width: 0.6em;
     height: 0.6em;
-    background-color: var(--primaryLight);
+    background-color: var(--primary-light);
     border-radius: 50%;
 
     scale: 0;
@@ -231,7 +231,7 @@ export const ButtonShowPrice = styled.button`
     font-size: 1rem;
     letter-spacing: 0.05rem;
     text-transform: uppercase;
-    color: var(--primaryDark);
+    color: var(--primary-dark);
   }
 
   @media screen and (max-width: 1024px) {
@@ -265,7 +265,7 @@ export const Value = styled.div`
     font-size: clamp(2rem, 6vw, 6rem);
     padding: 0;
 
-    background-image: var(--gradientTwo);
+    background-image: var(--gradient-2);
     background-clip: text;
 
     -webkit-background-clip: text;
@@ -283,7 +283,7 @@ export const Value = styled.div`
 export const Observation = styled.span`
   font-size: clamp(0.875rem, 1.25vw, 1.25rem);
   line-height: 1.5em;
-  color: var(--primaryLight);
+  color: var(--primary-light);
   opacity: 0.8;
 
   position: relative;
@@ -296,7 +296,7 @@ export const Observation = styled.span`
     margin-top: 80px;
     margin-bottom: 40px;
     border-radius: 2px;
-    background-color: var(--primaryLightShadow);
+    background-color: var(--primary-lightShadow);
   }
 
   &::after {

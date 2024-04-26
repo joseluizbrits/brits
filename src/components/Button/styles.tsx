@@ -20,22 +20,22 @@ export const ButtonWrapper = styled.button<{ $secondary?: boolean }>`
     letter-spacing: 0.05rem;
     text-transform: uppercase;
     color: ${(props) =>
-      !props.$secondary ? "var(--primaryDark)" : "var(--white)"};
+      !props.$secondary ? "var(--primary-dark)" : "var(--white)"};
   }
 
   @media screen and (min-width: 1024px) {
     &:hover {
       background-color: ${(props) =>
-        !props.$secondary ? "var(--primaryDark)" : "var(--primary)"};
+        !props.$secondary ? "var(--primary-dark)" : "var(--primary)"};
 
       span {
         color: ${(props) =>
-          !props.$secondary ? "var(--secondary)" : "var(--primaryLight)"};
+          !props.$secondary ? "var(--secondary)" : "var(--primary-light)"};
       }
 
       svg path {
         fill: ${(props) =>
-          !props.$secondary ? "var(--secondary)" : "var(--primaryLight)"};
+          !props.$secondary ? "var(--secondary)" : "var(--primary-light)"};
       }
     }
   }

@@ -6,10 +6,10 @@ export const Container = styled.footer<{ $type: "blog" | "blogPost" | "home" }>`
   padding: 0 40px;
   background: ${({ $type }) =>
     $type === "blog"
-      ? "var(--gradientTwo)"
+      ? "var(--gradient-2)"
       : $type === "blogPost"
         ? "transparent"
-        : "var(--primaryGradient)"};
+        : "var(--primary-gradient)"};
 
   display: flex;
   justify-content: center;

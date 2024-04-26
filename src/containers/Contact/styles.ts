@@ -33,7 +33,7 @@ export const Title = styled.h2`
   small {
     font-weight: 400;
     font-size: clamp(0.875rem, 1.25vw, 1.5rem);
-    color: var(--primaryDark);
+    color: var(--primary-dark);
   }
 
   span {

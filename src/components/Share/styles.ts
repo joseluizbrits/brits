@@ -20,7 +20,7 @@ export const Wrapper = styled.div`
   }
 
   span {
-    color: var(--primaryLight);
+    color: var(--primary-light);
   }
 
   &.bottom span {

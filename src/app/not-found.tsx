@@ -26,8 +26,8 @@ export default function NotFound() {
         href="/"
         style={{
           width: "fit-content",
-          borderBottom: "1px solid var(--primaryLight)",
-          color: "var(--primaryLight)",
+          borderBottom: "1px solid var(--primary-light)",
+          color: "var(--primary-light)",
           alignSelf: "start",
         }}
       >

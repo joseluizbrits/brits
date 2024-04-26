@@ -11,7 +11,7 @@ export const Container = styled.section`
   &::after {
     content: "";
     display: block;
-    background: var(--gradientOne);
+    background: var(--gradient-1);
 
     width: 40%;
     height: 100vh;

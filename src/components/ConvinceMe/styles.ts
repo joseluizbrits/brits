@@ -89,8 +89,8 @@ export const Container = styled.div`
     padding: 8px;
     margin: 12px;
     border-radius: 8px;
-    color: var(--primaryLight);
-    border: 1px solid var(--primaryLightShadow);
+    color: var(--primary-light);
+    border: 1px solid var(--primary-lightShadow);
   }
 
   @media screen and (min-width: 1024px) {

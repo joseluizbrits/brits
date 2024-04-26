@@ -27,7 +27,7 @@ export const Container = styled.section`
     padding-bottom: 80px;
     padding-left: 200px;
 
-    background-image: var(--gradientOne);
+    background-image: var(--gradient-1);
     background-clip: text;
 
     -webkit-background-clip: text;
@@ -50,7 +50,7 @@ export const Container = styled.section`
   }
 
   li + li {
-    border-top: 2px solid var(--primaryDarkClear);
+    border-top: 2px solid var(--primary-darkClear);
 
     span::after {
       content: "";
@@ -68,7 +68,7 @@ export const Container = styled.section`
 
   li span {
     font-size: clamp(2rem, 3vw, 3.5rem);
-    color: var(--primaryDark);
+    color: var(--primary-dark);
 
     position: relative;
 
@@ -77,7 +77,7 @@ export const Container = styled.section`
       width: 20px;
       height: 20px;
       border-radius: 50%;
-      background: var(--gradientOne);
+      background: var(--gradient-1);
       /* opacity: 0.4; */
 
       position: absolute;
@@ -152,7 +152,7 @@ export const Container = styled.section`
     }
 
     li + li {
-      border-top: 1px solid var(--primaryDarkClear);
+      border-top: 1px solid var(--primary-darkClear);
 
       span::after {
         width: 2px;

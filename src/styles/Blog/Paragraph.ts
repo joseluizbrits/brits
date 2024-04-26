@@ -8,6 +8,6 @@ export const Paragraph = styled.p`
 
   strong {
     font-weight: 700;
-    color: var(--primaryLight);
+    color: var(--primary-light);
   }
 `;

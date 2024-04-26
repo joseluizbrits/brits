@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ubuntu } from "@/lib/fonts";
+import { poppins } from "@/lib/fonts";
 
 import { GoogleAnalytics } from "@next/third-parties/google";
 
@@ -57,7 +57,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
-      <body className={ubuntu.className}>
+      <body className={poppins.className}>
         <StylesProvider>
           <PopupProvider>
             <Header />

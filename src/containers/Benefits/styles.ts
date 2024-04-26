@@ -13,7 +13,7 @@ export const Container = styled.section`
     font-weight: 400;
     font-size: clamp(2.25rem, 5vw, 7rem);
 
-    background-image: var(--gradientOne);
+    background-image: var(--gradient-1);
     background-clip: text;
 
     -webkit-background-clip: text;
@@ -55,7 +55,7 @@ export const Container = styled.section`
   li div h3 {
     font-weight: 400;
     font-size: clamp(1.75rem, 2.5vw, 2.5rem);
-    color: var(--primaryLight);
+    color: var(--primary-light);
   }
 
   li div p {

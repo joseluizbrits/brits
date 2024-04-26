@@ -1,8 +1,8 @@
-function ArrowRight() {
+function ArrowRight({ color }: { color: string }) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
       <path
-        stroke="#4D1981"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"

@@ -5,7 +5,7 @@ export const Container = styled.ul`
   padding: 40px;
   margin: 64px 0;
   border-radius: 50px;
-  background: var(--gradientTwo);
+  background: var(--gradient-2);
 
   position: relative;
 
@@ -90,7 +90,7 @@ export const Summary = styled.div`
   h3 {
     font-weight: 400;
     font-size: clamp(1.25rem, 1.5vw, 2rem);
-    color: var(--primaryDark);
+    color: var(--primary-dark);
   }
 
   svg {

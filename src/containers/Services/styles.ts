@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
-  background: var(--primaryGradient);
+  background: var(--primary-gradient);
 `;
 
 export const Title = styled.div`
@@ -19,7 +19,7 @@ export const Title = styled.div`
   em {
     font-style: normal;
 
-    background-image: var(--gradientThree);
+    background-image: var(--gradient-3);
     background-clip: text;
 
     -webkit-background-clip: text;
@@ -88,7 +88,7 @@ export const ProjectWrapper = styled.div`
     font-size: clamp(2rem, 5vw, 7rem);
     line-height: 1.25em;
     height: max-content;
-    color: var(--primaryDark);
+    color: var(--primary-dark);
     padding: 20vh 0;
 
     position: sticky;
@@ -97,7 +97,7 @@ export const ProjectWrapper = styled.div`
 
   strong {
     font-weight: normal;
-    color: var(--primaryLight);
+    color: var(--primary-light);
   }
 
   @media screen and (max-width: 1024px) {

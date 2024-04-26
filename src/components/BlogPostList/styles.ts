@@ -85,7 +85,7 @@ export const TextWrapper = styled.div<{ $reverse: boolean }>`
     line-height: 1.25;
     text-align: ${({ $reverse }) => ($reverse ? "end" : "start")};
     align-self: ${({ $reverse }) => ($reverse ? "end" : "start")};
-    color: var(--primaryLight);
+    color: var(--primary-light);
     padding-top: 16px;
     max-width: 26ch;
   }
@@ -106,7 +106,7 @@ export const TextWrapper = styled.div<{ $reverse: boolean }>`
     font-weight: 700;
     letter-spacing: 0.05rem;
     text-transform: uppercase;
-    color: var(--primaryDark);
+    color: var(--primary-dark);
 
     padding: 20px 32px;
     border-radius: 50px;
@@ -130,11 +130,11 @@ export const TextWrapper = styled.div<{ $reverse: boolean }>`
 
   @media screen and (min-width: 1024px) {
     h2:hover {
-      color: var(--primaryLight);
+      color: var(--primary-light);
     }
 
     a:hover {
-      background-color: var(--primaryDark);
+      background-color: var(--primary-dark);
       color: var(--secondary);
     }
 
@@ -169,7 +169,7 @@ export const TextWrapper = styled.div<{ $reverse: boolean }>`
 `;
 
 export const PostDate = styled.div<{ $reverse: boolean }>`
-  color: var(--primaryDark);
+  color: var(--primary-dark);
 
   display: flex;
   flex-direction: ${({ $reverse }) => ($reverse ? "row-reverse" : "row")};

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Popup = styled.div`
   width: 460px;
   border-radius: 50px 50px 0 0;
-  background: var(--gradientTwo);
+  background: var(--gradient-2);
   box-shadow: -3px -3px 10px rgba(0, 0, 0, 0.3);
 
   position: fixed;
@@ -35,13 +35,13 @@ export const Popup = styled.div`
     em {
       display: block;
       font-style: normal;
-      color: var(--primaryDark);
-      background-color: var(--primaryLight);
+      color: var(--primary-dark);
+      background-color: var(--primary-light);
     }
   }
 
   div > :nth-child(2) {
-    color: var(--primaryLight);
+    color: var(--primary-light);
     display: block;
     max-width: 18ch;
     padding-top: 8px;
@@ -69,7 +69,7 @@ export const Popup = styled.div`
   @media screen and (min-width: 1080px) {
     a:hover {
       background-color: var(--secondary);
-      color: var(--primaryDark);
+      color: var(--primary-dark);
     }
   }
 
@@ -98,7 +98,7 @@ export const Popup = styled.div`
 
 export const ButtonClose = styled.button`
   padding: 10px 13px;
-  background: var(--primaryDark);
+  background: var(--primary-dark);
   border-radius: 50%;
   box-shadow: -1px -1px 6px rgba(0, 0, 0, 0.3);
 

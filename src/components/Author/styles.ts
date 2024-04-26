@@ -17,11 +17,11 @@ export const Text = styled.div`
 
   :nth-child(1) {
     font-size: clamp(1rem, 1.15vw, 1.25rem);
-    color: var(--primaryLight);
+    color: var(--primary-light);
   }
 
   :nth-child(2) {
     font-size: clamp(0.875rem, 1vw, 1.15rem);
-    color: var(--primaryDark);
+    color: var(--primary-dark);
   }
 `;

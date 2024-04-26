@@ -4,7 +4,7 @@ export const ButtonWrapper = styled.a`
   width: clamp(140px, 15vw, 220px);
   height: clamp(140px, 15vw, 220px);
   border-radius: 50%;
-  background: var(--gradientOne);
+  background: var(--gradient-1);
   background-size: 200% 200%;
   box-shadow: -1px 1px 6px rgba(0, 0, 0, 0.2);
 
@@ -27,7 +27,7 @@ export const ButtonWrapper = styled.a`
     letter-spacing: 0.05rem;
     line-height: 1.25em;
     max-width: 5em;
-    color: var(--primaryLight);
+    color: var(--primary-light);
 
     transition: 0.3s ease-out;
   }
@@ -45,7 +45,7 @@ export const ButtonWrapper = styled.a`
 
   @media screen and (min-width: 1024px) {
     &:hover {
-      outline: 1px solid var(--primaryLightShadow);
+      outline: 1px solid var(--primary-lightShadow);
 
       span {
         color: white;

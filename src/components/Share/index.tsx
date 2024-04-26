@@ -23,7 +23,7 @@ function Share({ position }: { position: "top" | "bottom" }) {
         >
           <WhatsAppSquare
             color={
-              position === "top" ? "var(--primaryDark)" : "var(--tertiary)"
+              position === "top" ? "var(--primary-dark)" : "var(--tertiary)"
             }
           />
         </a>
@@ -34,7 +34,7 @@ function Share({ position }: { position: "top" | "bottom" }) {
         >
           <FacebookSquare
             color={
-              position === "top" ? "var(--primaryDark)" : "var(--tertiary)"
+              position === "top" ? "var(--primary-dark)" : "var(--tertiary)"
             }
           />
         </a>
@@ -45,7 +45,7 @@ function Share({ position }: { position: "top" | "bottom" }) {
         >
           <XTwitterSquare
             color={
-              position === "top" ? "var(--primaryDark)" : "var(--tertiary)"
+              position === "top" ? "var(--primary-dark)" : "var(--tertiary)"
             }
           />
         </a>
@@ -56,7 +56,7 @@ function Share({ position }: { position: "top" | "bottom" }) {
         >
           <LinkedInSquare
             color={
-              position === "top" ? "var(--primaryDark)" : "var(--tertiary)"
+              position === "top" ? "var(--primary-dark)" : "var(--tertiary)"
             }
           />
         </a>

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   height: 100vh;
   padding-left: 40px;
-  background: var(--gradientTwoToPrimary);
+  background: var(--gradient-2ToPrimary);
   clip-path: var(--middleTriangleBottom);
 
   display: flex;
@@ -33,7 +33,7 @@ export const Baloon = styled.div`
   width: max-content;
   height: max-content;
   border-radius: 25px;
-  background-color: var(--primaryDark);
+  background-color: var(--primary-dark);
   box-shadow: -1px 1px 6px rgba(0, 0, 0, 0.3);
 
   display: flex;
@@ -45,7 +45,7 @@ export const Baloon = styled.div`
   span {
     font-size: clamp(1rem, 1.5vw, 1.5rem);
     line-height: 1.5em;
-    color: var(--primaryLight);
+    color: var(--primary-light);
   }
 
   &::before {

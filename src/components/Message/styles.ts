@@ -86,7 +86,7 @@ export const Container = styled.aside`
 
     a span {
       font-size: 1.25rem;
-      color: var(--primaryLight);
+      color: var(--primary-light);
     }
 
     a svg {

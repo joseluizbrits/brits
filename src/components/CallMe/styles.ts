@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  background: var(--gradientTwo);
+  background: var(--gradient-2);
   padding: 40px;
   border-radius: 5px;
 
@@ -16,7 +16,7 @@ export const Wrapper = styled.div`
   }
 
   a {
-    color: var(--primaryLight);
+    color: var(--primary-light);
     transition: 0.3s ease;
   }
 

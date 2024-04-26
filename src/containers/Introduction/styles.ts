@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
-  background: var(--gradientTwo);
+  background: var(--gradient-2);
   height: 100vh;
   position: relative;
 `;
@@ -54,7 +54,7 @@ export const Content = styled.div`
     font-size: clamp(0.875rem, 1.25vw, 1.5rem);
     letter-spacing: 0.05rem;
     text-transform: lowercase;
-    color: var(--primaryLight);
+    color: var(--primary-light);
     margin-bottom: -7%;
   }
 
@@ -86,7 +86,7 @@ export const Labels = styled.ul`
     font-size: clamp(0.875rem, 1vw, 1.25rem);
     letter-spacing: 0.05rem;
     text-transform: lowercase;
-    color: var(--primaryLight);
+    color: var(--primary-light);
   }
 
   @media screen and (max-width: 1024px) {
