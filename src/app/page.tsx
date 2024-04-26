@@ -1,4 +1,4 @@
-import Hero from "@/components/Hero";
+import Hero from "@/containers/Hero";
 import Introduction from "@/containers/Introduction";
 import Process from "@/containers/Process";
 import Project from "@/containers/Project";
@@ -10,12 +10,14 @@ export default function Home() {
   return (
     <>
       {/* <SmoothScroll> */}
-      <Hero />
-      <Introduction />
-      <Process />
-      <Project />
-      <About />
-      <Contact />
+      <main className="container">
+        <Hero />
+        <Introduction />
+        <Process />
+        <Project />
+        <About />
+        <Contact />
+      </main>
       {/* </SmoothScroll> */}
     </>
   );
