@@ -5,7 +5,7 @@ import { montserrat } from "@/lib/fonts";
 import { useParams, usePathname } from "next/navigation";
 import Logo from "../Logo";
 import Bars from "@/icons/Bars";
-import GitHub from "@/icons/GitHub";
+import GitHub from "@/icons/GitHubFilled";
 import Instagram from "@/icons/Instagram";
 
 function Footer() {

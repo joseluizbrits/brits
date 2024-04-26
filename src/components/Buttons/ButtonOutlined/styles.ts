@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const OutlinedWrapper = styled.div`
   a {
+    display: block;
     font-weight: 700;
     letter-spacing: 0.05rem;
     text-transform: uppercase;

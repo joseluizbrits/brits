@@ -20,9 +20,8 @@ export const HeaderContainer = styled.header<{
   }
 
   .navlink {
-    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.05em;
     color: var(--white);
     padding: 20px;
 

@@ -1,168 +1,62 @@
 import styled from "styled-components";
 
 export const HeroContainer = styled.section`
-  height: calc(100vh - 80px);
-  background: var(--primary-gradient);
-
-  overflow: hidden;
-  position: relative;
-
-  &::after {
-    content: "";
-    display: block;
-    background: var(--gradient-1);
-
-    width: var(--triangleWidth);
-    height: calc(100vh - 80px);
-    clip-path: polygon(100% 0, 100% 100%, 0 100%);
-
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
-
-  @media screen and (max-width: 768px) {
-    &,
-    &::after {
-      height: calc(100vh - 64px);
-    }
-  }
-`;
-
-export const Content = styled.div`
-  height: 100%;
-
-  display: grid;
+  display: flex;
   align-items: center;
+  margin-bottom: 80px;
 
-  position: relative;
-  z-index: 1;
+  > :nth-child(1) {
+    width: 1200px;
+    aspect-ratio: 1/1;
+    margin-left: -40px;
 
-  .hero-title {
-    /* animate */
-    opacity: 0;
+    position: relative;
   }
 
-  span {
-    color: var(--primary-light);
-    text-transform: lowercase;
-    letter-spacing: 0.05rem;
+  > :nth-child(2) {
+    margin-top: -64px;
+    margin-left: -64px;
+
+    position: relative;
+    z-index: 1;
   }
 
   h1 {
-    font-size: clamp(4rem, 5vw, 9rem);
-    letter-spacing: 0.05rem;
+    font-size: clamp(4rem, 6.5vw, 9rem);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    line-height: 0.9em;
     color: var(--white);
-    max-width: 20ch;
-    margin-bottom: 48px;
+    max-width: 10ch;
+    margin-bottom: 12px;
   }
 
-  a {
-    font-weight: 700;
-    letter-spacing: 0.05rem;
-    text-transform: uppercase;
-    color: var(--primary-dark);
-
-    padding: 20px 32px;
-    border-radius: 50px;
-    background-color: var(--secondary);
-    box-shadow: -1px 1px 3px rgba(0, 0, 0, 0.1);
-
-    transition: 0.3s ease-out;
+  p {
+    margin-bottom: 28px;
   }
 
-  @media screen and (min-width: 1024px) {
-    a:hover {
-      background-color: var(--primary-dark);
-      color: var(--secondary);
-    }
-  }
-
-  @media screen and (min-width: 1680px) {
-    span {
-      font-size: 1.5rem;
-    }
-
-    h1 {
-      font-size: clamp(2rem, 7vw, 9rem);
-    }
-  }
-
-  @media screen and (max-width: 1024px) {
-    h1 {
-      margin-bottom: 36px;
-    }
-
-    a {
-      font-size: 0.875rem;
-      padding: 18px 28px;
-    }
-  }
-
-  @media screen and (max-width: 768px) {
-    div {
-      margin-top: -120px;
-    }
-
-    span {
-      font-size: 0.75rem;
-    }
-
-    h1 {
-      font-size: clamp(2.5rem, 7vw, 9rem);
-      line-height: 1.25em;
-      margin-top: 4px;
-      margin-bottom: 28px;
-    }
-
-    a {
-      font-size: 0.75rem;
-      padding: 14px 24px;
-    }
+  > :nth-child(2) > div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
   }
 `;
 
 export const Media = styled.div`
   display: flex;
-
-  position: absolute;
-  bottom: 48px;
-  right: 120px;
-
-  z-index: 1;
-
-  &.hero-media {
-    /* animate */
-    opacity: 0;
-  }
+  align-items: center;
 
   a {
-    padding: 10px;
-    cursor: pointer;
+    padding: 8px;
+    opacity: 0.5;
 
-    transition: 0.3s ease-out;
+    transition: 0.1s ease-out;
   }
 
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1080px) {
     a:hover {
-      scale: 1.2;
-    }
-  }
-
-  @media screen and (max-width: 1440px) {
-    right: 80px;
-  }
-
-  @media screen and (max-width: 1024px) {
-    right: 40px;
-  }
-
-  @media screen and (max-width: 768px) {
-    right: 10px;
-
-    a {
-      scale: 0.7;
-      padding: 4px;
+      opacity: 1;
+      scale: 1.1;
     }
   }
 `;

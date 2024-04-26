@@ -5,7 +5,7 @@ export const montserrat = Montserrat({
   weight: ["400", "900"],
 });
 
-export const poppins = Montserrat({
+export const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "700"],
 });
