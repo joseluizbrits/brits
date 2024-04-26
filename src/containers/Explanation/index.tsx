@@ -16,15 +16,6 @@ function Explanation() {
 
   return (
     <Container id="explan" ref={section}>
-      <ImageWrapper>
-        <Image
-          src="/note.webp"
-          alt="Ênfase nos olhos de uma mulher com o rosto coberto de tinta colorida"
-          fill
-          sizes="75vw"
-        ></Image>
-      </ImageWrapper>
-
       <Content className="container">
         <h2>
           <small>Marketing alavancado</small>

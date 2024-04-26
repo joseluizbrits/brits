@@ -84,7 +84,7 @@ function Story() {
 
   return (
     <Container>
-      {photos.map(({ id, src, alt }) => (
+      {/* {photos.map(({ id, src, alt }) => (
         <Image
           key={id}
           src={src}
@@ -92,7 +92,7 @@ function Story() {
           alt={alt}
           className={id === "photo-" + step ? "active" : ""}
         />
-      ))}
+      ))} */}
 
       <StatusProgress aria-label="barra de progresso">
         {photos.map((_, index) => (

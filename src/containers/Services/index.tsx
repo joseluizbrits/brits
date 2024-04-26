@@ -30,16 +30,6 @@ function Services() {
 
             <ButtonProject id={`see-project-${index + 1}`} href={href} />
           </Text>
-
-          <ImageWrapper id={`img-${index + 1}`}>
-            <Image
-              src={img}
-              alt={alt}
-              sizes="(max-width: 1024px) 85vw, 50vw"
-              fill
-              priority
-            ></Image>
-          </ImageWrapper>
         </ProjectWrapper>
       ))}
     </Container>

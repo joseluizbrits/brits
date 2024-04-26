@@ -36,15 +36,6 @@ function ConvinceMeCard({ id, text, img, link }: IConvinceMeCard) {
           <Quotes className="quote-1" />
           <Quotes className="quote-2" />
         </Text>
-        {img.alt && (
-          <Image
-            id={img.id}
-            src={img.src}
-            width={img.width}
-            height={img.height}
-            alt={img.alt}
-          />
-        )}
 
         {link && (
           <Link href="https://api.whatsapp.com/send?phone=5521977201981&text=Ola,%20Brits!%20Eu%20gostaria%20de%20fazer%20um%20or%C3%A7amento">

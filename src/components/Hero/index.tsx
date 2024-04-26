@@ -1,17 +1,14 @@
 "use client";
 
-import { Container, Content, Media } from "./styles";
+import { HeroContainer, Content, Media } from "./styles";
 import Link from "next/link";
 
 import GitHub from "@/icons/GitHub";
 import Instagram from "@/icons/Instagram";
-import Animation from "./animation";
 
 function Hero() {
-  Animation();
-
   return (
-    <Container id="hero" className="container">
+    <HeroContainer id="hero" className="container">
       <Content>
         <div className="hero-title">
           <span>Desenvolvimento web</span>
@@ -43,7 +40,7 @@ function Hero() {
           <Instagram />
         </Link>
       </Media>
-    </Container>
+    </HeroContainer>
   );
 }
 

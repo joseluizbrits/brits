@@ -15,15 +15,6 @@ function Project() {
 
   return (
     <Container id="project" ref={section}>
-      <ImageWrapper>
-        <Image
-          src="/art.webp"
-          alt="Mulher sentada em um banquinho no museu apreciando quadros artísticos"
-          fill
-          sizes="100vw"
-        ></Image>
-      </ImageWrapper>
-
       <Content className="container">
         <h2>
           Cada projeto é uma oportunidade para nos reinventarmos e superar

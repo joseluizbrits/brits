@@ -16,15 +16,6 @@ function Introduction() {
 
   return (
     <Container id="intro" ref={section}>
-      <ImageWrapper>
-        <Image
-          src="/eye.webp"
-          alt="Ênfase nos olhos de uma mulher com o rosto coberto de tinta colorida"
-          fill
-          sizes="75vw"
-        ></Image>
-      </ImageWrapper>
-
       <Content className="container">
         <h2>
           <small>Credibilidade online</small>

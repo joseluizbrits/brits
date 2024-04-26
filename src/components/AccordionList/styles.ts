@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import img from "../../../public/universe.webp";
 
 export const Container = styled.ul`
   padding: 40px;
@@ -13,7 +12,6 @@ export const Container = styled.ul`
     content: "";
     width: 100%;
     height: 100%;
-    background: url(${img.src}) center center no-repeat;
     background-size: cover;
     border-radius: 50px;
     opacity: 0.2;

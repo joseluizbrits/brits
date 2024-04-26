@@ -5,7 +5,6 @@ import { Pagination, Navigation } from "swiper/modules";
 import ConvinceMeCard from "../ConvinceMeCard";
 import Close from "@/icons/Close";
 
-import convince from "@/utils/convince";
 import usePopup from "@/hooks/usePopup";
 
 function ConvinceMe() {
@@ -35,18 +34,7 @@ function ConvinceMe() {
         }}
         navigation={true}
         modules={[Pagination, Navigation]}
-      >
-        {convince.map(({ id, text, img }, index) => (
-          <SwiperSlide key={id}>
-            <ConvinceMeCard
-              id={id}
-              text={text}
-              img={img}
-              link={index + 1 === convince.length ? true : false}
-            />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      ></Swiper>
 
       <ButtonClose
         aria-label="fechar"

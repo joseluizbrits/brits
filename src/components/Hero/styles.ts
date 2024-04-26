@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.section`
+export const HeroContainer = styled.section`
   height: calc(100vh - 80px);
   background: var(--primary-gradient);
 

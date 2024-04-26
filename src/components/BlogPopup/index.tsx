@@ -47,13 +47,6 @@ function BlogPopup() {
       <ButtonClose aria-label="fechar popup" onClick={() => setActive(2)}>
         <XClose />
       </ButtonClose>
-
-      <Image
-        src="/woman.png"
-        width={252}
-        height={296}
-        alt="Silhueta de uma mulher segurando uma lampada e com alguns pontos de luz pelo corpo"
-      />
     </Popup>
   );
 }
