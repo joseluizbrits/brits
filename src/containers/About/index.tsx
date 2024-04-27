@@ -16,7 +16,7 @@ function About() {
         </Paragraph>
 
         <Paragraph $color="gray" $strong="tertiary">
-          Além de tecnologia, gosto muito de arte, ciência e filosofia —
+          Além de tecnologia, gosto muito de arte, ciência e filosofia — são
           combustíveis que me fazem estar sempre{" "}
           <strong>buscando uma nova maneira criativa</strong> de desenvolver as
           coisas.

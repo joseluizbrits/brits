@@ -8,8 +8,6 @@ export const ServicesContainer = styled.section`
     display: flex;
     gap: 20px;
 
-    margin-bottom: 240px; // REMOVER
-
     > :nth-child(1) {
       background-color: var(--tertiary-light);
     }
@@ -24,6 +22,7 @@ export const ServicesContainer = styled.section`
   }
 
   li {
+    width: 100%;
     padding: 40px;
     border-radius: 35px;
 

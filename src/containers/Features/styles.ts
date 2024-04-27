@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const FeaturesContainer = styled.section`
+  margin-top: var(--gap);
+
   > :nth-child(2) {
     margin-top: 80px;
     display: grid;
