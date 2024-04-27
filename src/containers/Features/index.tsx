@@ -1,29 +1,99 @@
 "use client";
 
-import { Container } from "./styles";
-import Animation from "./animation";
-
-import { useRef } from "react";
-import { features } from "@/utils/features";
+import { FeaturesContainer } from "./styles";
+import { TitleWrapper } from "@/styles/Text/TitleWrapper";
+import { Paragraph } from "@/styles/Text/Paragraph";
+import { montserrat } from "@/lib/fonts";
+import Image from "next/image";
 
 function Features() {
-  const section = useRef(null);
-
-  Animation(section, features);
-
   return (
-    <Container id="features" ref={section}>
-      <h2>As funcionalidades são diversas </h2>
+    <FeaturesContainer id="features">
+      <TitleWrapper>
+        <h2>Por que escolher Brits?</h2>
+        <Paragraph $color="gray">
+          Comigo você tem um processo pouco burocrático e com custo bastante
+          otimizado, pois eu só te entrego aquilo que é estritamente necessário.
+        </Paragraph>
+      </TitleWrapper>
 
-      <ul>
-        {features.map(({ id, name, icon }) => (
-          <li key={id} id={id}>
-            <span>{name}</span>
-            {icon}
-          </li>
-        ))}
-      </ul>
-    </Container>
+      <div>
+        <div>
+          <h3 className={montserrat.className}>Design Profissional</h3>
+          <Paragraph $color="gray-light" $strong="primary-light">
+            O layout é desenhado e pensado única e exclusivamente às suas
+            necessidades, buscando reforçar a{" "}
+            <strong>credibilidade de sua marca</strong> no mercado. Você terá
+            orgulho em divulgar o endereço do seu site.
+          </Paragraph>
+
+          <div>
+            <Image
+              src="/bulb.svg"
+              alt="Ícone de uma lâmpada"
+              width={240}
+              height={200}
+            />
+          </div>
+        </div>
+
+        <div>
+          <h3 className={montserrat.className}>Alta Performance</h3>
+          <Paragraph $color="gray-light" $strong="primary-light">
+            A tecnologia utilizada{" "}
+            <strong>reduz expressivamente as taxas de carregamento</strong>,
+            tornando a navegação do seu site quase que instantânea. Desempenho
+            não será um problema.
+          </Paragraph>
+
+          <div>
+            <Image
+              src="/speedometer.svg"
+              alt="Ícone de um velocímetro"
+              width={300}
+              height={200}
+            />
+          </div>
+        </div>
+
+        <div>
+          <h3 className={montserrat.className}>Site Seguro</h3>
+          <Paragraph $color="gray-light" $strong="primary-light">
+            A segurança é garantida com{" "}
+            <strong>certificado SSL e criptografia</strong> (em https://),
+            exibindo assim a mensagem “Site Seguro” na barra de navegação. Isso
+            passa um ar de confiança para o seu cliente.
+          </Paragraph>
+
+          <div>
+            <Image
+              src="/lock.svg"
+              alt="Ícone de uma fechadura"
+              width={240}
+              height={220}
+            />
+          </div>
+        </div>
+
+        <div>
+          <h3 className={montserrat.className}>Hospedagem Cloud</h3>
+          <Paragraph $color="gray-light" $strong="primary-light">
+            Seu site ficará hospedado em um dos serviços de nuvem mais modernos
+            que gera várias otimizações e aprimora mais ainda a{" "}
+            <strong>performance e velocidade de carregamento</strong>.
+          </Paragraph>
+
+          <div>
+            <Image
+              src="/cloud.svg"
+              alt="Ícone de uma nuvem"
+              width={240}
+              height={220}
+            />
+          </div>
+        </div>
+      </div>
+    </FeaturesContainer>
   );
 }
 

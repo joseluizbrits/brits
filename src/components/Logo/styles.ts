@@ -1,8 +1,11 @@
 import styled from "styled-components";
 
 export const LogoWrapper = styled.div`
-  display: flex;
-  align-items: center;
+  &,
+  a {
+    display: flex;
+    align-items: center;
+  }
 
   span {
     font-style: italic;
