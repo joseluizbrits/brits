@@ -9,12 +9,22 @@ type ButtonOutlinedProps = {
   children: ReactNode;
   href: string;
   icon?: boolean;
+  external?: boolean;
 };
 
-function ButtonOutlined({ children, href, icon }: ButtonOutlinedProps) {
+function ButtonOutlined({
+  children,
+  href,
+  icon,
+  external,
+}: ButtonOutlinedProps) {
   return (
     <OutlinedWrapper>
-      <Link href={href} className={ubuntu.className}>
+      <Link
+        href={href}
+        className={ubuntu.className}
+        target={external ? "_blank" : "_self"}
+      >
         {children}
         {icon && <ArrowRight color={"var(--secondary)"} />}
       </Link>

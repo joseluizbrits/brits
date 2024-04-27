@@ -5,7 +5,6 @@ export const OutlinedWrapper = styled.div`
     display: block;
     font-weight: 700;
     letter-spacing: 0.05rem;
-    text-transform: uppercase;
     color: var(--secondary);
 
     padding: 12px 24px;

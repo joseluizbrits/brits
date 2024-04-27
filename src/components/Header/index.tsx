@@ -37,7 +37,7 @@ function Header() {
                 Contato
               </Link>
             ) : (
-              <ButtonOutlined href="/blog">Blog</ButtonOutlined>
+              <ButtonOutlined href="/blog">BLOG</ButtonOutlined>
             )}
           </li>
         </ul>

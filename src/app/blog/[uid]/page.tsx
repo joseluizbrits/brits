@@ -1,17 +1,18 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { SliceZone } from "@prismicio/react";
 
+import { SliceZone } from "@prismicio/react";
 import { createClient } from "@/prismicio";
 import { components } from "@/slices";
+
 import HeroBlog from "@/components/HeroBlog";
 import BlogWrapper from "@/components/BlogWrapper";
 import Author from "@/components/Author";
 import Share from "@/components/Share";
 import CallMe from "@/components/CallMe";
+
 import BlogPopup from "@/components/BlogPopup";
 import BlogPostList from "@/components/BlogPostList";
-import TitleCircle from "@/components/TitleCircle";
 
 type Params = { uid: string };
 

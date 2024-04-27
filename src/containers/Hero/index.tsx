@@ -39,11 +39,14 @@ function Hero() {
           </ButttonGradient>
 
           <Media>
-            <Link href="https://github.com/joseluizbrits">
+            <Link href="https://github.com/joseluizbrits" target="_blank">
               <GitHubFilled />
             </Link>
 
-            <Link href="https://www.instagram.com/joseluizbrits/?igsh=MTIxZTV4YjI2MmN0bQ%3D%3D&utm_source=qr">
+            <Link
+              href="https://www.instagram.com/joseluizbrits/?igsh=MTIxZTV4YjI2MmN0bQ%3D%3D&utm_source=qr"
+              target="_blank"
+            >
               <Instagram />
             </Link>
           </Media>

@@ -11,7 +11,9 @@ type ButtonGradientProps = {
 function ButtonGradient({ children, href }: ButtonGradientProps) {
   return (
     <ButttonGradientWrapper className={ubuntu.className}>
-      <Link href={href}>{children}</Link>
+      <Link href={href} target="_blank">
+        {children}
+      </Link>
     </ButttonGradientWrapper>
   );
 }

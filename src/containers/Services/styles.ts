@@ -40,6 +40,7 @@ export const ServicesContainer = styled.section`
   span {
     font-size: 1.825rem;
     color: var(--primary-dark-40);
+    margin-top: 4px;
     margin-bottom: 20px;
 
     display: flex;

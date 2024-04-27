@@ -17,8 +17,8 @@ const GlobalStyles = createGlobalStyle`
     --white: #FFFFFF;
     --gray: #CBB5E1;
     --gray-light: #F7EFFF;
-    --black-5: rbga(0, 0, 0, 0.05);
-    --black-10: rbga(0, 0, 0, 0.1);
+    --black-5: rgba(0, 0, 0, 0.05);
+    --black-10: rgba(0, 0, 0, 0.1);
     --gradient-1: linear-gradient(to bottom, #862FA4 30%, #692FA4);
     --gradient-2: linear-gradient(to bottom, #692FA4, #8A2A99);
     --gradient-3: linear-gradient(to bottom, #8A2A99 15%, #8DFFF8);
