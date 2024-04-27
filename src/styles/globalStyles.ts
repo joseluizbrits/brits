@@ -29,6 +29,7 @@ const GlobalStyles = createGlobalStyle`
     --bg-5: #271A34;
     --bg-6: #1E0B32;
     --bg-7: #16012B;
+    --gap: 200px;
   }
 
  * {

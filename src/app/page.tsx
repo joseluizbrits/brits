@@ -1,5 +1,6 @@
 import Hero from "@/containers/Hero";
 import Introduction from "@/containers/Introduction";
+import Services from "@/containers/Services";
 import Process from "@/containers/Process";
 import Project from "@/containers/Project";
 import About from "@/containers/About";
@@ -13,6 +14,7 @@ export default function Home() {
       <main className="container">
         <Hero />
         <Introduction />
+        <Services />
         <Process />
         <Project />
         <About />

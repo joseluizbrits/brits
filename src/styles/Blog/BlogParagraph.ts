@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-export const Paragraph = styled.p`
+export const BlogParagraph = styled.p`
   font-size: clamp(1.15rem, 1.5vw, 1.75rem);
   line-height: 1.5em;
-  color: var(--blogText);
+  color: var(--gray-light);
   margin-top: 28px;
 
   strong {

@@ -20,7 +20,7 @@ export const OutlinedWrapper = styled.div`
 
   a,
   svg {
-    transition: ease-out 0.1s;
+    transition: 0.1s ease-out;
   }
 
   @media screen and (min-width: 1024px) {

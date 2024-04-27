@@ -56,7 +56,7 @@ export const Media = styled.div`
   @media screen and (min-width: 1080px) {
     a:hover {
       opacity: 1;
-      scale: 1.1;
+      scale: 1.05;
     }
   }
 `;

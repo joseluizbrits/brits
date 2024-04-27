@@ -57,14 +57,14 @@ export const Container = styled.section`
   li div h3 {
     font-weight: 400;
     font-size: clamp(2.5rem, 5vw, 6rem);
-    color: var(--blogText);
+    color: var(--gray-light);
     padding: 16px 0;
   }
 
   li div p {
     font-size: clamp(1.25rem, 1.875vw, 2rem);
     line-height: 1.5em;
-    color: var(--blogText);
+    color: var(--gray-light);
     max-width: 55ch;
     padding: 8px 0;
   }

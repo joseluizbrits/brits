@@ -2,7 +2,7 @@
 
 import { Content } from "@prismicio/client";
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
-import { Paragraph as P } from "@/styles/Blog/Paragraph";
+import { BlogParagraph as P } from "@/styles/Blog/BlogParagraph";
 import { lato } from "@/lib/fonts";
 
 export type ParagraphProps = SliceComponentProps<Content.ParagraphSlice>;

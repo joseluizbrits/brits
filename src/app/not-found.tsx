@@ -15,7 +15,7 @@ export default function NotFound() {
         style={{
           fontWeight: 400,
           fontSize: "clamp(1.5rem, 2vw, 2rem)",
-          color: "var(--blogText)",
+          color: "var(--gray-light)",
           alignSelf: "end",
         }}
       >
