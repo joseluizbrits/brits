@@ -1,15 +1,10 @@
 function ArrowDraw() {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="110"
-      height="308"
-      fill="none"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" width="75" height="197" fill="none">
       <path
-        stroke="#B576F5"
-        strokeWidth="8"
-        d="M69.5 4C-19.4 62.9-27 233.4 104 304m0 0H66.2m37.8 0l-12.3-30.4"
+        stroke="var(--primary-light)"
+        strokeWidth="4"
+        d="M48.545.998c-64.654 38.246-70.181 148.961 25.091 194.805m0 0h-27.49m27.49 0l-8.945-19.741"
       ></path>
     </svg>
   );

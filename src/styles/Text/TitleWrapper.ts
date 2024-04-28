@@ -8,10 +8,10 @@ export const TitleWrapper = styled.div<{ $centered?: boolean }>`
   h2 {
     font-weight: 900;
     font-size: 3.5rem;
-    line-height: 1.15em;
+    line-height: 1.1em;
     letter-spacing: -0.02em;
     color: var(--white);
-    max-width: ${({ $centered }) => ($centered ? "20ch" : "fit-content")};
+    max-width: ${({ $centered }) => ($centered ? "22ch" : "fit-content")};
   }
 
   h2,
@@ -20,6 +20,6 @@ export const TitleWrapper = styled.div<{ $centered?: boolean }>`
   }
 
   p {
-    max-width: 40ch;
+    max-width: 44ch;
   }
 `;

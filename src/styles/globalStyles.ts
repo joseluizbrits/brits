@@ -41,6 +41,7 @@ const GlobalStyles = createGlobalStyle`
   html {
     background: var(--bg-2);
     overflow-x: hidden;
+    scroll-behavior: smooth;
   }
 
   a {

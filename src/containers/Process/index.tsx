@@ -1,30 +1,35 @@
 "use client";
 
 import { Container } from "./styles";
-import Animation from "./animation";
+import { ubuntu } from "@/lib/fonts";
+import parse from "html-react-parser";
 
-import { useRef } from "react";
-import { lato } from "@/lib/fonts";
-
+import { TitleWrapper } from "@/styles/Text/TitleWrapper";
+import { Paragraph } from "@/styles/Text/Paragraph";
 import { steps } from "@/utils/steps";
 import ArrowDraw from "@/icons/ArrowDraw";
 
 function Process() {
-  const section = useRef(null);
-
-  Animation(section, steps);
-
   return (
-    <Container id="process" ref={section}>
-      <h2>Entenda o processo de criação do site</h2>
+    <Container id="process">
+      <TitleWrapper $centered>
+        <h2>Como funciona o processo?</h2>
+        <Paragraph $color="gray">
+          O meu serviço é altamente personalizado e dedicado ao tipo do seu
+          negócio. No final você recebe um site profissional, original, com
+          beleza estética, alta performance e de fácil usabilidade.
+        </Paragraph>
+      </TitleWrapper>
 
       <ul>
         {steps.map(({ id, title, desc }, index) => (
           <li key={id} id={id}>
-            <span>{index + 1}</span>
+            <span className={ubuntu.className}>{index + 1}</span>
             <div>
-              <h3>{title}</h3>
-              <p className={lato.className}>{desc}</p>
+              <h3 className={ubuntu.className}>{title}</h3>
+              <Paragraph $color="gray-light" $strong="primary-light">
+                {parse(desc)}
+              </Paragraph>
             </div>
             {index + 1 < steps.length && <ArrowDraw />}
           </li>

@@ -1,23 +1,12 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
-  background-color: var(--primary);
-  padding-bottom: 200px;
-  overflow-x: hidden;
-
-  h2 {
-    font-weight: 400;
-    font-size: clamp(2.5rem, 6vw, 7rem);
-    color: var(--primary-light);
-    max-width: 16ch;
-    padding: 160px 0;
-    margin: 0 auto;
-  }
+  margin-top: var(--gap);
 
   ul {
-    padding: 0 120px;
+    margin-top: 80px;
     display: grid;
-    gap: 120px;
+    gap: 80px;
   }
 
   ul > :nth-child(even) {
@@ -35,18 +24,29 @@ export const Container = styled.section`
     }
   }
 
+  ul > :first-child,
+  ul > :last-child {
+    background-color: var(--bg-6);
+    border: none;
+  }
+
   li {
+    background-color: var(--black-10);
+    border: 1px solid var(--secondary-20);
+    border-radius: 35px;
+    padding: 40px;
+
     display: flex;
     gap: 28px;
     position: relative;
   }
 
   li span {
-    font-size: clamp(2.5rem, 4vw, 5rem);
-    color: var(--secondary);
+    font-size: 2rem;
+    color: var(--tertiary);
 
     aspect-ratio: 1/1;
-    height: clamp(64px, 8vw, 120px);
+    height: clamp(28px, 8vw, 64px);
     background-color: var(--primary-dark);
     border-radius: 50%;
 
@@ -56,23 +56,21 @@ export const Container = styled.section`
 
   li div h3 {
     font-weight: 400;
-    font-size: clamp(2.5rem, 5vw, 6rem);
-    color: var(--gray-light);
-    padding: 16px 0;
+    font-size: 3rem;
+    color: var(--secondary);
+    margin-bottom: 16px;
   }
 
   li div p {
-    font-size: clamp(1.25rem, 1.875vw, 2rem);
-    line-height: 1.5em;
-    color: var(--gray-light);
+    font-size: 1.25rem;
     max-width: 55ch;
-    padding: 8px 0;
   }
 
   li svg {
     position: absolute;
-    top: 90%;
+    top: 80%;
     left: 0;
+    z-index: 1;
   }
 
   @media screen and (max-width: 1440px) {

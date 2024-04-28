@@ -29,7 +29,7 @@ function Hero() {
 
         <Paragraph $color="gray" $strong="primary-light">
           Um <strong>desenvolvedor web front-end</strong> que utiliza da arte e
-          da filosofia como inspiração para entregar algo de
+          da filosofia como inspiração para entregar algo de{" "}
           <strong>único e original</strong> em cada projeto.
         </Paragraph>
 
