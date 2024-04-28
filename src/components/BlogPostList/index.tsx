@@ -1,32 +1,26 @@
 "use client";
 
-import {
-  Container,
-  Content,
-  ImageWrapper,
-  PostDate,
-  TextWrapper,
-} from "./styles";
+import { Container, ImageWrapper, TextWrapper, PostDate } from "./styles";
+
 import { AllDocumentTypes } from "../../../prismicio-types";
 import { PrismicRichText } from "@prismicio/react";
 import { PrismicNextImage } from "@prismicio/next";
-import { lato } from "@/lib/fonts";
-import Link from "next/link";
 
-import Calender from "@/icons/Calender";
-import ArrowRight from "@/icons/ArrowRight";
-import useMedia from "@/hooks/useMedia";
-import { formatDate } from "@/utils/formatDate";
 import { useRouter } from "next/navigation";
+import { ubuntu } from "@/lib/fonts";
 
-function BlogPostList({
-  posts,
-  except,
-}: {
+import { Paragraph } from "@/styles/Text/Paragraph";
+import { formatDate } from "@/utils/formatDate";
+import useMedia from "@/hooks/useMedia";
+import ButtonFilled from "../Buttons/ButtonFilled";
+import Calender from "@/icons/Calender";
+
+type BlogPostListProps = {
   posts: AllDocumentTypes[];
   except?: string;
-}) {
-  const mobile = useMedia("(max-width: 992px)");
+};
+
+function BlogPostList({ posts, except }: BlogPostListProps) {
   const router = useRouter();
 
   return (
@@ -34,7 +28,7 @@ function BlogPostList({
       {posts.map(
         ({ uid, data }, index) =>
           except !== uid && (
-            <Content key={uid} $reverse={!mobile ? index % 2 === 1 : false}>
+            <li key={uid}>
               <ImageWrapper onClick={() => router.push(`/blog/${uid}`)}>
                 <PrismicNextImage
                   field={data.blog_post_image}
@@ -44,8 +38,11 @@ function BlogPostList({
                 />
               </ImageWrapper>
 
-              <TextWrapper $reverse={!mobile ? index % 2 === 1 : false}>
-                <h2 onClick={() => router.push(`/blog/${uid}`)}>
+              <TextWrapper>
+                <h2
+                  className={ubuntu.className}
+                  onClick={() => router.push(`/blog/${uid}`)}
+                >
                   {data.meta_title}
                 </h2>
 
@@ -53,24 +50,28 @@ function BlogPostList({
                   field={data.hero[0]?.blog_subtitle}
                   components={{
                     paragraph: ({ children }) => (
-                      <p className={lato.className}>{children}</p>
+                      <Paragraph
+                        $color="primary-light"
+                        onClick={() => router.push(`/blog/${uid}`)}
+                      >
+                        {children}
+                      </Paragraph>
                     ),
                   }}
                 />
 
                 <div>
-                  <PostDate $reverse={!mobile ? index % 2 === 1 : false}>
+                  <PostDate>
                     <Calender />
                     {formatDate(data.blog_post_date)}
                   </PostDate>
 
-                  <Link href={`/blog/${uid}`}>
+                  <ButtonFilled href={`/blog/${uid}`} color="light" arrow>
                     Ler mais
-                    <ArrowRight />
-                  </Link>
+                  </ButtonFilled>
                 </div>
               </TextWrapper>
-            </Content>
+            </li>
           )
       )}
     </Container>

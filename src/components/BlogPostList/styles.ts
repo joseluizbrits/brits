@@ -3,34 +3,43 @@ import styled from "styled-components";
 export const Container = styled.ul`
   display: grid;
   gap: 40px;
-`;
 
-export const Content = styled.li<{ $reverse: boolean }>`
-  padding: 40px;
-  border-radius: 50px;
-  border: 1px solid var(--tertiaryClear);
+  > :nth-child(even) {
+    grid-template-columns: 5fr 7fr;
 
-  display: flex;
-  flex-direction: ${({ $reverse }) => ($reverse ? "row-reverse" : "row")};
-  gap: 40px;
+    > :last-child {
+      order: -1;
 
-  @media screen and (max-width: 1280px) {
-    padding: 24px;
-    gap: 24px;
+      h2 {
+        text-align: end;
+      }
+
+      p {
+        text-align: end;
+        align-self: end;
+      }
+
+      > div {
+        flex-direction: row-reverse;
+      }
+    }
   }
 
-  @media screen and (max-width: 992px) {
-    flex-direction: column;
-  }
+  li {
+    padding: 40px;
+    background-color: var(--black-10);
+    border-radius: 50px;
+    border: 1px solid var(--secondary-20);
 
-  @media screen and (max-width: 640px) {
-    border-radius: 25px;
+    display: grid;
+    grid-template-columns: 7fr 5fr;
+    gap: 40px;
   }
 `;
 
 export const ImageWrapper = styled.div`
   width: 100%;
-  border-radius: 50px;
+  border-radius: 35px;
   aspect-ratio: 16/9;
   cursor: pointer;
 
@@ -38,8 +47,9 @@ export const ImageWrapper = styled.div`
   position: relative;
 
   img {
+    aspect-ratio: 16/9;
     object-fit: cover;
-    border-radius: 50px;
+    border-radius: 35px;
     transition: 0.3s ease;
   }
 
@@ -58,43 +68,39 @@ export const ImageWrapper = styled.div`
   }
 
   @media screen and (max-width: 640px) {
-    border-radius: 25px;
+    border-radius: 15px;
 
     img {
-      border-radius: 25px;
+      border-radius: 15px;
     }
   }
 `;
 
-export const TextWrapper = styled.div<{ $reverse: boolean }>`
+export const TextWrapper = styled.div`
+  margin-top: 24px;
   display: flex;
   flex-direction: column;
   position: relative;
 
   h2 {
     font-size: clamp(1.875rem, 2.5vw, 4rem);
-    line-height: 1.25em;
-    text-align: ${({ $reverse }) => ($reverse ? "end" : "start")};
+    line-height: 1.15em;
     color: var(--white);
     cursor: pointer;
+
     transition: 0.3s ease;
   }
 
   p {
-    font-size: clamp(1.15rem, 1.5vw, 2rem);
-    line-height: 1.25;
-    text-align: ${({ $reverse }) => ($reverse ? "end" : "start")};
-    align-self: ${({ $reverse }) => ($reverse ? "end" : "start")};
-    color: var(--primary-light);
-    padding-top: 16px;
+    margin-top: 16px;
     max-width: 26ch;
+    cursor: pointer;
   }
 
   > div {
     width: 100%;
     flex: 1;
     display: flex;
-    flex-direction: ${({ $reverse }) => ($reverse ? "row-reverse" : "row")};
     justify-content: space-between;
     align-items: center;
 
@@ -102,53 +108,7 @@ export const TextWrapper = styled.div<{ $reverse: boolean }>`
     bottom: 0;
   }
 
-  a {
-    font-weight: 700;
-    letter-spacing: 0.05rem;
-    text-transform: uppercase;
-    color: var(--primary-dark);
-
-    padding: 20px 32px;
-    border-radius: 50px;
-    background-color: var(--secondary);
-    box-shadow: -1px 1px 3px rgba(0, 0, 0, 0.1);
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-  }
-
-  a svg {
-    scale: 0.9;
-  }
-
-  a,
-  a svg path {
-    transition: 0.3s ease-out;
-  }
-
-  @media screen and (min-width: 1024px) {
-    h2:hover {
-      color: var(--primary-light);
-    }
-
-    a:hover {
-      background-color: var(--primary-dark);
-      color: var(--secondary);
-    }
-
-    a:hover svg path {
-      stroke: var(--secondary);
-    }
-  }
-
   @media screen and (max-width: 1280px) {
-    a {
-      font-size: 0.875rem;
-      padding: 16px 24px;
-    }
-
     p {
       max-width: 35ch;
     }
@@ -160,19 +120,12 @@ export const TextWrapper = styled.div<{ $reverse: boolean }>`
       margin-top: 24px;
     }
   }
-
-  @media screen and (max-width: 640px) {
-    a {
-      padding: 12px 20px;
-    }
-  }
 `;
 
-export const PostDate = styled.div<{ $reverse: boolean }>`
+export const PostDate = styled.div`
   color: var(--primary-dark);
 
   display: flex;
-  flex-direction: ${({ $reverse }) => ($reverse ? "row-reverse" : "row")};
   align-items: center;
   gap: 8px;
 `;

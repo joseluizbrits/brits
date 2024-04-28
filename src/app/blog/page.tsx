@@ -1,9 +1,8 @@
 import { Metadata } from "next";
-import { createClient } from "@/prismicio";
 
 import TitleCircle from "@/components/TitleCircle";
 import GalaxiesImage from "@/components/GalaxiesImage";
-import BlogPostList from "@/components/BlogPostList";
+import GetBlogPosts from "@/components/GetBlogPosts";
 
 export const metadata: Metadata = {
   title: "Todos os posts | BRITS Blog",
@@ -18,9 +17,6 @@ export const metadata: Metadata = {
 };
 
 async function page() {
-  const client = createClient();
-  const blogPosts = await client.getAllByType("blog_post");
-
   return (
     <>
       <GalaxiesImage position="top" />
@@ -35,7 +31,7 @@ async function page() {
         }}
       >
         <TitleCircle>Todos os Posts</TitleCircle>
-        <BlogPostList posts={blogPosts} />
+        <GetBlogPosts />
       </main>
 
       <GalaxiesImage position="bottom" />

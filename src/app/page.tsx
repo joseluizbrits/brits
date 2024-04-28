@@ -6,6 +6,7 @@ import About from "@/containers/About";
 import Projects from "@/containers/Projects";
 import CTA from "@/containers/CTA";
 import Process from "@/containers/Process";
+import SeeBlog from "@/containers/SeeBlog";
 import Contact from "@/containers/Contact";
 import SmoothScroll from "@/components/SmoothScroll";
 
@@ -22,6 +23,7 @@ export default function Home() {
         <Projects />
         <CTA />
         <Process />
+        <SeeBlog />
         <Contact />
       </main>
       {/* </SmoothScroll> */}

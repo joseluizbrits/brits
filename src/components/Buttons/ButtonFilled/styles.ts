@@ -2,19 +2,23 @@ import styled from "styled-components";
 
 export const ButtonFilledWrapper = styled.div<{
   $color: "light" | "dark";
+  $arrow: boolean;
 }>`
   a {
-    display: block;
     font-weight: 700;
     letter-spacing: 0.05rem;
     text-align: center;
-    text-transform: uppercase;
-    padding: 12px 6px;
+    padding: 12px 24px;
     border-radius: 50px;
     color: ${({ $color }) =>
       $color === "light" ? "var(--primary-dark)" : "var(--tertiary)"};
     background-color: ${({ $color }) =>
       $color === "light" ? "var(--tertiary)" : "var(--primary-dark)"};
+
+    display: grid;
+    grid-template-columns: ${({ $arrow }) => ($arrow ? "auto 1fr" : "1fr")};
+    place-items: center;
+    gap: 8px;
 
     transition: 0.1s ease-out;
   }

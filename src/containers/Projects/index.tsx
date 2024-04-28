@@ -36,7 +36,7 @@ function Projects() {
             </Link>
 
             <div>
-              <ButtonOutlined href={href} icon external>
+              <ButtonOutlined href={href} arrow external>
                 Ver projeto
               </ButtonOutlined>
 

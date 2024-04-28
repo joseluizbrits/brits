@@ -13,6 +13,7 @@ import CallMe from "@/components/CallMe";
 
 import BlogPopup from "@/components/BlogPopup";
 import BlogPostList from "@/components/BlogPostList";
+import GetBlogPosts from "@/components/GetBlogPosts";
 
 type Params = { uid: string };
 
@@ -21,8 +22,6 @@ export default async function Page({ params }: { params: Params }) {
   const page = await client
     .getByUID("blog_post", params.uid)
     .catch(() => notFound());
-
-  const blogPosts = await client.getAllByType("blog_post");
 
   return (
     <>
@@ -58,7 +57,7 @@ export default async function Page({ params }: { params: Params }) {
           <br />
           ...
         </span>
-        <BlogPostList posts={blogPosts} except={page.uid} />
+        <GetBlogPosts except={page.uid} />
       </div>
 
       <BlogPopup />

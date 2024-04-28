@@ -1,16 +1,18 @@
 import styled from "styled-components";
 
-export const OutlinedWrapper = styled.div`
+export const ButtonOutlinedWrapper = styled.div<{ $borderless?: boolean }>`
   a {
     display: block;
+    width: max-content;
+
     font-weight: 700;
     letter-spacing: 0.05rem;
     color: var(--secondary);
 
-    padding: 12px 24px;
+    padding: ${({ $borderless }) => ($borderless ? "12px 0" : "12px 24px")};
     border-radius: 50px;
-    background-color: none;
-    border: 1px solid var(--secondary);
+    border: ${({ $borderless }) =>
+      $borderless ? "none" : "1px solid var(--secondary)"};
 
     display: flex;
     align-items: center;
@@ -24,7 +26,9 @@ export const OutlinedWrapper = styled.div`
 
   @media screen and (min-width: 1024px) {
     a:hover {
-      box-shadow: 0 0 10px 1px var(--secondary-20);
+      opacity: ${({ $borderless }) => ($borderless ? "0.8" : "auto")};
+      box-shadow: ${({ $borderless }) =>
+        $borderless ? "none" : "0 0 10px 1px var(--secondary-20)"};
 
       svg {
         transform: translateX(4px);
