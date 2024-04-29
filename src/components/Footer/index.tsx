@@ -1,12 +1,15 @@
 "use client";
 
-import { Container } from "./styles";
-import { montserrat } from "@/lib/fonts";
+import { FooterContainer } from "./styles";
+import { Paragraph } from "@/styles/Text/Paragraph";
+
 import { useParams, usePathname } from "next/navigation";
-import Logo from "../Logo";
-import Bars from "@/icons/Bars";
+import Link from "next/link";
+
+import Logo from "@/components/Logo";
 import GitHub from "@/icons/GitHubFilled";
 import Instagram from "@/icons/Instagram";
+import Bars from "@/icons/Bars";
 
 function Footer() {
   const params = useParams<{ uid: string }>();
@@ -18,29 +21,35 @@ function Footer() {
   const type = isBlog ? "blog" : isBlogPost ? "blogPost" : "home";
 
   return (
-    <Container $type={type}>
+    <FooterContainer $type={type}>
       <Logo href="/" />
-      <span className={montserrat.className}>
+      <span>
         © Copyright {new Date().getFullYear()} - {new Date().getFullYear() + 1}{" "}
         | BRITS | Todos os Direitos Reservados | Criado por BRITS
       </span>
 
       <div>
-        <a href="https://github.com/joseluizbrits">
+        <Link
+          href="https://github.com/joseluizbrits"
+          aria-label="Vai para o GitHub"
+        >
           <GitHub />
-        </a>
-        <a href="https://www.instagram.com/joseluizbrits/?igsh=MTIxZTV4YjI2MmN0bQ%3D%3D&utm_source=qr">
+        </Link>
+        <Link
+          href="https://www.instagram.com/joseluizbrits/?igsh=MTIxZTV4YjI2MmN0bQ%3D%3D&utm_source=qr"
+          aria-label="Vai para o Instagram"
+        >
           <Instagram />
-        </a>
+        </Link>
       </div>
 
-      {params.uid && (
+      {type !== "blog" && (
         <>
           <Bars className="top" />
           <Bars className="bottom" />
         </>
       )}
-    </Container>
+    </FooterContainer>
   );
 }
 

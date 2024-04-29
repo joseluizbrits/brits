@@ -27,7 +27,7 @@ export const LogoWrapper = styled.div`
   @media screen and (max-width: 1440px) {
     span {
       font-size: 2rem;
-      padding: 12px;
+      padding-right: 12px;
     }
 
     svg {

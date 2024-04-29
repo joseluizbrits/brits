@@ -1,15 +1,12 @@
 import styled from "styled-components";
 
-export const Container = styled.footer<{ $type: "blog" | "blogPost" | "home" }>`
+export const FooterContainer = styled.footer<{
+  $type: "blog" | "blogPost" | "home";
+}>`
   width: 100%;
-  height: 160px;
-  padding: 0 40px;
+  padding: 40px;
   background: ${({ $type }) =>
-    $type === "blog"
-      ? "var(--gradient-2)"
-      : $type === "blogPost"
-        ? "transparent"
-        : "var(--primary-gradient)"};
+    $type === "blog" ? "var(--gradient-2)" : "var(--primary-dark)"};
 
   display: flex;
   justify-content: center;
@@ -20,19 +17,20 @@ export const Container = styled.footer<{ $type: "blog" | "blogPost" | "home" }>`
   position: relative;
 
   > span {
+    font-size: 1rem;
     line-height: 1.25rem;
     text-align: center;
-    color: var(--white);
+    color: var(--gray-light);
     opacity: 0.8;
   }
 
-  > div {
-    margin-left: -8px;
-  }
+  > :nth-child(3) a {
+    padding: 12px;
+    padding-left: 0;
 
-  > div a svg {
-    scale: 0.6;
-    transition: 0.3s ease;
+    svg {
+      transition: 0.1s ease-out;
+    }
   }
 
   .bars {
@@ -51,8 +49,8 @@ export const Container = styled.footer<{ $type: "blog" | "blogPost" | "home" }>`
   }
 
   @media screen and (min-width: 1024px) {
-    > div a svg:hover {
-      scale: 0.7;
+    > :nth-child(3) a svg:hover {
+      scale: 1.1;
     }
   }
 

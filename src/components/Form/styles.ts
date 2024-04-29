@@ -34,7 +34,7 @@ export const FormWrapper = styled.form`
 
   input:hover,
   textarea:hover {
-    border: 1px solid var(--secondary);
+    border: 1px solid var(--secondary-40);
   }
 
   input:focus,
