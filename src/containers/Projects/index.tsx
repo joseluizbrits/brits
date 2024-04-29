@@ -40,7 +40,11 @@ function Projects() {
                 Ver projeto
               </ButtonOutlined>
 
-              <Link href={github} target="_blank">
+              <Link
+                href={github}
+                target="_blank"
+                aria-label="Vai para o repositório do GitHub"
+              >
                 <Image
                   src="/github.svg"
                   alt="Ícone do Github"

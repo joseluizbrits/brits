@@ -1,54 +1,35 @@
 import styled from "styled-components";
 
-export const Container = styled.section`
-  width: 100%;
-  background: var(--primary);
-`;
+export const ContactContainer = styled.section`
+  margin-top: var(--gap);
+  margin-bottom: var(--gap);
 
-export const Title = styled.h2`
-  padding: 200px 0;
-  padding-left: 120px;
-  display: grid;
-  justify-content: center;
-
-  position: relative;
-
-  &::after {
-    content: "";
-    display: block;
-    width: clamp(120px, 20vw, 240px);
-    height: clamp(24px, 4vw, 64px);
-    border-radius: 0 50px 50px 0;
-    background-color: var(--tertiary);
-    opacity: 0.8;
-
-    position: absolute;
-    bottom: 120px;
-    left: 0;
-
-    /* animate */
-    transform: var(--aboutDeco);
+  > :nth-child(2) {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: minmax(auto, 640px) minmax(400px, 640px);
+    justify-content: space-between;
+    gap: 20px;
   }
 
-  small {
-    font-weight: 400;
-    font-size: clamp(0.875rem, 1.25vw, 1.5rem);
-    color: var(--primary-dark);
-  }
+  > :nth-child(2) > div {
+    max-width: 640px;
+    position: relative;
 
-  span {
-    font-weight: 400;
-    font-size: clamp(2rem, 4vw, 7rem);
-    line-height: 1.25em;
-    color: var(--white);
-    max-width: 19ch;
-  }
+    > img {
+      object-fit: cover;
+    }
 
-  @media screen and (max-width: 1024px) {
-    padding: 160px 0;
+    :last-child {
+      position: absolute;
+      top: 31%;
+      left: 16%;
 
-    &::after {
-      bottom: 80px;
+      transition: 0.1s ease-out;
+    }
+
+    :last-child:hover {
+      scale: 1.05;
     }
   }
 `;

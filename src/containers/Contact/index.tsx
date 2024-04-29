@@ -1,23 +1,49 @@
 "use client";
 
-import { useRef } from "react";
-import { Container, Title } from "./styles";
+import { TitleWrapper } from "@/styles/Text/TitleWrapper";
+import { ContactContainer } from "./styles";
 import Form from "@/components/Form";
-import Animation from "./animation";
+import { Paragraph } from "@/styles/Text/Paragraph";
+import Image from "next/image";
+import Link from "next/link";
 
 function Contact() {
-  const section = useRef(null);
-
-  Animation(section);
-
   return (
-    <Container id="contact" ref={section}>
-      <Title>
-        <small>Caso você goste de formalidades</small>
-        <span>Me envie um e-mail pelo formulário abaixo</span>
-      </Title>
-      <Form />
-    </Container>
+    <ContactContainer id="contact">
+      <TitleWrapper>
+        <h2>Me mande uma mensagem!</h2>
+        <Paragraph $color="gray">
+          Sinta-se à vontade para me mandar uma mensagem a respeito de qualquer
+          dúvida que você tenha. Responderei o quanto antes :)
+        </Paragraph>
+      </TitleWrapper>
+
+      <div>
+        <Form />
+
+        <div>
+          <Image
+            src="/astronaut-thinking.png"
+            alt="Astronauta no espaço sentado em uma rocha"
+            fill
+            quality={100}
+          />
+
+          <Link
+            href="https://api.whatsapp.com/send?phone=5521977201981"
+            aria-label="Vai para o WhatsApp"
+            target="_blank"
+          >
+            <Image
+              src="/whatsapp.svg"
+              alt="Ícone do WhatsApp"
+              width={64}
+              height={64}
+            />
+          </Link>
+        </div>
+      </div>
+    </ContactContainer>
   );
 }
 

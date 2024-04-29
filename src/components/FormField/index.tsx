@@ -1,4 +1,6 @@
-type FieldProps = {
+import { poppins } from "@/lib/fonts";
+
+type FormFieldProps = {
   name: "name" | "email" | "message";
   label: string;
   type: "text" | "email" | "textarea";
@@ -8,7 +10,7 @@ type FieldProps = {
   error: string | null;
 };
 
-const Field = ({
+const FormField = ({
   name,
   label,
   type,
@@ -16,28 +18,29 @@ const Field = ({
   onChange,
   onBlur,
   error,
-}: FieldProps) => {
+}: FormFieldProps) => {
   return (
     <div className={"field-" + name}>
-      <label htmlFor={name}>{label}</label>
       {type !== "textarea" ? (
         <input
           id={name}
           name={name}
           type={type}
+          placeholder={label}
           value={value}
           onChange={onChange}
           onBlur={onBlur}
-          className={error ? "error" : ""}
+          className={error ? `error ${poppins.className}` : poppins.className}
         />
       ) : (
         <textarea
           id={name}
           name={name}
+          placeholder={label}
           value={value}
           onChange={onChange}
           onBlur={onBlur}
-          className={error ? "error" : ""}
+          className={error ? `error ${poppins.className}` : poppins.className}
         />
       )}
       {error && <span className="error">{error}</span>}
@@ -45,4 +48,4 @@ const Field = ({
   );
 };
 
-export default Field;
+export default FormField;

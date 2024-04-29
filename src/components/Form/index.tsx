@@ -1,18 +1,12 @@
-import { Container, Loading } from "./styles";
-import { useEffect, useState, useRef } from "react";
-
-import Field from "../Field";
-import useForm from "@/hooks/useForm";
-
+import { useEffect, useState } from "react";
 import { ubuntu } from "@/lib/fonts";
+
+import { FormWrapper, Loading } from "./styles";
+import FormField from "../FormField";
+import useForm from "@/hooks/useForm";
 import { sendEmail } from "@/utils/sendEmail";
-import Animation from "./animation";
 
 function Form() {
-  const comp = useRef(null);
-
-  Animation(comp);
-
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
@@ -50,37 +44,35 @@ function Form() {
   }, [success, error, name.error, email.error, message.error]);
 
   return (
-    <Container ref={comp}>
-      <form onSubmit={handleSubmit}>
-        <div className="fields">
-          <Field label="Nome: " type="text" name="name" {...name} />
-          <Field label="Email: " type="email" name="email" {...email} />
-          <Field
-            label="Menssagem: "
-            type="textarea"
-            name="message"
-            {...message}
-          />
+    <FormWrapper onSubmit={handleSubmit}>
+      <div className="fields">
+        <FormField label="Seu nome" type="text" name="name" {...name} />
+        <FormField label="Seu email" type="email" name="email" {...email} />
+        <FormField
+          label="Sua mensagem"
+          type="textarea"
+          name="message"
+          {...message}
+        />
 
-          {!success ? (
-            <button className="send" aria-label="enviar" disabled={loading}>
-              {loading ? (
-                <Loading />
-              ) : (
-                <span className={ubuntu.className}>Mandar</span>
-              )}
-            </button>
-          ) : (
-            <span className="success">Foi! 👍</span>
-          )}
-          {error && (
-            <span className="failed">
-              Ops! Ocorreu um erro ao enviar a mensagem!
-            </span>
-          )}
-        </div>
-      </form>
-    </Container>
+        {!success ? (
+          <button aria-label="botão enviar" disabled={loading}>
+            {loading ? (
+              <Loading />
+            ) : (
+              <span className={ubuntu.className}>Mandar</span>
+            )}
+          </button>
+        ) : (
+          <span className="success">Mensagem enviada com sucesso!</span>
+        )}
+        {error && (
+          <span className="failed">
+            Oops! Ocorreu algum erro ao enviar a mensagem
+          </span>
+        )}
+      </div>
+    </FormWrapper>
   );
 }
 

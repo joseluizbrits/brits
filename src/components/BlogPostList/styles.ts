@@ -108,6 +108,12 @@ export const TextWrapper = styled.div`
     bottom: 0;
   }
 
+  @media screen and (min-width: 1080px) {
+    h2:hover {
+      color: var(--gray);
+    }
+  }
+
   @media screen and (max-width: 1280px) {
     p {
       max-width: 35ch;
