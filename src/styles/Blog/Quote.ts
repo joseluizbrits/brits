@@ -5,7 +5,7 @@ export const Quote = styled.i`
   padding: 32px;
   margin: 28px;
   margin-bottom: 0;
-  border-left: 6px solid var(--secondary);
+  border-left: 6px solid var(--tertiary);
   border-radius: 5px;
   background-color: var(--primary-dark);
 

@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
-export const Container = styled.section`
+export const HeroBlogContainer = styled.section`
   height: calc(100vh - 80px);
+  background-color: var(--primary-dark);
 
   display: flex;
   align-items: center;
@@ -9,54 +10,15 @@ export const Container = styled.section`
   overflow: hidden;
   position: relative;
 
-  .bars.top {
-    position: absolute;
-    top: 0;
-    right: 0;
-    rotate: 180deg;
+  > :first-child {
+    width: 100%;
+    margin-left: 280px;
+    margin-top: -80px;
+
+    display: grid;
   }
 
-  .bars.bottom {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-  }
-
-  @media screen and (max-width: 1024px) {
-    .bars.top {
-      scale: 0.6;
-      right: -40px;
-    }
-
-    .bars.bottom {
-      scale: 0.6;
-      left: -40px;
-    }
-  }
-
-  @media screen and (max-width: 768px) {
-    .bars {
-      display: none;
-    }
-  }
-
-  @media screen and (max-width: 768px) {
-    height: calc(100vh - 64px);
-  }
-
-  @media screen and (max-width: 640px) {
-    height: 60vh;
-  }
-`;
-
-export const Content = styled.div`
-  width: 100%;
-  margin-left: 280px;
-  margin-top: -80px;
-
-  display: grid;
-
-  &::before {
+  > :first-child::before {
     content: "";
     display: block;
     width: 100%;
@@ -83,7 +45,7 @@ export const Content = styled.div`
   }
 
   p {
-    font-size: clamp(1rem, 1.5vw, 1.75rem);
+    font-size: clamp(1rem, 1.25vw, 1.5rem);
     line-height: 1.25em;
     max-width: 18ch;
     color: var(--primary-light);
@@ -94,6 +56,19 @@ export const Content = styled.div`
     opacity: 0;
     animation: fadeRight 0.6s ease-out forwards;
     animation-delay: 1.3s;
+  }
+
+  .bars.top {
+    position: absolute;
+    top: 0;
+    right: 0;
+    rotate: 180deg;
+  }
+
+  .bars.bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
   }
 
   @keyframes fromRight {
@@ -117,10 +92,12 @@ export const Content = styled.div`
   }
 
   @media screen and (max-width: 1440px) {
-    margin-left: 200px;
+    > :first-child {
+      margin-left: 200px;
 
-    &::before {
-      transform: translateY(-6px);
+      &::before {
+        transform: translateY(-6px);
+      }
     }
 
     p {
@@ -130,10 +107,12 @@ export const Content = styled.div`
   }
 
   @media screen and (max-width: 1024px) {
-    margin-left: 120px;
+    > :first-child {
+      margin-left: 120px;
 
-    &::before {
-      height: 3rem;
+      &::before {
+        height: 3rem;
+      }
     }
 
     h1 {
@@ -143,23 +122,45 @@ export const Content = styled.div`
     p {
       margin-right: 40px;
     }
+
+    .bars.top {
+      scale: 0.6;
+      right: -40px;
+    }
+
+    .bars.bottom {
+      scale: 0.6;
+      left: -40px;
+    }
   }
 
   @media screen and (max-width: 768px) {
-    margin-left: 80px;
+    height: calc(100vh - 64px);
 
-    &::before {
-      transform: translateY(-16px);
+    > :first-child {
+      margin-left: 80px;
+
+      &::before {
+        transform: translateY(-16px);
+      }
     }
 
     p {
       margin-right: 20px;
       margin-top: -8px;
     }
+
+    .bars {
+      display: none;
+    }
   }
 
   @media screen and (max-width: 640px) {
-    margin-left: 20px;
-    margin-top: 40px;
+    height: 60vh;
+
+    > :first-child {
+      margin-left: 20px;
+      margin-top: 0;
+    }
   }
 `;

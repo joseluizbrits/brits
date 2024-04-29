@@ -1,20 +1,21 @@
 "use client";
 
-import { Wrapper } from "./styles";
+import { ShareWrapper } from "./styles";
 import { useParams } from "next/navigation";
 
 import FacebookSquare from "@/icons/FacebookSquare";
 import WhatsAppSquare from "@/icons/WhatsAppSquare";
 import XTwitterSquare from "@/icons/XTwitterSquare";
 import LinkedInSquare from "@/icons/LinkedInSquare";
+import { ubuntu } from "@/lib/fonts";
 
 function Share({ position }: { position: "top" | "bottom" }) {
   const params = useParams<{ uid: string }>();
   const link = `https://www.brits.com.br/blog/${params.uid}`;
 
   return (
-    <Wrapper className={position}>
-      <span>Compartilhe!</span>
+    <ShareWrapper className={position}>
+      <span className={ubuntu.className}>Compartilhe!</span>
       <div>
         <a
           href={`https://api.whatsapp.com/send?text=Eu acabei de ler um texto muito legal escrito pelo Brits. Dá uma olhada lá pelo link: ${link}`}
@@ -23,7 +24,7 @@ function Share({ position }: { position: "top" | "bottom" }) {
         >
           <WhatsAppSquare
             color={
-              position === "top" ? "var(--primary-dark)" : "var(--tertiary)"
+              position === "top" ? "var(--primary-dark)" : "var(--secondary)"
             }
           />
         </a>
@@ -34,7 +35,7 @@ function Share({ position }: { position: "top" | "bottom" }) {
         >
           <FacebookSquare
             color={
-              position === "top" ? "var(--primary-dark)" : "var(--tertiary)"
+              position === "top" ? "var(--primary-dark)" : "var(--secondary)"
             }
           />
         </a>
@@ -45,7 +46,7 @@ function Share({ position }: { position: "top" | "bottom" }) {
         >
           <XTwitterSquare
             color={
-              position === "top" ? "var(--primary-dark)" : "var(--tertiary)"
+              position === "top" ? "var(--primary-dark)" : "var(--secondary)"
             }
           />
         </a>
@@ -56,12 +57,12 @@ function Share({ position }: { position: "top" | "bottom" }) {
         >
           <LinkedInSquare
             color={
-              position === "top" ? "var(--primary-dark)" : "var(--tertiary)"
+              position === "top" ? "var(--primary-dark)" : "var(--secondary)"
             }
           />
         </a>
       </div>
-    </Wrapper>
+    </ShareWrapper>
   );
 }
 

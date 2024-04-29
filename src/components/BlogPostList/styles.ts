@@ -31,6 +31,9 @@ export const Container = styled.ul`
     border-radius: 50px;
     border: 1px solid var(--secondary-20);
 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
     display: grid;
     grid-template-columns: 7fr 5fr;
     gap: 40px;
@@ -129,7 +132,7 @@ export const TextWrapper = styled.div`
 `;
 
 export const PostDate = styled.div`
-  color: var(--primary-dark);
+  color: var(--primary);
 
   display: flex;
   align-items: center;

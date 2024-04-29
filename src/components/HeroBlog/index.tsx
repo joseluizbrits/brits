@@ -1,26 +1,28 @@
 "use client";
 
-import Bars from "@/icons/Bars";
-import { Container, Content } from "./styles";
+import { PrismicRichText } from "@prismicio/react";
 import {
   BlogPostDocumentDataHeroItem,
   Simplify,
 } from "../../../prismicio-types";
-import { PrismicRichText } from "@prismicio/react";
 
-interface HeroProps {
+import { HeroBlogContainer } from "./styles";
+import { ubuntu } from "@/lib/fonts";
+import Bars from "@/icons/Bars";
+
+interface HeroBlogProps {
   data: Simplify<BlogPostDocumentDataHeroItem> | undefined;
 }
 
-function HeroBlog({ data }: HeroProps) {
+function HeroBlog({ data }: HeroBlogProps) {
   return (
-    <Container>
-      <Content>
+    <HeroBlogContainer>
+      <div>
         <PrismicRichText
           field={data?.blog_title}
           components={{
             heading2: ({ children }) => (
-              <h1>
+              <h1 className={ubuntu.className}>
                 {children} <span>{data?.blog_title_emphasis}</span>
               </h1>
             ),
@@ -28,10 +30,11 @@ function HeroBlog({ data }: HeroProps) {
         />
 
         <PrismicRichText field={data?.blog_subtitle} />
-      </Content>
+      </div>
+
       <Bars className="top" />
       <Bars className="bottom" />
-    </Container>
+    </HeroBlogContainer>
   );
 }
 

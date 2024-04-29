@@ -24,8 +24,8 @@ async function page() {
       <main
         className="container"
         style={{
-          backgroundColor: "var(--blogBody)",
-          paddingBottom: "40px",
+          marginTop: "120px",
+          marginBottom: "200px",
           display: "grid",
           gap: "80px",
         }}

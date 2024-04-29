@@ -4,12 +4,12 @@ export default function NotFound() {
   return (
     <div
       style={{
-        height: "calc(100vh - 240px)",
-        margin: "0 80px",
+        height: "calc(100vh - 200px)",
         display: "grid",
         alignItems: "center",
         gap: "20px",
       }}
+      className="container"
     >
       <h1
         style={{

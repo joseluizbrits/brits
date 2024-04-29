@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.div`
+export const ShareWrapper = styled.div`
   display: grid;
 
   &.top {
     gap: 12px;
     padding-bottom: 32px;
-    border-bottom: 1px solid var(--secondaryClear);
+    border-bottom: 1px solid var(--tertiary-20);
   }
 
   &.bottom {
@@ -14,7 +14,7 @@ export const Wrapper = styled.div`
     margin-top: 80px;
     padding-top: 40px;
     padding-bottom: 64px;
-    border-top: 1px solid var(--secondaryClear);
+    border-top: 1px solid var(--tertiary-20);
 
     place-items: center;
   }

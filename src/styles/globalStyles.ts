@@ -13,6 +13,7 @@ const GlobalStyles = createGlobalStyle`
     --secondary-40: rgba(210, 42 , 232, 0.4);
     --tertiary: #41F7EC;
     --tertiary-light: #A3FDF7;
+    --tertiary-20: rgba(65, 247 , 236, 0.2);
     --warning: #FB4B4B;
     --white: #FFFFFF;
     --gray: #CBB5E1;

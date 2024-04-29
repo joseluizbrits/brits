@@ -1,20 +1,22 @@
 "use client";
 
+import { CallMeWrapper } from "./styles";
+import { ubuntu } from "@/lib/fonts";
 import Talk from "@/icons/Talk";
-import { Wrapper } from "./styles";
+import Link from "next/link";
 
 function CallMe() {
   return (
-    <Wrapper>
+    <CallMeWrapper>
       <Talk />
-      <p>
+      <p className={ubuntu.className}>
         E aí, o que achou do assunto? Me manda uma DM lá no{" "}
-        <a href="https://www.instagram.com/joseluizbrits/?igsh=MTIxZTV4YjI2MmN0bQ%3D%3D&utm_source=qr">
+        <Link href="https://www.instagram.com/joseluizbrits/?igsh=MTIxZTV4YjI2MmN0bQ%3D%3D&utm_source=qr">
           Instagram
-        </a>{" "}
+        </Link>{" "}
         e me conta qual é a sua opinião :)
       </p>
-    </Wrapper>
+    </CallMeWrapper>
   );
 }
 

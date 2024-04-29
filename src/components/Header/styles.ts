@@ -6,12 +6,15 @@ export const HeaderContainer = styled.header<{
   padding-top: 20px;
   padding-bottom: 20px;
   height: 80px;
-  background: ${({ $type }) =>
-    $type === "blog" ? "var(--gradient-1)" : "transparent"};
+  background-color: ${({ $type }) =>
+    $type === "blogPost" ? "var(--primary-dark)" : "transparent"};
 
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  position: relative;
+  z-index: 1;
 
   ul {
     display: flex;

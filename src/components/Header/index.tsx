@@ -1,10 +1,10 @@
 "use client";
 
-import { HeaderContainer } from "./styles";
 import { useParams, usePathname } from "next/navigation";
 import Link from "next/link";
-import Logo from "../Logo";
-import { ubuntu } from "@/lib/fonts";
+
+import { HeaderContainer } from "./styles";
+import Logo from "@/components/Logo";
 import ButtonOutlined from "../Buttons/ButtonOutlined";
 
 function Header() {
@@ -30,12 +30,9 @@ function Header() {
           </li>
           <li>
             {type === "blog" ? (
-              <Link
-                className={ubuntu.className}
-                href="https://api.whatsapp.com/send?phone=5521977201981&text=Ola,%20Brits!%20Eu%20gostaria%20de%20fazer%20um%20or%C3%A7amento"
-              >
-                Contato
-              </Link>
+              <ButtonOutlined href="https://api.whatsapp.com/send?phone=5521977201981&text=Ola,%20Brits!%20Eu%20gostaria%20de%20fazer%20um%20or%C3%A7amento">
+                CONTATO
+              </ButtonOutlined>
             ) : (
               <ButtonOutlined href="/blog">BLOG</ButtonOutlined>
             )}

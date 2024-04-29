@@ -12,7 +12,6 @@ import Share from "@/components/Share";
 import CallMe from "@/components/CallMe";
 
 import BlogPopup from "@/components/BlogPopup";
-import BlogPostList from "@/components/BlogPostList";
 import GetBlogPosts from "@/components/GetBlogPosts";
 
 type Params = { uid: string };
@@ -38,7 +37,6 @@ export default async function Page({ params }: { params: Params }) {
       <div
         className="container"
         style={{
-          backgroundColor: "var(--blogBody)",
           paddingBottom: "120px",
           display: "grid",
           gap: "80px",
@@ -57,6 +55,7 @@ export default async function Page({ params }: { params: Params }) {
           <br />
           ...
         </span>
+
         <GetBlogPosts except={page.uid} />
       </div>
 

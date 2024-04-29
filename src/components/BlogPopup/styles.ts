@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-export const Popup = styled.div`
+export const BlogPopupWrapper = styled.div`
   width: 460px;
-  border-radius: 50px 50px 0 0;
+  border-radius: 15px 15px 0 0;
   background: var(--gradient-2);
   box-shadow: -3px -3px 10px rgba(0, 0, 0, 0.3);
 
@@ -18,16 +18,16 @@ export const Popup = styled.div`
     transform: translateY(0%);
   }
 
-  div {
-    padding: 56px 40px;
-    padding-bottom: 40px;
+  > div {
+    padding: 48px 40px;
+    padding-bottom: 32px;
     display: grid;
 
     position: relative;
     z-index: 1;
   }
 
-  div > :nth-child(1) {
+  > div > :nth-child(1) {
     font-weight: 500;
     font-size: 2.5rem;
     color: var(--white);
@@ -47,13 +47,14 @@ export const Popup = styled.div`
     padding-top: 8px;
   }
 
-  a {
+  > div > :last-child {
     justify-self: end;
     font-weight: 700;
     font-size: 0.875rem;
     letter-spacing: 0.05rem;
     text-transform: uppercase;
-    color: var(--secondary);
+    color: var(--primary-dark);
+    background-color: var(--secondary-light);
     padding: 16px 24px;
     border-radius: 50px;
     border: 1px solid var(--secondary);
@@ -62,20 +63,18 @@ export const Popup = styled.div`
 
   img {
     position: absolute;
-    top: 0;
+    top: 0px;
     right: 0;
   }
 
   @media screen and (min-width: 1080px) {
-    a:hover {
-      background-color: var(--secondary);
-      color: var(--primary-dark);
+    > div > :last-child:hover {
+      filter: contrast(150%);
     }
   }
 
   @media screen and (max-width: 640px) {
     width: 320px;
-    border-radius: 25px 25px 0 0;
 
     div {
       padding: 40px 28px;
@@ -90,8 +89,9 @@ export const Popup = styled.div`
       font-size: 0.75rem;
     }
 
-    a {
+    > div > :last-child {
       font-size: 0.75rem;
+      padding: 12px 20px;
     }
   }
 `;

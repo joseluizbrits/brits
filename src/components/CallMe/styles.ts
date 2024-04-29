@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.div`
+export const CallMeWrapper = styled.div`
   background: var(--gradient-2);
   padding: 40px;
   border-radius: 5px;
@@ -17,12 +17,12 @@ export const Wrapper = styled.div`
 
   a {
     color: var(--primary-light);
-    transition: 0.3s ease;
+    transition: 0.1s ease-out;
   }
 
   @media screen and (min-width: 1024px) {
     a:hover {
-      color: var(--tertiary);
+      color: var(--secondary);
     }
   }
 

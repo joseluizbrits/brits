@@ -3,25 +3,28 @@
 import Image from "next/image";
 import styled from "styled-components";
 
-const Wrapper = styled.div`
+const Wrapper = styled.div<{ $position: "top" | "bottom" }>`
   width: 100%;
-  height: 200px;
-  background-color: var(--blogBody);
+  height: 240px;
+  background-color: var(--bg-2);
 
-  position: relative;
+  position: fixed;
+  ${({ $position }) => ($position === "top" ? "top: 0;" : "bottom: 0;")};
+  left: 0;
+  z-index: -1;
 
   img {
     object-fit: cover;
   }
 
   @media screen and (max-width: 1024px) {
-    height: 120px;
+    height: 160px;
   }
 `;
 
 function GalaxiesImage({ position }: { position: "top" | "bottom" }) {
   return (
-    <Wrapper>
+    <Wrapper $position={position}>
       <Image
         fill
         src="/galaxies.png"

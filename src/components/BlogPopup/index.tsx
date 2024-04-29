@@ -1,10 +1,13 @@
 "use client";
 
-import { Popup, ButtonClose } from "./styles";
-import Link from "next/link";
-import XClose from "@/icons/XClose";
-import Image from "next/image";
+import { BlogPopupWrapper, ButtonClose } from "./styles";
+
 import { useEffect, useState } from "react";
+import { ubuntu } from "@/lib/fonts";
+
+import Link from "next/link";
+import Image from "next/image";
+import XClose from "@/icons/XClose";
 
 function BlogPopup() {
   const [active, setActive] = useState(0);
@@ -33,21 +36,31 @@ function BlogPopup() {
   }, [active]);
 
   return (
-    <Popup className={active === 1 ? "active" : ""}>
+    <BlogPopupWrapper className={active === 1 ? "active" : ""}>
       <div>
-        <span>
+        <Link href="/" className={ubuntu.className}>
           Precisando de <em>um site?</em>
+        </Link>
+        <span className={ubuntu.className}>
+          Inicie agora sua presença online comigo
         </span>
-        <span>Inicie agora sua presença online comigo</span>
         <Link href="https://api.whatsapp.com/send?phone=5521977201981&text=Ola,%20Brits!%20Eu%20gostaria%20de%20fazer%20um%20or%C3%A7amento">
           Entrar em contato
         </Link>
       </div>
 
-      <ButtonClose aria-label="fechar popup" onClick={() => setActive(2)}>
+      <ButtonClose aria-label="Fechar popup" onClick={() => setActive(2)}>
         <XClose />
       </ButtonClose>
-    </Popup>
+
+      <Image
+        src="/woman.png"
+        alt="Silhueta de uma mulher segurando uma lampada e com alguns pontos de luz pelo corpo"
+        width={252}
+        height={296}
+        quality={100}
+      />
+    </BlogPopupWrapper>
   );
 }
 
