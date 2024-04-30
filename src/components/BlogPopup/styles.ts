@@ -54,11 +54,10 @@ export const BlogPopupWrapper = styled.div`
     letter-spacing: 0.05rem;
     text-transform: uppercase;
     color: var(--primary-dark);
-    background-color: var(--secondary-light);
+    background-color: var(--tertiary);
     padding: 16px 24px;
     border-radius: 50px;
-    border: 1px solid var(--secondary);
-    transition: 0.3s ease;
+    transition: 0.1s ease-out;
   }
 
   img {
@@ -69,7 +68,8 @@ export const BlogPopupWrapper = styled.div`
 
   @media screen and (min-width: 1080px) {
     > div > :last-child:hover {
-      filter: contrast(150%);
+      color: var(--tertiary);
+      background-color: var(--primary-dark);
     }
   }
 

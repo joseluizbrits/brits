@@ -14,7 +14,7 @@ export const FormWrapper = styled.form`
 
   input,
   textarea {
-    font-size: 1rem;
+    font-size: 1.15rem;
     color: var(--white);
 
     width: 100%;
@@ -32,16 +32,6 @@ export const FormWrapper = styled.form`
     letter-spacing: 0.05rem;
   }
 
-  input:hover,
-  textarea:hover {
-    border: 1px solid var(--secondary-40);
-  }
-
-  input:focus,
-  textarea:focus {
-    border: 1px solid var(--secondary);
-  }
-
   textarea {
     height: 240px;
   }
@@ -53,6 +43,7 @@ export const FormWrapper = styled.form`
 
   button {
     font-weight: 700;
+    font-size: 1.15rem;
     letter-spacing: 0.05rem;
     text-align: center;
     text-transform: uppercase;
@@ -90,7 +81,12 @@ export const FormWrapper = styled.form`
   @media screen and (min-width: 1080px) {
     input:hover,
     textarea:hover {
-      box-shadow: 0 0 5px 5px var(--primary-light-10);
+      border: 1px solid var(--secondary-40);
+    }
+
+    input:focus,
+    textarea:focus {
+      border: 1px solid var(--secondary);
     }
 
     button:hover {
@@ -100,41 +96,6 @@ export const FormWrapper = styled.form`
 
     button:disabled:hover {
       background-color: var(--primary-dark);
-    }
-  }
-
-  @media screen and (max-width: 1280px) {
-    border-radius: 25px;
-  }
-
-  @media screen and (max-width: 768px) {
-    padding: 28px;
-  }
-
-  @media screen and (max-width: 640px) {
-    &::after {
-      display: none;
-    }
-
-    input,
-    textarea {
-      padding: 10px 20px;
-      border: 1px solid transparent;
-    }
-
-    input:focus,
-    textarea:focus {
-      border: 1px solid var(--secondary-light);
-    }
-
-    input.error,
-    textarea.error {
-      border: 1px solid var(--warning);
-    }
-
-    button {
-      padding: 10px 0;
-      margin-top: 8px;
     }
   }
 `;

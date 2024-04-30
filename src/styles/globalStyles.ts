@@ -78,7 +78,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   .container {
-    padding: 0 120px;
+    padding: 0 240px;
   }
 
   /* ---------- SCROLLBAR ---------- */
@@ -127,6 +127,12 @@ const GlobalStyles = createGlobalStyle`
     pointer-events: none;
   }
 
+  @media screen and (max-width: 1680px) {
+    .container {
+      padding: 0 120px;
+    }
+  }
+
   @media screen and (max-width: 1440px) {
     .container {
       padding: 0 80px;
@@ -147,7 +153,7 @@ const GlobalStyles = createGlobalStyle`
 
   @media screen and (max-width: 480px) {
     .container {
-      padding: 0 20px;
+      padding: 0 16px;
     }
   }
 `;

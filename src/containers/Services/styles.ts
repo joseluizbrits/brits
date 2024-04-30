@@ -33,6 +33,7 @@ export const ServicesContainer = styled.section`
 
   h3 {
     font-size: 2.25rem;
+    line-height: 1.1em;
     color: var(--primary-dark);
   }
 
@@ -63,5 +64,18 @@ export const ServicesContainer = styled.section`
 
   a {
     margin-top: 80px;
+  }
+
+  @media screen and (max-width: 1080px) {
+    ul {
+      margin-top: 120px;
+      flex-direction: column;
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    li {
+      padding: 28px;
+    }
   }
 `;

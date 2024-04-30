@@ -7,8 +7,11 @@ import ButtonGradient from "@/components/Buttons/ButtonGradient";
 import { TitleWrapper } from "@/styles/Text/TitleWrapper";
 import { Label } from "@/styles/Text/Label";
 import { Paragraph } from "@/styles/Text/Paragraph";
+import useMedia from "@/hooks/useMedia";
 
 function CTA() {
+  const mobile = useMedia("(max-width: 992px)");
+
   return (
     <CTAContainer>
       <div>
@@ -17,11 +20,12 @@ function CTA() {
           alt="Imagem de Vito Corleone do filme O Poderoso Chefão"
           fill
           quality={100}
+          sizes="(max-width: 992px) 100vw, 50vw"
         />
       </div>
 
       <div>
-        <TitleWrapper>
+        <TitleWrapper $centered={mobile}>
           <h2>Venha fazer um orçamento comigo!</h2>
           <Paragraph $color="gray">
             Eu vou te propor uma <Label>oferta irrecusável</Label>

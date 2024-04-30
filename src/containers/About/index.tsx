@@ -33,6 +33,7 @@ function About() {
         <Image
           src="/crazy-image.png"
           alt="Arte colagem maluca com o rosto de Brits de lado com donuts gigantes colocados em sua cabeça por uma mão gigante"
+          sizes="(max-width: 1080px) 100vw, 50vw"
           fill
         />
       </div>

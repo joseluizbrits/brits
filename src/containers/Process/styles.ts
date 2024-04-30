@@ -41,12 +41,12 @@ export const Container = styled.section`
     position: relative;
   }
 
-  li span {
+  span {
     font-size: 2rem;
     color: var(--tertiary);
 
     aspect-ratio: 1/1;
-    height: clamp(28px, 8vw, 64px);
+    height: 64px;
     background-color: var(--primary-dark);
     border-radius: 50%;
 
@@ -54,100 +54,80 @@ export const Container = styled.section`
     place-items: center;
   }
 
-  li div h3 {
+  h3 {
     font-weight: 400;
     font-size: 3rem;
     color: var(--secondary);
     margin-bottom: 16px;
   }
 
-  li div p {
+  p {
     font-size: 1.25rem;
     max-width: 55ch;
   }
 
-  li svg {
+  svg {
     position: absolute;
     top: 80%;
     left: 0;
     z-index: 1;
   }
 
-  @media screen and (max-width: 1440px) {
-    ul {
-      padding: 0 40px;
-    }
-  }
-
   @media screen and (max-width: 1080px) {
-    h2 {
-      padding: 120px 0;
+    ul {
+      gap: 28px;
     }
 
-    li div h3 {
-      padding: 4px 0;
-    }
-
-    li svg {
-      top: 50%;
-      scale: 0.4;
+    svg {
+      top: 65%;
+      scale: 0.8;
     }
   }
 
   @media screen and (max-width: 768px) {
-    ul {
-      padding: 0 20px;
+    li {
+      padding: 28px;
+      padding-bottom: 48px;
+    }
+
+    span {
+      font-size: 1.5rem;
+      height: 48px;
     }
 
     li {
       gap: 16px;
     }
 
-    li div p {
-      max-width: 50ch;
-      padding-right: 20px;
+    h3 {
+      font-size: 2.25rem;
     }
 
-    li svg {
-      top: 65%;
-      left: -20px;
-    }
-
-    ul > :nth-child(even) {
-      p {
-        padding-right: 0;
-        padding-left: 20px;
-      }
-      svg {
-        right: -20px;
-      }
+    svg {
+      scale: 0.6;
     }
   }
 
   @media screen and (max-width: 480px) {
-    h2 {
-      padding-bottom: 160px;
+    ul {
+      gap: 20px;
     }
 
-    li {
-      gap: 12px;
+    li,
+    ul > :nth-child(even) {
+      flex-direction: column;
     }
 
-    li span {
-      font-size: 2rem;
-      height: 40px;
-
-      margin-top: -40px;
-      margin-right: -24px;
+    ul > :nth-child(even) {
+      align-items: end;
     }
 
-    li svg {
-      scale: 0.3;
-      top: 68%;
+    span {
+      width: fit-content;
     }
 
-    ul > :nth-child(even) span {
-      transform: translateX(-24px);
+    svg {
+      top: 85%;
     }
   }
 `;

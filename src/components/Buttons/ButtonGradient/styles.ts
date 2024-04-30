@@ -4,6 +4,7 @@ export const ButttonGradientWrapper = styled.div`
   a {
     display: block;
     font-weight: 700;
+    text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     color: var(--tertiary);
@@ -19,6 +20,13 @@ export const ButttonGradientWrapper = styled.div`
     a:hover {
       filter: brightness(110%);
       -webkit-filter: brightness(110%);
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    a {
+      padding: 16px 0;
+      width: 100%;
     }
   }
 `;

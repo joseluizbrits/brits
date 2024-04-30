@@ -4,6 +4,20 @@ export const Container = styled.ul`
   display: grid;
   gap: 40px;
 
+  li {
+    padding: 40px;
+    background-color: var(--black-10);
+    border: 1px solid var(--secondary-20);
+    border-radius: 35px;
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    display: grid;
+    grid-template-columns: 7fr 5fr;
+    gap: 40px;
+  }
+
   > :nth-child(even) {
     grid-template-columns: 5fr 7fr;
 
@@ -25,18 +39,35 @@ export const Container = styled.ul`
     }
   }
 
-  li {
-    padding: 40px;
-    background-color: var(--black-10);
-    border-radius: 50px;
-    border: 1px solid var(--secondary-20);
+  @media screen and (max-width: 1080px) {
+    li,
+    > :nth-child(even) {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
 
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    > :nth-child(even) > :last-child {
+      order: 2;
 
-    display: grid;
-    grid-template-columns: 7fr 5fr;
-    gap: 40px;
+      h2 {
+        text-align: start;
+      }
+
+      p {
+        text-align: start;
+        align-self: start;
+      }
+
+      > div {
+        flex-direction: row;
+      }
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    li {
+      padding: 24px;
+    }
   }
 `;
 
@@ -52,7 +83,6 @@ export const ImageWrapper = styled.div`
   img {
     aspect-ratio: 16/9;
     object-fit: cover;
-    border-radius: 35px;
     transition: 0.3s ease;
   }
 
@@ -62,20 +92,9 @@ export const ImageWrapper = styled.div`
     }
   }
 
-  @media screen and (max-width: 1440px) {
-    aspect-ratio: 16/10;
-  }
-
-  @media screen and (max-width: 992px) {
-    aspect-ratio: 16/9;
-  }
-
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 1080px) {
+    max-height: 400px;
     border-radius: 15px;
-
-    img {
-      border-radius: 15px;
-    }
   }
 `;
 
@@ -86,7 +105,7 @@ export const TextWrapper = styled.div`
   position: relative;
 
   h2 {
-    font-size: clamp(1.875rem, 2.5vw, 4rem);
+    font-size: clamp(1.75rem, 2.5vw, 4rem);
     line-height: 1.15em;
     color: var(--white);
     cursor: pointer;
@@ -123,10 +142,12 @@ export const TextWrapper = styled.div`
     }
   }
 
-  @media screen and (max-width: 992px) {
+  @media screen and (max-width: 1080px) {
+    margin-top: 0;
+
     > div {
       position: initial;
-      margin-top: 24px;
+      margin-top: 64px;
     }
   }
 `;

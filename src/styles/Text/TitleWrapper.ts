@@ -7,7 +7,7 @@ export const TitleWrapper = styled.div<{ $centered?: boolean }>`
 
   h2 {
     font-weight: 900;
-    font-size: 3.5rem;
+    font-size: clamp(2.5rem, 3.5vw, 3.5rem);
     line-height: 1.1em;
     letter-spacing: -0.02em;
     color: var(--white);

@@ -14,10 +14,11 @@ function Process() {
     <Container id="process">
       <TitleWrapper $centered>
         <h2>Como funciona o processo?</h2>
-        <Paragraph $color="gray">
-          O meu serviço é altamente personalizado e dedicado ao tipo do seu
-          negócio. No final você recebe um site profissional, original, com
-          beleza estética, alta performance e de fácil usabilidade.
+        <Paragraph $color="gray" $strong="primary-light">
+          O meu serviço é altamente personalizado e{" "}
+          <strong>dedicado ao tipo do seu negócio</strong>. No final você recebe
+          um site profissional, original, com beleza estética, alta performance
+          e de fácil usabilidade.
         </Paragraph>
       </TitleWrapper>
 
@@ -27,7 +28,7 @@ function Process() {
             <span className={ubuntu.className}>{index + 1}</span>
             <div>
               <h3 className={ubuntu.className}>{title}</h3>
-              <Paragraph $color="gray-light" $strong="primary-light">
+              <Paragraph $color="gray" $strong="primary-light">
                 {parse(desc)}
               </Paragraph>
             </div>

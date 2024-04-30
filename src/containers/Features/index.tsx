@@ -5,8 +5,11 @@ import { TitleWrapper } from "@/styles/Text/TitleWrapper";
 import { Paragraph } from "@/styles/Text/Paragraph";
 import { montserrat } from "@/lib/fonts";
 import Image from "next/image";
+import useMedia from "@/hooks/useMedia";
 
 function Features() {
+  const mobile = useMedia("(max-width: 640px)");
+
   return (
     <FeaturesContainer id="features">
       <TitleWrapper>
@@ -31,8 +34,8 @@ function Features() {
             <Image
               src="/bulb.svg"
               alt="Ícone de uma lâmpada"
-              width={240}
-              height={200}
+              width={mobile ? 160 : 250}
+              height={mobile ? 150 : 240}
             />
           </div>
         </div>
@@ -50,8 +53,8 @@ function Features() {
             <Image
               src="/speedometer.svg"
               alt="Ícone de um velocímetro"
-              width={300}
-              height={200}
+              width={mobile ? 200 : 300}
+              height={mobile ? 150 : 200}
             />
           </div>
         </div>
@@ -69,8 +72,8 @@ function Features() {
             <Image
               src="/lock.svg"
               alt="Ícone de uma fechadura"
-              width={240}
-              height={220}
+              width={mobile ? 150 : 230}
+              height={mobile ? 140 : 220}
             />
           </div>
         </div>
@@ -87,8 +90,8 @@ function Features() {
             <Image
               src="/cloud.svg"
               alt="Ícone de uma nuvem"
-              width={240}
-              height={220}
+              width={mobile ? 160 : 240}
+              height={mobile ? 140 : 220}
             />
           </div>
         </div>

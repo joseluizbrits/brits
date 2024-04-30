@@ -17,7 +17,7 @@ export const IntroContainer = styled.section`
 
   h2 {
     font-weight: 700;
-    font-size: 3rem;
+    font-size: clamp(2rem, 3vw, 3rem);
     line-height: 1.15em;
     letter-spacing: -0.02em;
     color: var(--white);
@@ -34,9 +34,25 @@ export const IntroContainer = styled.section`
   h3 {
     font-weight: 700;
     font-size: 2rem;
+    line-height: 1.1em;
     letter-spacing: -0.02em;
     color: var(--secondary);
-    margin-top: 12px;
-    margin-bottom: 8px;
+    margin-top: 20px;
+    margin-bottom: 16px;
+  }
+
+  @media screen and (max-width: 1080px) {
+    padding: 56px;
+    grid-template-columns: 1fr;
+    gap: 80px;
+
+    > :nth-child(2) {
+      gap: 48px;
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    padding: 48px 28px;
+    grid-template-columns: 1fr;
   }
 `;

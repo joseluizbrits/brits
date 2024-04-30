@@ -12,7 +12,6 @@ export const CTAContainer = styled.div`
   grid-template-columns: 5fr 7fr;
 
   > :nth-child(1) {
-    max-width: 600px;
     aspect-ratio: 6 / 5;
     position: relative;
     mix-blend-mode: lighten;
@@ -31,5 +30,53 @@ export const CTAContainer = styled.div`
 
   a {
     margin-top: 40px;
+  }
+
+  @media screen and (max-width: 1280px) {
+    h2 {
+      font-size: 2.25rem;
+    }
+  }
+
+  @media screen and (max-width: 992px) {
+    grid-template-columns: 1fr;
+    padding: 40px;
+
+    > :nth-child(1) {
+      width: 400px;
+      justify-self: center;
+    }
+
+    > :nth-child(2) {
+      margin-top: 20px;
+    }
+
+    h2 {
+      font-size: 2.25rem;
+      text-align: center;
+    }
+
+    a {
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    padding: 28px;
+    padding-bottom: 32px;
+
+    > :nth-child(1) {
+      width: 240px;
+    }
+
+    h2 {
+      font-size: 2rem !important;
+    }
+
+    p {
+      display: grid;
+      justify-content: center;
+      gap: 8px;
+    }
   }
 `;

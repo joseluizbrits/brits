@@ -35,4 +35,11 @@ export const ButtonOutlinedWrapper = styled.div<{ $borderless?: boolean }>`
       }
     }
   }
+
+  @media screen and (max-width: 640px) {
+    a {
+      font-size: 0.875rem;
+      padding: ${({ $borderless }) => ($borderless ? "10px 0" : "10px 20px")};
+    }
+  }
 `;

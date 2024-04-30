@@ -46,11 +46,29 @@ export const FeaturesContainer = styled.section`
 
   h3 {
     font-weight: 900;
-    font-size: 2rem;
+    font-size: clamp(1.75rem, 2vw, 2rem);
     line-height: 1em;
     letter-spacing: -0.02em;
     text-transform: uppercase;
     color: var(--secondary);
     margin-bottom: 16px;
+  }
+
+  @media screen and (max-width: 1080px) {
+    > :nth-child(2) {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    > :nth-child(2) > div {
+      padding: 28px;
+      padding-top: 32px;
+
+      > div {
+        margin-right: 0;
+      }
+    }
   }
 `;

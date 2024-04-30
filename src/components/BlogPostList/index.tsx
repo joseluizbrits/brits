@@ -11,7 +11,6 @@ import { ubuntu } from "@/lib/fonts";
 
 import { Paragraph } from "@/styles/Text/Paragraph";
 import { formatDate } from "@/utils/formatDate";
-import useMedia from "@/hooks/useMedia";
 import ButtonFilled from "../Buttons/ButtonFilled";
 import Calender from "@/icons/Calender";
 
@@ -51,6 +50,7 @@ function BlogPostList({ posts, except }: BlogPostListProps) {
                   components={{
                     paragraph: ({ children }) => (
                       <Paragraph
+                        className={ubuntu.className}
                         $color="primary-light"
                         onClick={() => router.push(`/blog/${uid}`)}
                       >

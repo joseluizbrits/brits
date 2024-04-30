@@ -10,7 +10,6 @@ export const ProjectsContainer = styled.section`
 
   p {
     margin-top: 20px;
-    transition: 0.1s ease-out;
   }
 
   .swiper {
@@ -20,7 +19,7 @@ export const ProjectsContainer = styled.section`
 
   .swiper-wrapper {
     display: flex;
-    width: max-content;
+    width: fit-content;
   }
 
   .swiper-slide {
@@ -42,27 +41,12 @@ export const ProjectsContainer = styled.section`
       padding: 12px;
       opacity: 0.6;
       transition: 0.1s ease-out;
-
-      &:hover {
-        opacity: 1;
-        scale: 1.05;
-      }
     }
   }
 
   .swiper-slide > :nth-child(2) {
     margin-top: 64px;
     align-self: end;
-  }
-
-  .swiper-slide > a:hover {
-    img {
-      scale: 1.05;
-    }
-
-    p {
-      opacity: 0.7;
-    }
   }
 
   .swiper-button-prev,
@@ -90,11 +74,41 @@ export const ProjectsContainer = styled.section`
   }
 
   @media screen and (min-width: 1080px) {
+    p {
+      transition: 0.1s ease-out;
+    }
+
+    .swiper-slide > a:hover {
+      img {
+        scale: 1.05;
+      }
+
+      p {
+        opacity: 0.7;
+      }
+    }
+
+    .swiper-slide > div > :nth-child(2):hover {
+      opacity: 1;
+      scale: 1.05;
+    }
+
     .swiper-button-prev:hover,
     .swiper-button-next:hover {
       filter: hue-rotate(250deg);
       -webkit-filter: hue-rotate(250deg);
       scale: 1;
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    .swiper-slide {
+      padding: 28px;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      scale: 0.8;
     }
   }
 `;

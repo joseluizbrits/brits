@@ -21,8 +21,15 @@ export const HeroContainer = styled.section`
     z-index: 1;
   }
 
+  > :nth-child(2) > div {
+    display: grid;
+    grid-template-columns: max-content auto;
+    align-items: center;
+    gap: 20px;
+  }
+
   h1 {
-    font-size: clamp(4rem, 6.5vw, 9rem);
+    font-size: clamp(3rem, 6.5vw, 6.5rem);
     font-weight: 900;
     letter-spacing: -0.02em;
     line-height: 0.9em;
@@ -35,10 +42,45 @@ export const HeroContainer = styled.section`
     margin-bottom: 28px;
   }
 
-  > :nth-child(2) > div {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+  @media screen and (max-width: 992px) {
+    margin-top: 8px;
+    flex-direction: column;
+    gap: 12px;
+
+    > :nth-child(1) {
+      width: 200px;
+      margin-left: 16px;
+    }
+
+    > :nth-child(2) {
+      margin-top: 0;
+      margin-left: 0;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    > :nth-child(2) > div {
+      grid-template-columns: 1fr auto;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    p {
+      text-align: center;
+      max-width: 45ch;
+      margin-bottom: 32px;
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    > :nth-child(2) > div {
+      width: 100%;
+    }
   }
 `;
 

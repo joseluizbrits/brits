@@ -11,8 +11,11 @@ import projects from "@/utils/projects";
 import { Paragraph } from "@/styles/Text/Paragraph";
 import ButtonOutlined from "@/components/Buttons/ButtonOutlined";
 import Link from "next/link";
+import useMedia from "@/hooks/useMedia";
 
 function Projects() {
+  const mobile = useMedia("(max-width: 1080px)");
+
   return (
     <ProjectsContainer id="projects">
       <TitleWrapper>
@@ -20,7 +23,7 @@ function Projects() {
       </TitleWrapper>
 
       <Swiper
-        slidesPerView={3}
+        slidesPerView={mobile ? 1 : 2}
         spaceBetween={20}
         navigation={true}
         modules={[Navigation]}
@@ -29,7 +32,13 @@ function Projects() {
           <SwiperSlide key={id}>
             <Link href={href} target="_blank">
               <ImageWrapper>
-                <Image src={img} alt={alt} fill quality={100} unoptimized />
+                <Image
+                  src={img}
+                  alt={alt}
+                  fill
+                  quality={100}
+                  sizes="(max-width: 1080px) 100vw, 50vw"
+                />
               </ImageWrapper>
 
               <Paragraph $color="primary-light">{desc}</Paragraph>

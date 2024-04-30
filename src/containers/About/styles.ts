@@ -3,14 +3,15 @@ import styled from "styled-components";
 export const AboutContainer = styled.section`
   margin-top: 20px;
   border-radius: 35px;
+  aspect-ratio: 15 / 9;
 
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
 
   > :nth-child(1) {
-    background-color: var(--bg-3);
     padding: 160px 80px;
+    background-color: var(--bg-3);
     border-radius: 35px;
     border: 1px solid var(--secondary-20);
   }
@@ -31,11 +32,42 @@ export const AboutContainer = styled.section`
 
   > :nth-child(2) {
     position: relative;
-    aspect-ratio: 4/5;
 
     img {
       object-fit: cover;
       border-radius: 35px;
+    }
+  }
+
+  @media screen and (max-width: 1080px) {
+    grid-template-columns: 1fr;
+
+    > :nth-child(1) {
+      padding: 80px 40px;
+    }
+
+    > :nth-child(2) {
+      order: -1;
+      aspect-ratio: 4 / 5;
+    }
+
+    p {
+      font-size: 1.15rem;
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    > :nth-child(1) {
+      padding: 64px 28px;
+      padding-bottom: 80px;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+    }
+
+    p {
+      font-size: 1.15rem;
     }
   }
 `;
