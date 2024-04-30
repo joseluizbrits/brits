@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ReactNode } from "react";
 import { ubuntu } from "@/lib/fonts";
-import ArrowRight from "@/icons/ArrowRight";
+import Arrow from "@/icons/Arrow";
 import { ButtonOutlinedWrapper } from "./styles";
 
 type ButtonOutlinedProps = {
@@ -27,7 +27,7 @@ function ButtonOutlined({
         target={external ? "_blank" : "_self"}
       >
         {children}
-        {arrow && <ArrowRight color={"var(--secondary)"} />}
+        {arrow && <Arrow color={"var(--secondary)"} />}
       </Link>
     </ButtonOutlinedWrapper>
   );

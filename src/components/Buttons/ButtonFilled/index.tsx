@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import { ButtonFilledWrapper } from "./styles";
 import Link from "next/link";
-import ArrowRight from "@/icons/ArrowRight";
+import Arrow from "@/icons/Arrow";
 import { ubuntu } from "@/lib/fonts";
 
 type ButtonFilledProps = {
@@ -16,7 +16,7 @@ function ButtonFilled({ children, href, color, arrow }: ButtonFilledProps) {
     <ButtonFilledWrapper $color={color} $arrow={arrow ? true : false}>
       <Link href={href} className={ubuntu.className}>
         {children}
-        {arrow && <ArrowRight color="var(--primary-dark)" />}
+        {arrow && <Arrow color="var(--primary-dark)" />}
       </Link>
     </ButtonFilledWrapper>
   );
