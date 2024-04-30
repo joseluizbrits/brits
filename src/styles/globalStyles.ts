@@ -42,7 +42,6 @@ const GlobalStyles = createGlobalStyle`
   html {
     background: var(--bg-2);
     overflow-x: hidden;
-    scroll-behavior: smooth;
   }
 
   a {
@@ -81,28 +80,45 @@ const GlobalStyles = createGlobalStyle`
     padding: 0 240px;
   }
 
+  .skeleton {
+    background: linear-gradient(
+    110deg,
+    var(--black-10) 8%,
+    var(--black-5) 18%,
+    var(--black-10) 33%
+    );
+    background-size: 200% 100%;
+    animation: 1.5s shine linear infinite;
+    animation-delay: 0.3s;
+  }
+
+  @keyframes shine {
+    to {
+      background-position-x: -200%;
+    }
+  }
+
   /* ---------- SCROLLBAR ---------- */
 
   *::-webkit-scrollbar,
   body::-webkit-scrollbar,
   html::-webkit-scrollbar {
-    background: var(--primary-gradient);
-    width: 12px;
+    background: transparent;
+    width: 6px;
     height: 12px;
   }
 
   *::-webkit-scrollbar-thumb,
   body::-webkit-scrollbar-thumb,
   html::-webkit-scrollbar-thumb {
-    background: var(--gradient-1);
-    border-radius: 25px;
-    border: 5px solid var(--primary-gradient);
+    background: var(--tertiary-20);
+    border-radius: 35px;
   }
 
   *::-webkit-scrollbar-thumb:hover,
   body::-webkit-scrollbar-thumb:hover,
   html::-webkit-scrollbar-thumb:hover {
-    background: var(--gradient-3);
+    background: var(--tertiary);
   }
 
   /* LENIS SCROLL SMOOTH */

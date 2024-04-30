@@ -5,14 +5,14 @@ import { SliceZone } from "@prismicio/react";
 import { createClient } from "@/prismicio";
 import { components } from "@/slices";
 
-import HeroBlog from "@/components/HeroBlog";
-import BlogWrapper from "@/components/BlogWrapper";
-import Author from "@/components/Author";
-import Share from "@/components/Share";
-import CallMe from "@/components/CallMe";
+import Hero from "@/containers/Blog/Hero";
+import Post from "@/containers/Blog/Post";
+import Author from "@/components/Blog/Author";
+import Share from "@/components/Blog/Share";
+import CallMe from "@/components/Blog/CallMe";
 
-import BlogPopup from "@/components/BlogPopup";
-import GetBlogPosts from "@/components/GetBlogPosts";
+import Popup from "@/components/Blog/Popup";
+import GetPosts from "@/components/Blog/GetPosts";
 
 type Params = { uid: string };
 
@@ -24,15 +24,15 @@ export default async function Page({ params }: { params: Params }) {
 
   return (
     <>
-      <HeroBlog data={page.data.hero[0]} />
+      <Hero data={page.data.hero[0]} />
 
-      <BlogWrapper>
+      <Post>
         <Share position="top" />
         <Author date={page.data.blog_post_date} />
         <SliceZone slices={page.data.slices} components={components} />
         <Share position="bottom" />
         <CallMe />
-      </BlogWrapper>
+      </Post>
 
       <div
         className="container"
@@ -56,10 +56,10 @@ export default async function Page({ params }: { params: Params }) {
           ...
         </span>
 
-        <GetBlogPosts except={page.uid} />
+        <GetPosts except={page.uid} />
       </div>
 
-      <BlogPopup />
+      <Popup />
     </>
   );
 }

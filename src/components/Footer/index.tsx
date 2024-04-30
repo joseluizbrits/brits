@@ -32,12 +32,14 @@ function Footer() {
         <Link
           href="https://github.com/joseluizbrits"
           aria-label="Vai para o GitHub"
+          target="_blank"
         >
           <GitHub />
         </Link>
         <Link
           href="https://www.instagram.com/joseluizbrits/?igsh=MTIxZTV4YjI2MmN0bQ%3D%3D&utm_source=qr"
           aria-label="Vai para o Instagram"
+          target="_blank"
         >
           <Instagram />
         </Link>

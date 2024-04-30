@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 
-import TitleCircle from "@/components/TitleCircle";
-import GalaxiesImage from "@/components/GalaxiesImage";
-import GetBlogPosts from "@/components/GetBlogPosts";
+import TitleCircle from "@/components/Blog/TitleCircle";
+import GalaxiesImage from "@/components/Blog/GalaxiesImage";
+import GetPosts from "@/components/Blog/GetPosts";
 
 export const metadata: Metadata = {
   title: "Todos os posts | BRITS Blog",
@@ -31,7 +31,7 @@ async function page() {
         }}
       >
         <TitleCircle>Todos os Posts</TitleCircle>
-        <GetBlogPosts />
+        <GetPosts />
       </main>
 
       <GalaxiesImage position="bottom" />
