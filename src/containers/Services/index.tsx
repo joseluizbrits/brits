@@ -5,11 +5,17 @@ import { ServicesContainer } from "./styles";
 import { Paragraph } from "@/styles/Text/Paragraph";
 import { TitleWrapper } from "@/styles/Text/TitleWrapper";
 import ButtonFilled from "@/components/Buttons/ButtonFilled";
+import { useRef } from "react";
+import Animation from "@/styles/animation";
 
 function Services() {
+  const container = useRef(null);
+
+  Animation(container, ["#title", "#service-1", "#service-2", "#service-3"]);
+
   return (
-    <ServicesContainer id="services">
-      <TitleWrapper $centered>
+    <ServicesContainer id="services" ref={container}>
+      <TitleWrapper $centered id="title">
         <h2 className={montserrat.className}>
           Que tipo de site eu posso criar para você?
         </h2>
@@ -20,7 +26,7 @@ function Services() {
       </TitleWrapper>
 
       <ul>
-        <li>
+        <li id="service-1">
           <div>
             <h3 className={montserrat.className}>Site Institucional</h3>
             <span className={ubuntu.className}>
@@ -42,7 +48,7 @@ function Services() {
           </ButtonFilled>
         </li>
 
-        <li>
+        <li id="service-2">
           <div>
             <h3 className={montserrat.className}>Landing Page</h3>
             <span className={ubuntu.className}>
@@ -64,7 +70,7 @@ function Services() {
           </ButtonFilled>
         </li>
 
-        <li>
+        <li id="service-3">
           <div>
             <h3 className={montserrat.className}>Portfólio</h3>
             <span className={ubuntu.className}>

@@ -6,11 +6,17 @@ import Form from "@/components/Form";
 import { Paragraph } from "@/styles/Text/Paragraph";
 import Image from "next/image";
 import Link from "next/link";
+import { useRef } from "react";
+import Animation from "@/styles/animation";
 
 function Contact() {
+  const container = useRef(null);
+
+  Animation(container, ["#title", "form", "#astronaut"]);
+
   return (
-    <ContactContainer id="contact">
-      <TitleWrapper>
+    <ContactContainer ref={container}>
+      <TitleWrapper id="title">
         <h2>Me mande uma mensagem!</h2>
         <Paragraph $color="gray">
           Sinta-se à vontade para me mandar uma mensagem a respeito de qualquer
@@ -21,7 +27,7 @@ function Contact() {
       <div>
         <Form />
 
-        <div>
+        <div id="astronaut">
           <Image
             src="/astronaut-thinking.png"
             alt="Astronauta no espaço sentado em uma rocha"

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.section`
+export const ProcessContainer = styled.section`
   margin-top: var(--gap);
 
   ul {

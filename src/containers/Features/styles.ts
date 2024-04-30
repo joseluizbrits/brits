@@ -36,11 +36,20 @@ export const FeaturesContainer = styled.section`
     div {
       flex: 1;
       align-self: end;
+
+      width: 250px;
       margin-top: 20px;
       margin-right: 64px;
+      aspect-ratio: 5 / 4;
 
       display: flex;
       align-items: end;
+
+      position: relative;
+
+      img {
+        object-fit: contain;
+      }
     }
   }
 
@@ -67,6 +76,7 @@ export const FeaturesContainer = styled.section`
       padding-top: 32px;
 
       > div {
+        width: 200px;
         margin-right: 0;
       }
     }

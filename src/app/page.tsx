@@ -13,20 +13,20 @@ import SmoothScroll from "@/components/SmoothScroll";
 export default function Home() {
   return (
     <>
-      {/* <SmoothScroll> */}
-      <main className="container">
-        <Hero />
-        <Introduction />
-        <Services />
-        <Features />
-        <About />
-        <Projects />
-        <CTA />
-        <Process />
-        <SeeBlog />
-        <Contact />
-      </main>
-      {/* </SmoothScroll> */}
+      <SmoothScroll>
+        <main className="container">
+          <Hero />
+          <Introduction />
+          <Services />
+          <Features />
+          <About />
+          <Projects />
+          <CTA />
+          <Process />
+          <SeeBlog />
+          <Contact />
+        </main>
+      </SmoothScroll>
     </>
   );
 }

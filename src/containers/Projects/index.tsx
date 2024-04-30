@@ -12,17 +12,23 @@ import { Paragraph } from "@/styles/Text/Paragraph";
 import ButtonOutlined from "@/components/Buttons/ButtonOutlined";
 import Link from "next/link";
 import useMedia from "@/hooks/useMedia";
+import { useRef } from "react";
+import Animation from "@/styles/animation";
 
 function Projects() {
   const mobile = useMedia("(max-width: 1080px)");
+  const container = useRef(null);
+
+  Animation(container, ["#title", "#projects"]);
 
   return (
-    <ProjectsContainer id="projects">
-      <TitleWrapper>
+    <ProjectsContainer ref={container}>
+      <TitleWrapper id="title">
         <h2>Conheça os meus projetos!</h2>
       </TitleWrapper>
 
       <Swiper
+        id="projects"
         slidesPerView={mobile ? 1 : 2}
         spaceBetween={20}
         navigation={true}

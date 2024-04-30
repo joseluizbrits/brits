@@ -23,7 +23,7 @@ function BlogPostList({ posts, except }: BlogPostListProps) {
   const router = useRouter();
 
   return (
-    <Container>
+    <Container id="posts">
       {posts.map(
         ({ uid, data }, index) =>
           except !== uid && (

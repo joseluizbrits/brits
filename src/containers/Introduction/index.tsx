@@ -8,7 +8,7 @@ import Image from "next/image";
 
 function Introduction() {
   return (
-    <IntroContainer id="intro">
+    <IntroContainer>
       <div>
         <span className={ubuntu.className}>O que eu faço?</span>
         <h2 className={montserrat.className}>
@@ -27,8 +27,8 @@ function Introduction() {
           />
           <h3 className={ubuntu.className}>Estética e performance</h3>
           <Paragraph $color="gray-light">
-            BRITS desenvolve sites institucionais através da criação de um
-            design original e de codificação com tecnologias modernas.
+            Os meus sites são criados através da concepção de um design original
+            e de codificação com tecnologias modernas.
           </Paragraph>
         </div>
 
@@ -41,9 +41,9 @@ function Introduction() {
           />
           <h3>Processo simples e ágil</h3>
           <Paragraph $color="gray-light">
-            BRITS oferece um serviço pouco burocrático e altamente personalizado
-            que facilita a criação de um site profissional para aqueles que
-            possuem um pequeno negócio.
+            Ofereço um serviço pouco burocrático e altamente personalizado que
+            facilita a criação de um site profissional para aqueles que possuem
+            um pequeno negócio.
           </Paragraph>
         </div>
       </div>

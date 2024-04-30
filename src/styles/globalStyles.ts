@@ -155,6 +155,10 @@ const GlobalStyles = createGlobalStyle`
     .container {
       padding: 0 16px;
     }
+
+    :root {
+      --gap: 140px
+    }
   }
 `;
 

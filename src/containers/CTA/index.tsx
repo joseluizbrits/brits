@@ -8,13 +8,18 @@ import { TitleWrapper } from "@/styles/Text/TitleWrapper";
 import { Label } from "@/styles/Text/Label";
 import { Paragraph } from "@/styles/Text/Paragraph";
 import useMedia from "@/hooks/useMedia";
+import Animation from "@/styles/animation";
+import { useRef } from "react";
 
 function CTA() {
   const mobile = useMedia("(max-width: 992px)");
+  const container = useRef(null);
+
+  Animation(container, ["#vito", "#title"]);
 
   return (
-    <CTAContainer>
-      <div>
+    <CTAContainer id="cta" ref={container}>
+      <div id="vito">
         <Image
           src="/vito-corleone.png"
           alt="Imagem de Vito Corleone do filme O Poderoso Chefão"
@@ -25,7 +30,7 @@ function CTA() {
       </div>
 
       <div>
-        <TitleWrapper $centered={mobile}>
+        <TitleWrapper $centered={mobile} id="title">
           <h2>Venha fazer um orçamento comigo!</h2>
           <Paragraph $color="gray">
             Eu vou te propor uma <Label>oferta irrecusável</Label>
