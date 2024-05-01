@@ -23,9 +23,9 @@ function Header() {
         <ul>
           <li>
             {type === "home" && (
-              <Link href="#services" className="navlink">
+              <a href="#services" className="navlink">
                 Serviços
-              </Link>
+              </a>
             )}
           </li>
           <li>
