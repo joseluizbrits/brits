@@ -36,6 +36,11 @@ export const FormWrapper = styled.form`
     height: 240px;
   }
 
+  input:focus,
+  textarea:focus {
+    border: 1px solid var(--secondary);
+  }
+
   input.error,
   textarea.error {
     border: 1px solid var(--warning);
@@ -82,11 +87,6 @@ export const FormWrapper = styled.form`
     input:hover,
     textarea:hover {
       border: 1px solid var(--secondary-40);
-    }
-
-    input:focus,
-    textarea:focus {
-      border: 1px solid var(--secondary);
     }
 
     button:hover {

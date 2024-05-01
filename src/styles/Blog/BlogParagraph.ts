@@ -7,7 +7,7 @@ export const BlogParagraph = styled.p`
   margin-top: 28px;
 
   strong {
-    font-weight: 700;
+    font-weight: 900;
     color: var(--primary-light);
   }
 `;

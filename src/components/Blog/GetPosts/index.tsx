@@ -6,11 +6,9 @@ type GetPosts = {
   except?: string;
 };
 
-async function GetPosts({ onlyFirst, except }: GetPosts) {
+async function GetPosts({ except }: GetPosts) {
   const client = createClient();
-  const posts = onlyFirst
-    ? [await client.getFirst()]
-    : await client.getAllByType("blog_post");
+  const posts = await client.getAllByType("blog_post");
 
   return <PostList posts={posts} except={except} />;
 }

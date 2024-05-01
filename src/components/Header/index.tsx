@@ -1,7 +1,6 @@
 "use client";
 
 import { useParams, usePathname } from "next/navigation";
-import Link from "next/link";
 
 import { HeaderContainer } from "./styles";
 import Logo from "@/components/Logo";

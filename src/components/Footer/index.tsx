@@ -1,7 +1,6 @@
 "use client";
 
 import { FooterContainer } from "./styles";
-import { Paragraph } from "@/styles/Text/Paragraph";
 
 import { useParams, usePathname } from "next/navigation";
 import Link from "next/link";

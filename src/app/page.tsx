@@ -10,7 +10,7 @@ import SeeBlog from "@/containers/Home/SeeBlog";
 import Contact from "@/containers/Home/Contact";
 import SmoothScroll from "@/components/Home/SmoothScroll";
 
-export default function Home() {
+export default async function Home() {
   return (
     <>
       <SmoothScroll>

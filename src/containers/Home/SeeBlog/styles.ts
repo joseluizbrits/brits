@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const SeeBlogContainer = styled.section`
+export const SeeBlogContentContainer = styled.section`
   margin-top: var(--gap);
 
   > :nth-child(2) a {

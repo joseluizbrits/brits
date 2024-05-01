@@ -62,8 +62,7 @@ export const ProcessContainer = styled.section`
   }
 
   p {
-    font-size: 1.25rem;
-    max-width: 55ch;
+    max-width: 56ch;
   }
 
   svg {

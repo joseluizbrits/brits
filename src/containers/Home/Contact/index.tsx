@@ -40,7 +40,6 @@ function Contact() {
           <Link
             href="https://api.whatsapp.com/send?phone=5521977201981"
             aria-label="Vai para o WhatsApp"
-            target="_blank"
           >
             <Image
               src="/whatsapp.svg"

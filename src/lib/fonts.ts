@@ -17,5 +17,5 @@ export const ubuntu = Ubuntu({
 
 export const lato = Lato({
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["400", "900"],
 });
