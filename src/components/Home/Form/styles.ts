@@ -89,6 +89,16 @@ export const FormWrapper = styled.form`
       border: 1px solid var(--secondary-40);
     }
 
+    input:focus:hover,
+    input:focus:hover {
+      border: 1px solid var(--secondary);
+    }
+
+    input.error:hover,
+    textarea.error:hover {
+      border: 1px solid var(--warning);
+    }
+
     button:hover {
       color: var(--primary-dark);
       background-color: var(--tertiary);
