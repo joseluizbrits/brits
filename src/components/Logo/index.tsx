@@ -6,7 +6,7 @@ import Link from "next/link";
 function Logo({ href }: { href: string }) {
   return (
     <LogoWrapper>
-      <Link href={href}>
+      <Link href={href} arial-label="Página principal">
         <span className={montserrat.className}>BRITS</span>
         <Shorts />
       </Link>
