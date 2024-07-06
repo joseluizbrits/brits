@@ -2,7 +2,6 @@ import { createClient } from "@/prismicio";
 import PostList from "../PostList";
 
 type GetPosts = {
-  onlyFirst?: boolean;
   except?: string;
 };
 

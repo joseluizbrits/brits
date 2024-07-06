@@ -35,6 +35,7 @@ export const ServicesContainer = styled.section`
     font-size: 2.25rem;
     line-height: 1.1em;
     color: var(--primary-dark);
+    margin-bottom: 20px;
   }
 
   span {

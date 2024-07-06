@@ -31,9 +31,9 @@ function Services() {
         <li id="service-1">
           <div>
             <h3 className={montserrat.className}>Site Institucional</h3>
-            <span className={ubuntu.className}>
-              R$ 1199<small>a partir</small>
-            </span>
+            {/* <span className={ubuntu.className}>
+              R$ X<small>a partir</small>
+            </span> */}
 
             <Paragraph $color="primary-dark">
               Se você quer fortalecer a imagem da sua empresa, passar mais
@@ -53,9 +53,9 @@ function Services() {
         <li id="service-2">
           <div>
             <h3 className={montserrat.className}>Landing Page</h3>
-            <span className={ubuntu.className}>
-              R$ 799<small>a partir</small>
-            </span>
+            {/* <span className={ubuntu.className}>
+              R$ Y<small>a partir</small>
+            </span> */}
 
             <Paragraph $color="primary-dark">
               Se você precisa de algo mais simples, focado apenas na sua oferta
@@ -75,9 +75,9 @@ function Services() {
         <li id="service-3">
           <div>
             <h3 className={montserrat.className}>Portfólio</h3>
-            <span className={ubuntu.className}>
-              R$ 999<small>a partir</small>
-            </span>
+            {/* <span className={ubuntu.className}>
+              R$ Z<small>a partir</small>
+            </span> */}
 
             <Paragraph $color="gray">
               Se você é apenas um profissional que quer expor os seus melhores
