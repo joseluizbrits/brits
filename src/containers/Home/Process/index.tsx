@@ -8,13 +8,13 @@ import parse from "html-react-parser";
 import { useRef } from "react";
 import { ubuntu } from "@/lib/fonts";
 
-import { steps } from "@/utils/steps";
+import { process } from "@/containers/Home/Process/process";
 import ElasticUp from "@/animation/ElasticUp";
 
 function Process() {
   const container = useRef(null);
 
-  ElasticUp(container, ["#title", ...steps.map(({ id }) => `#${id}`)]);
+  ElasticUp(container, ["#title", ...process.map(({ id }) => `#${id}`)]);
 
   return (
     <ProcessContainer ref={container}>
@@ -29,7 +29,7 @@ function Process() {
       </TitleWrapper>
 
       <ul>
-        {steps.map(({ id, title, desc }, index) => (
+        {process.map(({ id, title, desc }, index) => (
           <li key={id} id={id}>
             <span className={ubuntu.className}>{index + 1}</span>
             <div>

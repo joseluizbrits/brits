@@ -8,6 +8,14 @@ const projects = [
     github: "https://github.com/joseluizbrits/bnb-it",
   },
   {
+    id: "godsclean",
+    desc: "Site one-page da GodsClean (Lavagem e Limpeza de Estofados) - Desenvolvido em Next.js com animações em GSAP",
+    img: "/godsclean.png",
+    alt: "Tela do site da GodsClean",
+    href: "https://godsclean.com.br",
+    github: "https://github.com/joseluizbrits/godsclean",
+  },
+  {
     id: "ana-e-bia",
     desc: "Site institucional de uma confeitaria chamada Ana & Bia Doces - Feito em React com animações em GSAP",
     img: "/ana-e-bia.png",

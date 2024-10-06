@@ -11,7 +11,7 @@ import { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import projects from "@/utils/projects";
+import projects from "@/containers/Home/Projects/projects";
 import useMedia from "@/hooks/useMedia";
 import ButtonOutlined from "@/components/Buttons/ButtonOutlined";
 import ElasticUp from "@/animation/ElasticUp";

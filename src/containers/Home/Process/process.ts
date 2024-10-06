@@ -1,4 +1,4 @@
-export const steps = [
+export const process = [
   {
     id: "step-1",
     title: "Briefing",
