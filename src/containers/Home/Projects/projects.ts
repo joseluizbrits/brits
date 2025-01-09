@@ -28,7 +28,7 @@ const projects = [
     desc: "Landing Page da Lili da Ribeira - Encomenda de massa para bolinho de bacalhau (desenvolvida em Next.js)",
     img: "/lili-da-ribeira.png",
     alt: "Tela da landing page da Lili da Ribeira",
-    href: "https://lilidaribeira.com.br",
+    href: "https://lili-da-ribeira-jose-luiz-brits-projects.vercel.app/",
     github: "https://github.com/joseluizbrits/lili-da-ribeira",
   },
   {
