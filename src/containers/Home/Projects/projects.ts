@@ -4,7 +4,7 @@ const projects = [
     desc: "Landing Page da BNB TI - Empresa de consultoria em banco de dados e BI (Desenvolvido em Next.js)",
     img: "/bnb-ti.png",
     alt: "Tela da landing page da BNB TI",
-    href: "https://bnbti.com.br",
+    href: "https://bnbti.netlify.app",
     github: "https://github.com/joseluizbrits/bnb-it",
   },
   {
