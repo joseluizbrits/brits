@@ -12,7 +12,7 @@ const projects = [
     desc: "Site one-page da GodsClean (Lavagem e Limpeza de Estofados) - Desenvolvido em Next.js com animações em GSAP",
     img: "/godsclean.png",
     alt: "Tela do site da GodsClean",
-    href: "https://godsclean.com.br",
+    href: "https://godsclean.netlify.app/",
     github: "https://github.com/joseluizbrits/godsclean",
   },
   {
